@@ -2,15 +2,17 @@ import { useState } from "react"
 import { showProjectEnter, showProjectHover, hideProjectLeave } from "../../interaction/selectProject"
 import projects from "../../data/projects"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRightLong, faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 // !!!!!!! modify and optimize image to jpg !!!!!!!!!
-import meSVG from "../../images/me-v2b.png"
+import meSVG from "../../images/me-v2a.png"
 import "../../style/Home.scss"
 // detect if the device support touch events
 function isTouchDevice() {
 	return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
 }
 const touchScreen = isTouchDevice()
+export { touchScreen }
+console.log(touchScreen)
 export default function Home() {
 	// save where the mouse was before it gets hover another button
 	const [currentProject, setCurrentProject] = useState(null)
@@ -30,11 +32,10 @@ export default function Home() {
 		}
 	}
 	return (
+		// for classes names a '-c' at the end mean for cursor events and a '-ts' mean for Touch Screen events
 		<div className='home'>
-			<div className='about'>
-				<div className='me-svg'>
-					<img src={meSVG} alt='Un dessin de moi' />
-				</div>
+			<div className={!touchScreen ? "about-c" : "about-ts"}>
+				<img className={!touchScreen ? "me-svg-c" : "me-svg-ts"} src={meSVG} alt='Un dessin de moi' />
 				<p>
 					Bienvenue sur mon Portfolio,
 					<br />
@@ -46,15 +47,15 @@ export default function Home() {
 				</p>
 			</div>
 			{!touchScreen ? (
-				<div className='projects-cursor'>
-					<div className='project-cursor'>
+				<div className='projects-c'>
+					<div className='project-c'>
 						<span>
 							Choisisez un projet
 							<FontAwesomeIcon className='icon' icon={faArrowRightLong} />
 						</span>
 						{projects.map((project) => (
-							<figure key={project.id} id={project.id} className='figure-cursor hide'>
-								<img src={project.img} alt={project.name} />
+							<figure key={project.id} id={project.id} className='figure-c hide'>
+								<img src={project.img_169} alt={project.name} />
 								<figcaption>{project.description}</figcaption>
 							</figure>
 						))}
@@ -87,26 +88,30 @@ export default function Home() {
 					</ul>
 				</div>
 			) : (
-				<div
-					id='touchProjects'
-					className='projects-touch'
-					onTouchStart={(e) => {
-						setTouchStartX(e.touches[0].clientX)
-					}}
-					onTouchEnd={(e) => {
-						touchEndX(e.changedTouches[0].clientX)
-					}}>
-					{projects.map((project) => (
-						<figure
-							key={project.id}
-							id={project.id}
-							className={`figure-touch figure-touch-${
-								index === project.nb ? (deltaX < 0 ? "display-left" : "display-right") : "hide"
-							}`}>
-							<img src={project.img} alt={project.name} />
-							<figcaption>{project.description}</figcaption>
-						</figure>
-					))}
+				<div className='projects-ts'>
+					<div
+						id='touchProjects'
+						className='project-ts'
+						onTouchStart={(e) => {
+							setTouchStartX(e.touches[0].clientX)
+						}}
+						onTouchEnd={(e) => {
+							touchEndX(e.changedTouches[0].clientX)
+						}}>
+						{projects.map((project) => (
+							<figure
+								key={project.id}
+								id={project.id}
+								className={`figure-ts figure-ts-${index === project.nb ? (deltaX < 0 ? "move-left" : "move-right") : "hide"}`}>
+								<img src={project.img_916} alt={project.name} />
+								<figcaption>{project.description}</figcaption>
+							</figure>
+						))}
+						<div className='arrows-ts'>
+							<FontAwesomeIcon className='icon' icon={faChevronLeft} />
+							<FontAwesomeIcon className='icon' icon={faChevronRight} />
+						</div>
+					</div>
 				</div>
 			)}
 		</div>

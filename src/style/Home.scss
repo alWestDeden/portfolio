@@ -7,37 +7,31 @@
 	justify-content: space-between;
 	align-items: center;
 	margin: 0;
-	& .about {
+	& .about-c {
 		position: relative;
 		z-index: 1;
 		height: fit-content;
 		width: 90%;
-		box-sizing: border-box;
 		background-color: $third-color;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 		margin-top: 50px;
 		padding: 25px;
-		& .me-svg {
+		// use media querries to place the picture
+		& .me-svg-c {
 			position: absolute;
-			bottom: -103px;
-			left: -9%;
-			width: 44%;
-			height: 80%;
-			& img {
-				width: 40%;
-				height: auto;
-			}
+			width: 12%;
+			bottom: -135%;
+			left: 0;
 		}
 	}
-	& .projects-cursor {
+	& .projects-c {
 		display: flex;
 		justify-content: flex-end;
 		width: 90%;
 		margin-top: 60px;
-		& .project-cursor {
+		& .project-c {
 			position: relative;
-			box-sizing: content-box;
 			box-shadow: 6px 4px 4px -2px $third-color;
 			border-radius: 10px;
 			width: 100%;
@@ -58,9 +52,8 @@
 					}
 				}
 			}
-			& .figure-cursor {
+			& .figure-c {
 				transform-origin: top left;
-				box-sizing: content-box;
 				margin: 0;
 				& img {
 					width: 100%;
@@ -97,7 +90,6 @@
 			margin: 0;
 			padding-left: 10px;
 			& li {
-				height: fit-content;
 				& button {
 					width: 200px;
 					background-color: $third-color;
@@ -134,48 +126,73 @@
 			}
 		}
 	}
-	& p {
-		margin: 0;
-	}
-	& .projects-touch {
+	& .about-ts {
 		position: relative;
-		width: 90%;
-		margin-top: 60px;
-		max-width: 1024px;
-		& .figure-touch {
-			width: 100%;
+		height: 90%;
+		width: 93%;
+		background-color: $third-color;
+		border-radius: 10px;
+		margin-top: 50px;
+		padding: 20px;
+		& .me-svg-ts {
+			display: block;
+			width: 33%;
 			margin: auto;
-			left: 0;
-			top: 0;
-			position: absolute;
-			transition: opacity 1s;
-			&-hide {
-				opacity: 0;
-			}
-			&-display-right {
-				animation: slide-right 1s forwards;
-			}
-			&-display-left {
-				animation: slide-left 1s forwards;
-			}
-			& img {
-				width: 100%;
-				height: 100%;
-				border-radius: 10px;
-				object-fit: cover;
-			}
-			& figcaption {
+		}
+	}
+	& .projects-ts {
+		position: relative;
+		width: 93%;
+		margin-top: 40px;
+		& .project-ts {
+			& .figure-ts {
 				position: absolute;
-				bottom: 2px;
-				left: 0;
 				width: 100%;
-				height: 25%;
-				background-color: white;
-				border-bottom-left-radius: 10px;
-				border-bottom-right-radius: 10px;
-				box-sizing: border-box;
-				padding: 10px;
-				color: $dark-color;
+				margin: 0;
+				box-shadow: 0 0 8px $secondary-color;
+				transition: opacity 1s;
+				&-hide {
+					opacity: 0;
+				}
+				&-move-right {
+					animation: slide-right 1s forwards;
+				}
+				&-move-left {
+					animation: slide-left 1s forwards;
+				}
+				& img {
+					height: 100%;
+					width: 100%;
+					border-radius: 10px;
+					object-fit: cover;
+				}
+				& figcaption {
+					position: absolute;
+					bottom: 2px;
+					left: 0;
+					width: 100%;
+					height: 25%;
+					background-color: $primary-color;
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
+					box-sizing: border-box;
+					padding: 10px;
+					color: $dark-color;
+				}
+			}
+			& .arrows-ts {
+				position: absolute;
+				width: 100%;
+				bottom: -50%;
+				display: flex;
+				justify-content: space-between;
+				& .icon {
+					display: inline-block;
+					font-size: 2.5rem;
+					& > path {
+						color: $secondary-color;
+					}
+				}
 			}
 		}
 	}

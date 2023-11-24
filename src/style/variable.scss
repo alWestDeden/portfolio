@@ -18,3 +18,11 @@ $font-nina: "Inter", sans-serif;
 $nina-color: #212529;
 $font-argent: "Montserrat", sans-serif;
 $argent-color: #00bc77;
+// media queries
+@mixin devices($breakpoint) {
+	@if $breakpoint == mobile {
+		@media only screen and (max-width: 1024px) {
+			@content;
+		}
+	}
+}
