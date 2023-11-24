@@ -105,7 +105,7 @@
   z-index: 1;
   height: -moz-fit-content;
   height: fit-content;
-  width: 90%;
+  width: 90vw;
   background-color: #e3c08f;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -114,27 +114,27 @@
 }
 .home .about-c .me-svg-c {
   position: absolute;
-  width: 12%;
+  width: 12vw;
   bottom: -135%;
   left: 0;
 }
 .home .projects-c {
   display: flex;
   justify-content: flex-end;
-  width: 90%;
+  width: 90vw;
   margin-top: 60px;
 }
 .home .projects-c .project-c {
   position: relative;
   box-shadow: 6px 4px 4px -2px #e3c08f;
   border-radius: 10px;
-  width: 100%;
+  width: 100vw;
   height: 300px;
 }
 .home .projects-c .project-c span {
   position: absolute;
   display: inline-block;
-  width: 90%;
+  width: 90vw;
   font-family: "Handlee", cursive;
   color: #e3c08f;
   padding-top: 10px;
@@ -152,7 +152,7 @@
   margin: 0;
 }
 .home .projects-c .project-c .figure-c img {
-  width: 100%;
+  width: 100vw;
   height: 300px;
   border-radius: 10px;
   -o-object-fit: cover;
@@ -162,7 +162,7 @@
   position: absolute;
   bottom: 2px;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 25%;
   background-color: white;
   border-bottom-left-radius: 10px;
@@ -221,7 +221,7 @@
 .home .about-ts {
   position: relative;
   height: 90%;
-  width: 93%;
+  width: 93vw;
   background-color: #e3c08f;
   border-radius: 10px;
   margin-top: 50px;
@@ -229,17 +229,17 @@
 }
 .home .about-ts .me-svg-ts {
   display: block;
-  width: 33%;
+  width: 33vw;
   margin: auto;
 }
 .home .projects-ts {
   position: relative;
-  width: 93%;
+  width: 93vw;
   margin-top: 40px;
 }
 .home .projects-ts .project-ts .figure-ts {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   box-shadow: 0 0 8px #e3e2db;
   transition: opacity 1s;
@@ -255,7 +255,7 @@
 }
 .home .projects-ts .project-ts .figure-ts img {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -264,7 +264,7 @@
   position: absolute;
   bottom: 2px;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 25%;
   background-color: #fdf8f4;
   border-bottom-left-radius: 10px;
@@ -275,7 +275,7 @@
 }
 .home .projects-ts .project-ts .arrows-ts {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   bottom: -50%;
   display: flex;
   justify-content: space-between;
