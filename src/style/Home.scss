@@ -1,0 +1,182 @@
+@import "./variable.scss";
+@import "./animation.scss";
+
+.home {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	& .about {
+		position: relative;
+		z-index: 1;
+		height: fit-content;
+		width: 90%;
+		box-sizing: border-box;
+		background-color: $third-color;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		margin-top: 50px;
+		padding: 25px;
+		& .me-svg {
+			position: absolute;
+			bottom: -103px;
+			left: -9%;
+			width: 44%;
+			height: 80%;
+			& img {
+				width: 40%;
+				height: auto;
+			}
+		}
+	}
+	& .projects-cursor {
+		display: flex;
+		justify-content: flex-end;
+		width: 90%;
+		margin-top: 60px;
+		& .project-cursor {
+			position: relative;
+			box-sizing: content-box;
+			box-shadow: 6px 4px 4px -2px $third-color;
+			border-radius: 10px;
+			width: 100%;
+			height: 300px;
+			& span {
+				position: absolute;
+				display: inline-block;
+				width: 90%;
+				font-family: $font-cursive;
+				color: $third-color;
+				padding-top: 10px;
+				text-align: right;
+				align-items: center;
+				& .icon {
+					margin-left: 10px;
+					& > path {
+						color: $third-color;
+					}
+				}
+			}
+			& .figure-cursor {
+				transform-origin: top left;
+				box-sizing: content-box;
+				margin: 0;
+				& img {
+					width: 100%;
+					height: 300px;
+					border-radius: 10px;
+					object-fit: cover;
+				}
+				& figcaption {
+					position: absolute;
+					bottom: 2px;
+					left: 0;
+					width: 100%;
+					height: 25%;
+					background-color: white;
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
+					box-sizing: border-box;
+					padding: 10px;
+					color: $dark-color;
+				}
+			}
+			& .animation-in {
+				animation: 400ms ease-out forwards slideIn;
+			}
+			& .animation-out {
+				animation: 100ms ease-out forwards slideOut;
+			}
+			& .hide {
+				display: none;
+			}
+		}
+		& .projects-menu {
+			list-style: none;
+			margin: 0;
+			padding-left: 10px;
+			& li {
+				height: fit-content;
+				& button {
+					width: 200px;
+					background-color: $third-color;
+					color: $primary-color;
+					border: none;
+					margin: 0;
+					padding: 10px;
+				}
+				& button:hover {
+					background-color: $fourth-color;
+					font-size: 1.1rem;
+				}
+				& .button-1 {
+					font-family: $font-kasa;
+					border-top-right-radius: 10px;
+				}
+				& .button-1:hover {
+					color: $kasa-color;
+				}
+				& .button-2 {
+					font-family: $font-nina;
+				}
+				& .button-2:hover {
+					color: $nina-color;
+				}
+				& .button-3 {
+					font-family: $font-argent;
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
+				}
+				& .button-3:hover {
+					color: $argent-color;
+				}
+			}
+		}
+	}
+	& p {
+		margin: 0;
+	}
+	& .projects-touch {
+		position: relative;
+		width: 90%;
+		margin-top: 60px;
+		max-width: 1024px;
+		& .figure-touch {
+			width: 100%;
+			margin: auto;
+			left: 0;
+			top: 0;
+			position: absolute;
+			transition: opacity 1s;
+			&-hide {
+				opacity: 0;
+			}
+			&-display-right {
+				animation: slide-right 1s forwards;
+			}
+			&-display-left {
+				animation: slide-left 1s forwards;
+			}
+			& img {
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+				object-fit: cover;
+			}
+			& figcaption {
+				position: absolute;
+				bottom: 2px;
+				left: 0;
+				width: 100%;
+				height: 25%;
+				background-color: white;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				box-sizing: border-box;
+				padding: 10px;
+				color: $dark-color;
+			}
+		}
+	}
+}

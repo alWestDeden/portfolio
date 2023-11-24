@@ -1,0 +1,13 @@
+@import "./variable.scss";
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	// border-top: 1px solid $dark-color;
+	// box-shadow: 0px -4px 4px 2px $primary-color;
+	& h3 {
+		display: inline-block;
+		margin: 0;
+	}
+}

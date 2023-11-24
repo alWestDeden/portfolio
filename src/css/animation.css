@@ -1,0 +1,47 @@
+@keyframes slideIn {
+  0% {
+    transform: Scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(-25px, -10px) scale(0.96);
+  }
+  75% {
+    transform: translate(0) scale(1.01);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.96);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.76);
+    opacity: 0;
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}/*# sourceMappingURL=animation.css.map */

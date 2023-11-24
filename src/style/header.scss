@@ -1,0 +1,33 @@
+@import "./variable.scss";
+.header {
+	// position: sticky;
+	// z-index: 99;
+	// top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	// box-shadow: 0px 4px 4px -2px $secondary-color;
+	// background-color: white;
+	& .title {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 0 10px;
+		& h2 {
+			text-align: right;
+		}
+	}
+	& nav {
+		display: flex;
+		margin-right: 10px;
+		& a {
+			& .icon {
+				font-size: 2rem;
+				margin-left: 10px;
+				& > path {
+					color: $dark-color;
+				}
+			}
+		}
+	}
+}

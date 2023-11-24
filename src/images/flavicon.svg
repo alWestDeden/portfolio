@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32mm"
+   height="32mm"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="flavicon.png"
+   inkscape:export-xdpi="514.36469"
+   inkscape:export-ydpi="514.36469"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="flavicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.4979517"
+     inkscape:cx="106.88757"
+     inkscape:cy="46.638211"
+     inkscape:window-width="1440"
+     inkscape:window-height="872"
+     inkscape:window-x="937"
+     inkscape:window-y="1440"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.8615px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';fill:#4e4e4e;fill-opacity:1;stroke-width:2.09458"
+       x="17.891859"
+       y="25.445168"
+       id="text2"
+       transform="scale(0.87003768,1.1493755)"
+       inkscape:label="B"><tspan
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';fill:#4e4e4e;fill-opacity:1;stroke-width:2.09458"
+         x="17.891859"
+         y="25.445168"
+         sodipodi:role="line">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.1996px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';fill:#e3c08f;fill-opacity:1;stroke-width:2.71282"
+       x="5.3260679"
+       y="25.445168"
+       id="text1-1"
+       transform="scale(0.87003768,1.1493755)"
+       inkscape:label="A"><tspan
+         id="tspan1-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';fill:#e3c08f;fill-opacity:1;stroke-width:2.71282"
+         x="5.3260679"
+         y="25.445168"
+         sodipodi:role="line">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.8615px;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';fill:#4e4e4e;fill-opacity:1;stroke-width:2.09458"
+       x="-0.61562967"
+       y="25.445168"
+       id="text1"
+       transform="scale(0.87003768,1.1493755)"
+       inkscape:label="B"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Arial Black';-inkscape-font-specification:'Arial Black, ';fill:#4e4e4e;fill-opacity:1;stroke-width:2.09458"
+         x="-0.61562967"
+         y="25.445168"
+         sodipodi:role="line">B</tspan></text>
+  </g>
+</svg>
