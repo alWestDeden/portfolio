@@ -1,0 +1,198 @@
+@import "./variable.scss";
+@import "./animation.scss";
+.projects {
+	height: 48vh;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 9vh;
+	margin-bottom: 5vh;
+	overflow: visible;
+	& .project {
+		position: relative;
+		overflow: visible;
+		// !!!! change width regarding responsive 1280 1024 960 760 ... !!!!!!!!
+		width: 78%;
+		height: inherit;
+		box-shadow: 6px 4px 4px -2px $third-color;
+		border-radius: 10px;
+		// use media querries to place the picture
+		& .me-svg {
+			position: absolute;
+			width: 17%;
+			top: 14vh;
+			left: 42%;
+		}
+		& span {
+			position: absolute;
+			display: inline-block;
+			width: 90%;
+			font-family: $font-cursive;
+			color: $third-color;
+			padding-top: 10px;
+			text-align: right;
+			align-items: center;
+			& .icon {
+				margin-left: 10px;
+				& > path {
+					color: $third-color;
+				}
+			}
+		}
+		& .figure {
+			transform-origin: top left;
+			margin: 0;
+			& img {
+				width: 100%;
+				height: inherit;
+				border-radius: 10px;
+				object-fit: cover;
+			}
+			& .bottom-caption {
+				position: absolute;
+				bottom: 2px;
+				left: 0;
+				width: 100%;
+				height: 12vh;
+				background-color: $primary-color;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				box-sizing: border-box;
+				padding: 10px;
+				color: $dark-color;
+			}
+		}
+		& .animation-in {
+			animation: 400ms ease-out forwards slideIn;
+		}
+		& .animation-out {
+			animation: 100ms ease-out forwards slideOut;
+		}
+		& .hide {
+			display: none;
+		}
+	}
+	& .projects-menu {
+		list-style: none;
+		margin: 0;
+		box-sizing: border-box;
+		padding-left: 10px;
+		& li {
+			& button {
+				width: 200px;
+				box-sizing: border-box;
+				background-color: $third-color;
+				color: $primary-color;
+				border: none;
+				margin: 0;
+				padding: 10px;
+			}
+			& button:hover {
+				background-color: $fourth-color;
+				font-size: 1.1rem;
+			}
+			& .project-name-0 {
+				font-family: $font-kasa;
+				border-top-right-radius: 10px;
+			}
+			& .project-name-0:hover {
+				color: $kasa-color;
+			}
+			& .project-name-1 {
+				font-family: $font-nina;
+			}
+			& .project-name-1:hover {
+				color: $nina-color;
+			}
+			& .project-name-2 {
+				font-family: $font-argent;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+			}
+			& .project-name-2:hover {
+				color: $argent-color;
+			}
+		}
+	}
+}
+.projects-ts {
+	position: relative;
+	height: 75vh;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	& .project-ts {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		box-shadow: none;
+		& .figure-ts {
+			transform-origin: center center;
+			overflow: hidden;
+			height: 100%;
+			width: 100%;
+			box-shadow: 0 0 8px $secondary-color;
+			& .bottom-caption-ts {
+				display: flex;
+				align-items: center;
+				bottom: 0;
+				height: 25%;
+				background-color: $light-color;
+				& .caption-title {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					& h4 {
+						display: inline-block;
+						width: fit-content;
+						padding: 0.1rem 0;
+						margin: 0;
+						font-family: $font-title;
+					}
+					& p {
+						display: inline-block;
+						padding: 0 0 0 5px;
+						font-size: 1.2rem;
+					}
+					& .project-name-0 {
+						font-family: $font-kasa;
+						color: $kasa-color;
+					}
+					& .project-name-1 {
+						font-family: $font-nina;
+						color: $nina-color;
+					}
+					& .project-name-2 {
+						font-family: $font-argent;
+						color: $argent-color;
+					}
+				}
+			}
+		}
+	}
+	& .hide {
+		display: none;
+	}
+	& .slide-right {
+		animation: slideRight 400ms forwards;
+	}
+	& .slide-left {
+		animation: slideLeft 400ms forwards;
+	}
+	& .arrows-ts {
+		position: absolute;
+		width: 93%;
+		display: flex;
+		justify-content: space-between;
+		& .icon {
+			display: inline-block;
+			font-size: 3rem;
+			& > path {
+				color: $secondary-color;
+			}
+		}
+	}
+}

@@ -1,10 +1,12 @@
-import { touchScreen } from "../../pages/Home"
+import { useContext } from "react"
+import { DeviceContext } from "../../index"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import "../../style/header.scss"
 
 export default function Header() {
+	const touchScreen = useContext(DeviceContext)
 	return (
 		<div className={!touchScreen ? "header" : "header header-ts"}>
 			<div className='title'>
