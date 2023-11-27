@@ -1,17 +1,15 @@
+import { touchScreen } from "../../pages/Home"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import "../../style/header.scss"
 
 export default function Header() {
-	// const gitHub = <FontAwesomeIcon icon='fa-brands fa-github' />
-	// const linkedIn = <FontAwesomeIcon icon='fa-brands fa-linkedin' />
-	// const mail = <FontAwesomeIcon icon='fa-brands fa-envelope' />
 	return (
-		<div className='header'>
+		<div className={!touchScreen ? "header" : "header header-ts"}>
 			<div className='title'>
 				<h3>portfolio</h3>
-				<h1>BEN AOUMAR BOUMEDIENE</h1>
+				<h1>{!touchScreen ? "BEN AOUMAR BOUMEDIENE" : "BAB"}</h1>
 				<h2>Intégrateur Web</h2>
 			</div>
 			<nav className='navigation'>

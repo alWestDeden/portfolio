@@ -30,30 +30,36 @@
     opacity: 0;
   }
 }
-@keyframes slide-right {
+@keyframes slideRight {
   0% {
     transform: translateX(100%);
   }
+  79% {
+    transform: translateX(-1%);
+  }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
-@keyframes slide-left {
+@keyframes slideLeft {
   0% {
     transform: translateX(-100%);
   }
+  79% {
+    transform: translateX(1%);
+  }
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 }
 * {
   font-family: "Didact Gothic", sans-serif;
   color: #4e4e4e;
   font-size: 1rem;
-  width: 100vw;
+  overflow-x: hidden;
 }
 * body {
-  margin: 0;
+  margin: 0 3.5vw;
   background-color: #fdf8f4;
 }
 * body a {

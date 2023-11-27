@@ -1,14 +1,11 @@
 @import "./variable.scss";
 .header {
-	// position: sticky;
-	// z-index: 99;
-	// top: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 100px;
-	// box-shadow: 0px 4px 4px -2px $secondary-color;
-	// background-color: white;
+	height: 10vh;
+	width: 100%;
+	border-bottom: 1px solid $fourth-color;
 	& .title {
 		display: flex;
 		flex-direction: column;
@@ -30,4 +27,7 @@
 			}
 		}
 	}
+}
+.header-ts {
+	height: 15vh;
 }
