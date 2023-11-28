@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { useSwipeable } from "react-swipeable"
 import { showProjectEnter, showProjectHover, hideProjectLeave } from "../../interaction/selectProject"
 import projects from "../../data/projects"
@@ -12,6 +13,7 @@ export default function Projects({ touchScreen }) {
 	const [currentProject, setCurrentProject] = useState(null)
 	const [index, setIndex] = useState(0)
 	const [direction, setDirection] = useState("")
+	const navigate = useNavigate()
 	const handlers = useSwipeable({
 		onSwipedLeft: () => {
 			index === projects.length - 1 ? setIndex(0) : setIndex(index + 1)
@@ -29,11 +31,14 @@ export default function Projects({ touchScreen }) {
 				document.getElementById(projects[index].id).classList.remove("slide-right")
 			}
 		},
+		onTap: () => {
+			navigate(`/project/${projects[index].id}`)
+		},
 	})
 	return (
 		<>
 			{!touchScreen ? (
-				<div className='projects'>
+				<section className='projects'>
 					<div className='project'>
 						<img className='me-svg' src={meSVG} alt='Un dessin de moi' />
 						<span>
@@ -43,7 +48,7 @@ export default function Projects({ touchScreen }) {
 						{projects.map((project) => (
 							<figure key={project.id} id={project.id} className='figure hide'>
 								<img src={project.img_169} alt={project.name} />
-								<figcaption className='bottom-caption'>{project.description}</figcaption>
+								<figcaption className='caption'>{project.description}</figcaption>
 							</figure>
 						))}
 					</div>
@@ -67,16 +72,19 @@ export default function Projects({ touchScreen }) {
 										e.preventDefault()
 										hideProjectLeave(project.id)
 										setCurrentProject(null)
+									}}
+									onClick={(e) => {
+										navigate(`/project/${project.id}`)
 									}}>
 									{project.name}
 								</button>
 							</li>
 						))}
 					</ul>
-				</div>
+				</section>
 			) : (
-				<div className='projects projects-ts'>
-					<div {...handlers} id='touchProjects' className='project project-ts'>
+				<section className='projects projects-ts'>
+					<div {...handlers} className='project project-ts'>
 						{projects.map((project) => (
 							// <figure key={project.id} id={project.id} className='figure-ts'>
 							<figure
@@ -84,7 +92,7 @@ export default function Projects({ touchScreen }) {
 								id={project.id}
 								className={`figure figure-ts ${index === project.nb ? direction : "hide"}`}>
 								<img src={project.img_916} alt={project.name} />
-								<figcaption className='bottom-caption bottom-caption-ts'>
+								<figcaption className='caption caption-ts'>
 									<div className='caption-text'>
 										<div className='caption-title'>
 											<h4>Projet : </h4>
@@ -100,7 +108,7 @@ export default function Projects({ touchScreen }) {
 							<FontAwesomeIcon className='icon' icon={faChevronRight} />
 						</div>
 					</div>
-				</div>
+				</section>
 			)}
 		</>
 	)

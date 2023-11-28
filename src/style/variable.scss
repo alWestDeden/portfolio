@@ -12,11 +12,11 @@ $dark-color: #4e4e4e;
 $font-text: "Didact Gothic", sans-serif;
 $font-title: "Black Han Sans", sans-serif;
 $font-cursive: "Handlee", cursive;
-$font-kasa: "Montserrat", sans-serif;
+$kasa-font: "Montserrat", sans-serif;
 $kasa-color: #ff6060;
-$font-nina: "Inter", sans-serif;
+$nina-font: "Inter", sans-serif;
 $nina-color: #212529;
-$font-argent: "Montserrat", sans-serif;
+$argent-font: "Montserrat", sans-serif;
 $argent-color: #00bc77;
 // media queries
 @mixin devices($breakpoint) {

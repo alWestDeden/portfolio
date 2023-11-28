@@ -106,18 +106,17 @@
   }
 }
 .projects {
-  height: 48vh;
+  height: 44vh;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 9vh;
-  margin-bottom: 5vh;
+  justify-content: flex-start;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
   overflow: visible;
 }
 .projects .project {
   position: relative;
-  overflow: visible;
-  width: 78%;
+  width: calc(74% - 30px);
   height: inherit;
   box-shadow: 6px 4px 4px -2px #e3c08f;
   border-radius: 10px;
@@ -155,18 +154,19 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.projects .project .figure .bottom-caption {
+.projects .project .figure .caption {
   position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 12vh;
-  background-color: #fdf8f4;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-sizing: border-box;
-  padding: 10px;
+  top: 20px;
+  right: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #e3c08f;
+  border-radius: 5px;
+  border: 1px solid #ebd0ac;
+  padding: 10px 20px;
   color: #4e4e4e;
+  text-align: center;
+  white-space: nowrap;
 }
 .projects .project .animation-in {
   animation: 400ms ease-out forwards slideIn;
@@ -179,18 +179,20 @@
 }
 .projects .projects-menu {
   list-style: none;
+  width: 200px;
   margin: 0;
-  box-sizing: border-box;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 .projects .projects-menu li button {
-  width: 200px;
   box-sizing: border-box;
+  width: inherit;
   background-color: #e3c08f;
   color: #fdf8f4;
   border: none;
-  margin: 0;
+  margin-bottom: 5px;
   padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .projects .projects-menu li button:hover {
   background-color: #ebd0ac;
@@ -198,7 +200,6 @@
 }
 .projects .projects-menu li .project-name-0 {
   font-family: "Montserrat", sans-serif;
-  border-top-right-radius: 10px;
 }
 .projects .projects-menu li .project-name-0:hover {
   color: #ff6060;
@@ -211,8 +212,6 @@
 }
 .projects .projects-menu li .project-name-2 {
   font-family: "Montserrat", sans-serif;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 .projects .projects-menu li .project-name-2:hover {
   color: #00bc77;
@@ -241,19 +240,19 @@
   width: 100%;
   box-shadow: 0 0 8px #e3e2db;
 }
-.projects-ts .project-ts .figure-ts .bottom-caption-ts {
+.projects-ts .project-ts .figure-ts .caption-ts {
   display: flex;
   align-items: center;
   bottom: 0;
   height: 25%;
   background-color: white;
 }
-.projects-ts .project-ts .figure-ts .bottom-caption-ts .caption-title {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.projects-ts .project-ts .figure-ts .bottom-caption-ts .caption-title h4 {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-title h4 {
   display: inline-block;
   width: -moz-fit-content;
   width: fit-content;
@@ -261,20 +260,20 @@
   margin: 0;
   font-family: "Black Han Sans", sans-serif;
 }
-.projects-ts .project-ts .figure-ts .bottom-caption-ts .caption-title p {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-title p {
   display: inline-block;
   padding: 0 0 0 5px;
   font-size: 1.2rem;
 }
-.projects-ts .project-ts .figure-ts .bottom-caption-ts .caption-title .project-name-0 {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-title .project-name-0 {
   font-family: "Montserrat", sans-serif;
   color: #ff6060;
 }
-.projects-ts .project-ts .figure-ts .bottom-caption-ts .caption-title .project-name-1 {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-title .project-name-1 {
   font-family: "Inter", sans-serif;
   color: #212529;
 }
-.projects-ts .project-ts .figure-ts .bottom-caption-ts .caption-title .project-name-2 {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-title .project-name-2 {
   font-family: "Montserrat", sans-serif;
   color: #00bc77;
 }

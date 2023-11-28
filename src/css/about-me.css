@@ -52,36 +52,29 @@
     transform: translateX(0);
   }
 }
-* {
-  font-family: "Didact Gothic", sans-serif;
-  color: #4e4e4e;
-  font-size: 1rem;
-  overflow-x: hidden;
+.about {
+  position: relative;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #e3c08f;
+  border-radius: 10px;
+  margin-top: 5vh;
+  padding: 25px;
 }
-* body {
-  margin: 0 6%;
-  background-color: #fdf8f4;
+
+.about-ts {
+  display: flex;
+  align-items: center;
+  height: 75vh;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #e3e2db;
+  margin-top: 5vh;
+  padding: 20px;
 }
-* body a {
-  text-decoration: none;
-  font-weight: bold;
-}
-* body p {
-  margin: 0;
-}
-* body h1 {
+.about-ts p {
   display: inline-block;
-  font-family: "Black Han Sans", sans-serif;
-  font-size: 2rem;
-  margin: 0;
-}
-* body h2 {
-  display: inline-block;
+  text-align: center;
   font-size: 1.1rem;
-  margin: 0;
-}
-* body h3 {
-  display: inline-block;
-  font-family: "Handlee", cursive;
-  margin: 0;
-}/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=about-me.css.map */

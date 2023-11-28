@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&display=swap");
+@keyframes slideIn {
+  0% {
+    transform: Scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(-25px, -10px) scale(0.96);
+  }
+  75% {
+    transform: translate(0) scale(1.01);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.96);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.76);
+    opacity: 0;
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+  }
+  79% {
+    transform: translateX(-1%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  79% {
+    transform: translateX(1%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.selected-project {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  margin: 5vh 0;
+  overflow: visible;
+}
+.selected-project-img {
+  display: block;
+  width: 64%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 5px;
+  box-shadow: 0 0 8px #e3e2db;
+}
+.selected-project-info {
+  position: relative;
+  width: 36%;
+  padding: 10px;
+}
+.selected-project-info .title {
+  font-size: 2rem;
+  margin: 0;
+}
+.selected-project-info .title-kasa {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+}
+.selected-project-info .title-nina {
+  font-family: "Inter", sans-serif;
+  color: #212529;
+}
+.selected-project-info .title-argent {
+  font-family: "Montserrat", sans-serif;
+  color: #00bc77;
+}
+.selected-project-info h5 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.selected-project-info .details {
+  margin-top: 10px;
+}
+.selected-project-info .constraints {
+  margin-top: 10px;
+}
+.selected-project-info .icons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.selected-project-info .icons .tech-icon {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+.selected-project-info .icons .tech-name {
+  font-size: 1rem;
+}
+.selected-project-info .return {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+}
+.selected-project-info .return-home {
+  display: inline-block;
+  font-size: 2rem;
+}/*# sourceMappingURL=Project.css.map */

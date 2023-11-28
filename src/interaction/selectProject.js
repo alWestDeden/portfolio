@@ -1,21 +1,21 @@
 // show project when mouse enter the button
 export function showProjectEnter(project) {
 	//define the images elements
-	const project08 = document.getElementById("project08")
-	const project09 = document.getElementById("project09")
-	const project11 = document.getElementById("project11")
+	const kasa = document.getElementById("kasa")
+	const nina = document.getElementById("nina")
+	const argent = document.getElementById("argent")
 	switch (project) {
-		case "project08":
-			project08.classList.remove("hide")
-			project08.classList.add("animation-in")
+		case "kasa":
+			kasa.classList.remove("hide")
+			kasa.classList.add("animation-in")
 			break
-		case "project09":
-			project09.classList.remove("hide")
-			project09.classList.add("animation-in")
+		case "nina":
+			nina.classList.remove("hide")
+			nina.classList.add("animation-in")
 			break
-		case "project11":
-			project11.classList.remove("hide")
-			project11.classList.add("animation-in")
+		case "argent":
+			argent.classList.remove("hide")
+			argent.classList.add("animation-in")
 			break
 		default:
 			break
@@ -24,21 +24,21 @@ export function showProjectEnter(project) {
 // show project when mouse get hover the button after being hover another one
 export function showProjectHover(currentProject) {
 	//define the images elements
-	const project08 = document.getElementById("project08")
-	const project09 = document.getElementById("project09")
-	const project11 = document.getElementById("project11")
+	const kasa = document.getElementById("kasa")
+	const nina = document.getElementById("nina")
+	const argent = document.getElementById("argent")
 	switch (currentProject) {
-		case "project08":
-			project08.classList.remove("animation-in")
-			project08.classList.add("hide")
+		case "kasa":
+			kasa.classList.remove("animation-in")
+			kasa.classList.add("hide")
 			break
-		case "project09":
-			project09.classList.remove("animation-in")
-			project09.classList.add("hide")
+		case "nina":
+			nina.classList.remove("animation-in")
+			nina.classList.add("hide")
 			break
-		case "project11":
-			project11.classList.remove("animation-in")
-			project11.classList.add("hide")
+		case "argent":
+			argent.classList.remove("animation-in")
+			argent.classList.add("hide")
 			break
 		default:
 			break
@@ -47,32 +47,32 @@ export function showProjectHover(currentProject) {
 // hide projects when mouse leave button
 export function hideProjectLeave(currentProject) {
 	//define the images elements
-	const project08 = document.getElementById("project08")
-	const project09 = document.getElementById("project09")
-	const project11 = document.getElementById("project11")
+	const kasa = document.getElementById("kasa")
+	const nina = document.getElementById("nina")
+	const argent = document.getElementById("argent")
 	switch (currentProject) {
-		case "project08":
-			project08.classList.remove("animation-in")
-			project08.classList.add("animation-out")
+		case "kasa":
+			kasa.classList.remove("animation-in")
+			kasa.classList.add("animation-out")
 			setTimeout(() => {
-				project08.classList.remove("animation-out")
-				project08.classList.add("hide")
+				kasa.classList.remove("animation-out")
+				kasa.classList.add("hide")
 			}, 100)
 			break
-		case "project09":
-			project09.classList.remove("animation-in")
-			project09.classList.add("animation-out")
+		case "nina":
+			nina.classList.remove("animation-in")
+			nina.classList.add("animation-out")
 			setTimeout(() => {
-				project09.classList.remove("animation-out")
-				project09.classList.add("hide")
+				nina.classList.remove("animation-out")
+				nina.classList.add("hide")
 			}, 100)
 			break
-		case "project11":
-			project11.classList.remove("animation-in")
-			project11.classList.add("animation-out")
+		case "argent":
+			argent.classList.remove("animation-in")
+			argent.classList.add("animation-out")
 			setTimeout(() => {
-				project11.classList.remove("animation-out")
-				project11.classList.add("hide")
+				argent.classList.remove("animation-out")
+				argent.classList.add("hide")
 			}, 100)
 			break
 		default:

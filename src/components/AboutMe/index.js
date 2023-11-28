@@ -1,7 +1,7 @@
 import "../../style/about-me.scss"
 export default function AboutMe({ touchScreen }) {
 	return (
-		<div className={!touchScreen ? "about" : "about about-ts"}>
+		<section className={!touchScreen ? "about" : "about about-ts"}>
 			<p>
 				Bienvenue sur mon Portfolio,
 				<br />
@@ -13,6 +13,6 @@ export default function AboutMe({ touchScreen }) {
 				Vous trouverez sur ce site quelques uns des Projets validés dans le cadre de la formation d'Intégrateur Web que j'ai suivi
 				chez OpenClassRooms.
 			</p>
-		</div>
+		</section>
 	)
 }
