@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.cede2b5f.css",
-    "main.js": "/portfolio/static/js/main.e2d1c115.js",
-    "static/media/project09_169.jpg": "/portfolio/static/media/project09_169.7f56f71f2aae362e1db0.jpg",
-    "static/media/project08_169.jpg": "/portfolio/static/media/project08_169.8a95ccd4d4649a19e8b3.jpg",
-    "static/media/project11_169.jpg": "/portfolio/static/media/project11_169.60ce12364e242abae069.jpg",
-    "static/media/project09_916.jpg": "/portfolio/static/media/project09_916.953fd441c269ebe7511f.jpg",
-    "static/media/project08_916.jpg": "/portfolio/static/media/project08_916.8a573c4e143fc29441dc.jpg",
-    "static/media/project11_916.jpg": "/portfolio/static/media/project11_916.41461b35df20f6efea9f.jpg",
+    "main.css": "/portfolio/static/css/main.3c64d87b.css",
+    "main.js": "/portfolio/static/js/main.98ecffce.js",
+    "static/media/nina_169.jpg": "/portfolio/static/media/nina_169.7f56f71f2aae362e1db0.jpg",
+    "static/media/kasa_169.jpg": "/portfolio/static/media/kasa_169.8a95ccd4d4649a19e8b3.jpg",
+    "static/media/argent_169.jpg": "/portfolio/static/media/argent_169.60ce12364e242abae069.jpg",
+    "static/media/nina_916.jpg": "/portfolio/static/media/nina_916.953fd441c269ebe7511f.jpg",
+    "static/media/kasa_916.jpg": "/portfolio/static/media/kasa_916.8a573c4e143fc29441dc.jpg",
+    "static/media/argent_916.jpg": "/portfolio/static/media/argent_916.41461b35df20f6efea9f.jpg",
     "static/media/me-v2a.png": "/portfolio/static/media/me-v2a.b9ca808ded8fea5bb228.png",
     "index.html": "/portfolio/index.html",
-    "main.cede2b5f.css.map": "/portfolio/static/css/main.cede2b5f.css.map",
-    "main.e2d1c115.js.map": "/portfolio/static/js/main.e2d1c115.js.map"
+    "main.3c64d87b.css.map": "/portfolio/static/css/main.3c64d87b.css.map",
+    "main.98ecffce.js.map": "/portfolio/static/js/main.98ecffce.js.map"
   },
   "entrypoints": [
-    "static/css/main.cede2b5f.css",
-    "static/js/main.e2d1c115.js"
+    "static/css/main.3c64d87b.css",
+    "static/js/main.98ecffce.js"
   ]
 }
