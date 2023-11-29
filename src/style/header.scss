@@ -30,3 +30,8 @@
 .header-ts {
 	height: 15vh;
 }
+@include devices(tablet) {
+	.header-ts {
+		height: 20vh;
+	}
+}
