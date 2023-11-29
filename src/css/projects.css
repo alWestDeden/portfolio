@@ -317,5 +317,6 @@
   .projects-ts .project-ts .figure-ts .caption-ts {
     width: 66%;
     height: 33%;
+    overflow-y: hidden;
   }
 }/*# sourceMappingURL=projects.css.map */
