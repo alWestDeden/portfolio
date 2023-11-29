@@ -308,13 +308,13 @@
   color: #e3e2db;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px), only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
   .projects-ts {
     height: 48vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
   }
   .projects-ts .project-ts .figure-ts .caption-ts {
-    height: 25%;
+    height: 33%;
   }
 }/*# sourceMappingURL=projects.css.map */

@@ -222,3 +222,17 @@
 		}
 	}
 }
+@include devices(landscape) {
+	.projects-ts {
+		height: 48vh;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		& .project-ts {
+			& .figure-ts {
+				& .caption-ts {
+					height: 33%;
+				}
+			}
+		}
+	}
+}

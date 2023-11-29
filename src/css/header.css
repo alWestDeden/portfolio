@@ -83,8 +83,8 @@
   height: 15vh;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px), only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
   .header-ts {
-    height: 22vh;
+    height: 24vh;
   }
 }/*# sourceMappingURL=header.css.map */
