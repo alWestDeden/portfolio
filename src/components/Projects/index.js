@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { useSwipeable } from "react-swipeable"
 import { showProjectEnter, showProjectHover, hideProjectLeave } from "../../interaction/selectProject"
 import projects from "../../data/projects"
-import meSVG from "../../images/me-v2a.png"
+// import meSVG from "../../images/me-v2a.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRightLong, faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 import "../../style/projects.scss"
@@ -40,7 +40,7 @@ export default function Projects({ touchScreen }) {
 			{!touchScreen ? (
 				<section className='projects'>
 					<div className='project'>
-						<img className='me-svg' src={meSVG} alt='Un dessin de moi' />
+						{/* <img className='me-svg' src={meSVG} alt='Un dessin de moi' /> */}
 						<span>
 							Choisisez un projet
 							<FontAwesomeIcon className='icon' icon={faArrowRightLong} />
