@@ -1,7 +1,7 @@
-import { useContext } from "react"
-import { DeviceContext } from "../../index"
+import { useContext, useEffect } from "react"
 import { useParams } from "react-router"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import { DeviceContext } from "../../index"
 import projects from "../../data/projects"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe, faHouse } from "@fortawesome/free-solid-svg-icons"
@@ -14,6 +14,10 @@ export default function Project() {
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
 	const { name, img_169, details, constraints, technologies, code, site } = selectedProject[0]
+	const { pathname } = useLocation()
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
 	return (
 		<section className={!touchScreen ? "selected" : "selected selected--ts"}>
 			<div className={!touchScreen ? "selected-left" : "selected-left selected-left--ts"}>
