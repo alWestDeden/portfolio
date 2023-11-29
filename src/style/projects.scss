@@ -115,9 +115,9 @@
 }
 .projects-ts {
 	position: relative;
-	height: 75vh;
-	margin-top: 5vh;
-	margin-bottom: 5vh;
+	height: 40vh;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
 	& .project-ts {
 		position: absolute;
 		display: flex;
@@ -127,48 +127,60 @@
 		height: 100%;
 		width: 100%;
 		box-shadow: none;
+		border-radius: 0;
 		& .figure-ts {
 			transform-origin: center center;
 			overflow: hidden;
 			height: 100%;
 			width: 100%;
 			box-shadow: 0 0 8px $secondary-color;
+			& img {
+				border-radius: 0;
+			}
 			& .caption-ts {
 				display: flex;
 				align-items: center;
-				top: unset;
-				right: unset;
-				bottom: 0;
-				height: 25%;
+				top: 25px;
+				right: 0;
+				height: 33%;
 				background-color: $light-color;
-				& .caption-title {
-					display: flex;
-					justify-content: flex-start;
-					align-items: center;
-					& h4 {
-						display: inline-block;
-						width: fit-content;
-						padding: 0.1rem 0;
-						margin: 0;
-						font-family: $font-title;
+				box-sizing: border-box;
+				white-space: unset;
+				text-align: left;
+				border-radius: 0;
+				border-right: unset;
+				width: 84%;
+				& .caption-text {
+					& .caption-title {
+						display: flex;
+						justify-content: flex-start;
+						align-items: flex-end;
+						& h4 {
+							display: inline-block;
+							margin: 0;
+							font-family: $font-title;
+						}
+						& p {
+							display: inline-block;
+							margin-left: 5px;
+							font-size: 1.2rem;
+						}
+						& .project-name-0 {
+							font-family: $kasa-font;
+							color: $kasa-color;
+						}
+						& .project-name-1 {
+							font-family: $nina-font;
+							color: $nina-color;
+						}
+						& .project-name-2 {
+							font-family: $argent-font;
+							color: $argent-color;
+						}
 					}
-					& p {
-						display: inline-block;
-						padding: 0 0 0 5px;
-						font-size: 1.2rem;
-					}
-					& .project-name-0 {
-						font-family: $kasa-font;
-						color: $kasa-color;
-					}
-					& .project-name-1 {
-						font-family: $nina-font;
-						color: $nina-color;
-					}
-					& .project-name-2 {
-						font-family: $argent-font;
-						color: $argent-color;
-					}
+					// & p {
+					// 	margin-top: 5px;
+					// }
 				}
 			}
 		}
@@ -184,7 +196,7 @@
 	}
 	& .arrows-ts {
 		position: absolute;
-		width: 93%;
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		& .icon {
@@ -192,6 +204,20 @@
 			font-size: 3rem;
 			& > path {
 				color: $secondary-color;
+			}
+		}
+	}
+}
+@include devices(tablet) {
+	.projects-ts {
+		height: 48vh;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		& .project-ts {
+			& .figure-ts {
+				& .caption-ts {
+					height: 25%;
+				}
 			}
 		}
 	}

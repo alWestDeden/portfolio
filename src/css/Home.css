@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   margin: 0;
 }
 .home .me-svg-ts {

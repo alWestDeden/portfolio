@@ -11,7 +11,7 @@ const projects = [
 		name: "Kasa",
 		img_169: kasaIMG169,
 		img_916: kasaIMG916,
-		description: "Plateforme de location d'appartements entre particuliers",
+		description: "Plateforme de location d'appartements entre particuliers.",
 		details:
 			"A partir de la maquette Figma, il a fallu développer l'application avec React et React-Router. Le Back-End n'étant pas développé on le simule en récupérant les informations de chaque appartements dans un fichier JSON. SASS a été utilisé pour génerer le style CSS.",
 		constraints:
@@ -26,7 +26,7 @@ const projects = [
 		name: "Nina Carducci",
 		img_169: ninaIMG169,
 		img_916: ninaIMG916,
-		description: "Portfolio de la photographe Nina Carducci",
+		description: "Portfolio de la photographe Nina Carducci.",
 		details:
 			"Ici, le challenge était d'optimiser le site tant sur les performances que sur le SEO. Ensuite, il a fallu mettre en place le référencement local à l'aide de Schema.org, ajouter les metas pour les réseaux sociaux et le conformer aux exigences d'accessibilité.",
 		constraints:
@@ -41,7 +41,7 @@ const projects = [
 		name: "ARGENTBANK",
 		img_169: argentIMG169,
 		img_916: argentIMG916,
-		description: "Application Web Bancaire",
+		description: "Application Web Bancaire.",
 		details:
 			"En se basant sur sur des pages HTML statique j'ai développé à l'aide de React, React-Router et Redux un site permettant à l'utilisateur autorisé de se connecter en utilisant un Token et de changer son nom d'utilisateur. Il fallait aussi fournir un fichier Swagger décrivant les requêtes nécessaires pour afficher les différents compte et leurs transactions.",
 		constraints:

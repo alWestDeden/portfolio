@@ -20,8 +20,8 @@ $argent-font: "Montserrat", sans-serif;
 $argent-color: #00bc77;
 // media queries
 @mixin devices($breakpoint) {
-	@if $breakpoint == mobile {
-		@media only screen and (max-width: 1024px) {
+	@if $breakpoint == tablet {
+		@media only screen and (min-width: 600px) and (max-width: 1024px), only screen and (orientation: landscape) {
 			@content;
 		}
 	}

@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	min-height: fit-content;
 	margin: 0;
 	& .me-svg-ts {
 		position: fixed;

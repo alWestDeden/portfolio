@@ -4,8 +4,7 @@ import { Link, useLocation } from "react-router-dom"
 import { DeviceContext } from "../../index"
 import projects from "../../data/projects"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobe, faHouse } from "@fortawesome/free-solid-svg-icons"
-import { faClipboard } from "@fortawesome/free-regular-svg-icons"
+import { faGlobe, faHouse, faScroll } from "@fortawesome/free-solid-svg-icons"
 import { faCss3Alt, faFigma, faGithub, faHtml5, faSquareJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons"
 import "../../style/Project.scss"
 
@@ -67,7 +66,7 @@ export default function Project() {
 								break
 							case "Lighthouse":
 							case "Swagger":
-								techIcon = faClipboard
+								techIcon = faScroll
 								break
 							default:
 						}

@@ -219,9 +219,9 @@
 
 .projects-ts {
   position: relative;
-  height: 75vh;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  height: 40vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 .projects-ts .project-ts {
   position: absolute;
@@ -232,6 +232,7 @@
   height: 100%;
   width: 100%;
   box-shadow: none;
+  border-radius: 0;
 }
 .projects-ts .project-ts .figure-ts {
   transform-origin: center center;
@@ -240,42 +241,47 @@
   width: 100%;
   box-shadow: 0 0 8px #e3e2db;
 }
+.projects-ts .project-ts .figure-ts img {
+  border-radius: 0;
+}
 .projects-ts .project-ts .figure-ts .caption-ts {
   display: flex;
   align-items: center;
-  top: unset;
-  right: unset;
-  bottom: 0;
-  height: 25%;
+  top: 25px;
+  right: 0;
+  height: 33%;
   background-color: white;
+  box-sizing: border-box;
+  white-space: unset;
+  text-align: left;
+  border-radius: 0;
+  border-right: unset;
+  width: 84%;
 }
-.projects-ts .project-ts .figure-ts .caption-ts .caption-title {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-text .caption-title {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
 }
-.projects-ts .project-ts .figure-ts .caption-ts .caption-title h4 {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-text .caption-title h4 {
   display: inline-block;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.1rem 0;
   margin: 0;
   font-family: "Black Han Sans", sans-serif;
 }
-.projects-ts .project-ts .figure-ts .caption-ts .caption-title p {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-text .caption-title p {
   display: inline-block;
-  padding: 0 0 0 5px;
+  margin-left: 5px;
   font-size: 1.2rem;
 }
-.projects-ts .project-ts .figure-ts .caption-ts .caption-title .project-name-0 {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-text .caption-title .project-name-0 {
   font-family: "Montserrat", sans-serif;
   color: #ff6060;
 }
-.projects-ts .project-ts .figure-ts .caption-ts .caption-title .project-name-1 {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-text .caption-title .project-name-1 {
   font-family: "Inter", sans-serif;
   color: #212529;
 }
-.projects-ts .project-ts .figure-ts .caption-ts .caption-title .project-name-2 {
+.projects-ts .project-ts .figure-ts .caption-ts .caption-text .caption-title .project-name-2 {
   font-family: "Montserrat", sans-serif;
   color: #00bc77;
 }
@@ -290,7 +296,7 @@
 }
 .projects-ts .arrows-ts {
   position: absolute;
-  width: 93%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -300,4 +306,15 @@
 }
 .projects-ts .arrows-ts .icon > path {
   color: #e3e2db;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px), only screen and (orientation: landscape) {
+  .projects-ts {
+    height: 48vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .projects-ts .project-ts .figure-ts .caption-ts {
+    height: 25%;
+  }
 }/*# sourceMappingURL=projects.css.map */
