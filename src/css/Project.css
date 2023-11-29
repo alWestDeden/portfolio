@@ -52,73 +52,186 @@
     transform: translateX(0);
   }
 }
-.selected-project {
+.selected {
   display: flex;
   width: 100%;
   height: 70vh;
   margin: 5vh 0;
-  overflow: visible;
 }
-.selected-project-img {
-  display: block;
+.selected-left {
+  display: flex;
+  flex-direction: column;
   width: 64%;
+  height: 100%;
+}
+.selected-left-image {
+  width: 100%;
+  height: 61vh;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 5px;
   box-shadow: 0 0 8px #e3e2db;
 }
-.selected-project-info {
-  position: relative;
-  width: 36%;
-  padding: 10px;
+.selected-left-image-hide {
+  display: none;
 }
-.selected-project-info .title {
+.selected-left-links {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.selected-left-links-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: content-box;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 10px;
+}
+.selected-left-links-link-icon {
+  font-size: 2rem;
+}
+.selected-left-links-link:hover > svg > path {
+  color: #ebd0ac;
+}
+.selected-left-links-link:hover p {
+  color: #ebd0ac;
+}
+.selected-left-links-link p {
+  font-size: 0.8rem;
+}
+.selected-left--ts {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.selected-right {
+  width: 36%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  border-left: 1px solid #e3e2db;
+  margin-left: 2px;
+}
+.selected-right-title {
   font-size: 2rem;
   margin: 0;
 }
-.selected-project-info .title-kasa {
+.selected-right-title-kasa {
   font-family: "Montserrat", sans-serif;
   color: #ff6060;
 }
-.selected-project-info .title-nina {
+.selected-right-title-nina {
   font-family: "Inter", sans-serif;
   color: #212529;
 }
-.selected-project-info .title-argent {
+.selected-right-title-argent {
   font-family: "Montserrat", sans-serif;
   color: #00bc77;
 }
-.selected-project-info h5 {
+.selected-right h5 {
   font-family: "Black Han Sans", sans-serif;
   font-size: 0.8rem;
-  margin-bottom: 10px;
+  margin: 30px 0 10px;
 }
-.selected-project-info .details {
+.selected-right-details {
   margin-top: 10px;
+  text-align: justify;
 }
-.selected-project-info .constraints {
+.selected-right-constraints {
   margin-top: 10px;
+  text-align: justify;
 }
-.selected-project-info .icons {
-  margin-top: 10px;
+.selected-right-tech {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.selected-project-info .icons .tech-icon {
+.selected-right-tech-icon {
   font-size: 2rem;
-  margin-top: 20px;
+  margin-top: 10px;
 }
-.selected-project-info .icons .tech-name {
+.selected-right-tech-icon > path {
+  color: #e3e2db;
+}
+.selected-right-tech-name {
   font-size: 1rem;
 }
-.selected-project-info .return {
-  position: absolute;
+.selected-right-tech .fa-css3-alt > path {
+  color: #039fda;
+}
+.selected-right-tech .fa-figma > path {
+  color: #eb4b1d;
+}
+.selected-right-tech .fa-html5 > path {
+  color: #dc4a25;
+}
+.selected-right-tech .fa-square-js > path {
+  color: #efd81a;
+}
+.selected-right-tech .fa-react > path {
+  color: #5ed2f3;
+}
+.selected-right-tech .fa-sass > path {
+  color: #c56494;
+}
+.selected-right-return {
+  position: sticky;
+  display: flex;
+  width: 100%;
   bottom: 0;
-  right: 0;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+.selected-right-return--ts {
   justify-content: center;
 }
-.selected-project-info .return-home {
-  display: inline-block;
-  font-size: 2rem;
+.selected-right-return .return-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selected-right-return .return-link-icon {
+  font-size: 1.8rem;
+}
+.selected-right-return .return-link:hover > svg > path {
+  color: #ebd0ac;
+}
+.selected-right-return .return-link:hover p {
+  color: #ebd0ac;
+}
+.selected-right-return .return-link p {
+  font-size: 0.8rem;
+}
+.selected-right--ts {
+  width: 100%;
+  overflow-y: visible;
+  padding: 10px;
+  border-left: none;
+  margin-left: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: unset;
+}
+.selected-right::-webkit-scrollbar {
+  width: 4px;
+}
+.selected-right::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.selected-right::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+.selected-right::-webkit-scrollbar-thumb:hover {
+  background: #4e4e4e;
+}
+
+.selected--ts {
+  flex-direction: column;
+  height: unset;
 }/*# sourceMappingURL=Project.css.map */

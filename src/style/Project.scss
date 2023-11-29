@@ -1,23 +1,68 @@
 @import "./variable.scss";
-.selected-project {
+.selected {
 	display: flex;
 	width: 100%;
 	height: 70vh;
 	margin: 5vh 0;
-	overflow: visible;
-	&-img {
-		display: block;
+	&-left {
+		display: flex;
+		flex-direction: column;
 		width: 64%;
-		object-fit: cover;
-		margin: 5px;
-		// border-radius: 10px;
-		box-shadow: 0 0 8px $secondary-color;
+		height: 100%;
+		&-image {
+			width: 100%;
+			height: 61vh;
+			object-fit: cover;
+			box-shadow: 0 0 8px $secondary-color;
+			&-hide {
+				display: none;
+			}
+		}
+		&-links {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+			box-sizing: border-box;
+			margin-top: 20px;
+			&-link {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				box-sizing: content-box;
+				height: fit-content;
+				margin: 0 10px;
+				&-icon {
+					font-size: 2rem;
+				}
+				&:hover {
+					& > svg {
+						& > path {
+							color: $fourth-color;
+						}
+					}
+					& p {
+						color: $fourth-color;
+					}
+				}
+				& p {
+					font-size: 0.8rem;
+				}
+			}
+		}
 	}
-	&-info {
-		position: relative;
+	&-left--ts {
+		width: 100%;
+		height: fit-content;
+	}
+	&-right {
 		width: 36%;
+		max-height: fit-content;
+		overflow-y: auto;
+		box-sizing: border-box;
 		padding: 10px;
-		& .title {
+		border-left: 1px solid $secondary-color;
+		margin-left: 2px;
+		&-title {
 			font-size: 2rem;
 			margin: 0;
 			&-kasa {
@@ -36,36 +81,109 @@
 		& h5 {
 			font-family: $font-title;
 			font-size: 0.8rem;
-			margin-bottom: 10px;
+			margin: 30px 0 10px;
 		}
-		& .details {
+		&-details {
 			margin-top: 10px;
+			text-align: justify;
 		}
-		& .constraints {
+		&-constraints {
 			margin-top: 10px;
+			text-align: justify;
 		}
-		& .icons {
-			margin-top: 10px;
+		&-tech {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			& .tech-icon {
+			&-icon {
 				font-size: 2rem;
-				margin-top: 20px;
+				margin-top: 10px;
+				& > path {
+					color: $secondary-color;
+				}
 			}
-			& .tech-name {
+			&-name {
 				font-size: 1rem;
 			}
+			& .fa-css3-alt > path {
+				color: #039fda;
+			}
+			& .fa-figma > path {
+				color: #eb4b1d;
+			}
+			& .fa-html5 > path {
+				color: #dc4a25;
+			}
+			& .fa-square-js > path {
+				color: #efd81a;
+			}
+			& .fa-react > path {
+				color: #5ed2f3;
+			}
+			& .fa-sass > path {
+				color: #c56494;
+			}
 		}
-		& .return {
-			position: absolute;
+		&-return {
+			position: sticky;
+			display: flex;
+			width: 100%;
 			bottom: 0;
-			right: 0;
-			justify-content: center;
-			&-home {
-				display: inline-block;
-				font-size: 2rem;
+			justify-content: flex-end;
+			box-sizing: border-box;
+			&--ts {
+				justify-content: center;
+			}
+			& .return-link {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				&-icon {
+					font-size: 1.8rem;
+				}
+				&:hover {
+					& > svg {
+						& > path {
+							color: $fourth-color;
+						}
+					}
+					& p {
+						color: $fourth-color;
+					}
+				}
+				& p {
+					font-size: 0.8rem;
+				}
 			}
 		}
 	}
+	&-right--ts {
+		width: 100%;
+		overflow-y: visible;
+		padding: 10px;
+		border-left: none;
+		margin-left: 0;
+		height: fit-content;
+		max-height: unset;
+	}
+	&-right::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	&-right::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	&-right::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 2px;
+	}
+
+	&-right::-webkit-scrollbar-thumb:hover {
+		background: $dark-color;
+	}
+}
+.selected--ts {
+	flex-direction: column;
+	height: unset;
 }

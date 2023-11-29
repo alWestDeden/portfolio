@@ -162,9 +162,9 @@
   width: fit-content;
   background-color: #e3c08f;
   border-radius: 5px;
-  border: 1px solid #ebd0ac;
+  border: 1px solid #fdf8f4;
   padding: 10px 20px;
-  color: #4e4e4e;
+  color: white;
   text-align: center;
   white-space: nowrap;
 }
@@ -243,6 +243,8 @@
 .projects-ts .project-ts .figure-ts .caption-ts {
   display: flex;
   align-items: center;
+  top: unset;
+  right: unset;
   bottom: 0;
   height: 25%;
   background-color: white;

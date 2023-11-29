@@ -1,25 +1,45 @@
+import { useContext } from "react"
+import { DeviceContext } from "../../index"
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
 import projects from "../../data/projects"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHouse, faSquare } from "@fortawesome/free-solid-svg-icons"
-import { faCss3Alt, faFigma, faHtml5, faSquareJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons"
+import { faGlobe, faHouse } from "@fortawesome/free-solid-svg-icons"
+import { faClipboard } from "@fortawesome/free-regular-svg-icons"
+import { faCss3Alt, faFigma, faGithub, faHtml5, faSquareJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons"
 import "../../style/Project.scss"
 
 export default function Project() {
+	const touchScreen = useContext(DeviceContext)
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
-	const { name, img_169, details, constraints, technologies } = selectedProject[0]
+	const { name, img_169, details, constraints, technologies, code, site } = selectedProject[0]
 	return (
-		<section className='selected-project'>
-			<img className='selected-project-img' src={img_169} alt={name} />
-			<article className='selected-project-info'>
-				<h4 className={`title title-${id}`}>{name}</h4>
-				<p className='details'>{details}</p>
+		<section className={!touchScreen ? "selected" : "selected selected--ts"}>
+			<div className={!touchScreen ? "selected-left" : "selected-left selected-left--ts"}>
+				<img
+					className={!touchScreen ? "selected-left-image" : "selected-left-image selected-left-image-hide"}
+					src={img_169}
+					alt={name}
+				/>
+				<div className='selected-left-links'>
+					<Link className='selected-left-links-link' to={site}>
+						<FontAwesomeIcon className='selected-left-links-link-icon' icon={faGlobe} />
+						<p>site</p>
+					</Link>
+					<Link className='selected-left-links-link' to={code}>
+						<FontAwesomeIcon className='selected-left-links-link-icon' icon={faGithub} />
+						<p>code</p>
+					</Link>
+				</div>
+			</div>
+			<div className={!touchScreen ? "selected-right" : "selected-right selected-right--ts"}>
+				<h4 className={`selected-right-title selected-right-title-${id}`}>{name}</h4>
+				<p className='selected-right-details'>{details}</p>
 				<h5>Contraintes :</h5>
-				<p className='constraints'>{constraints}</p>
+				<p className='selected-right-constraints'>{constraints}</p>
 				<h5>Technologies :</h5>
-				<div className='icons'>
+				<div className='selected-right-tech'>
 					{technologies.map((technology) => {
 						let techIcon
 						switch (technology) {
@@ -43,25 +63,25 @@ export default function Project() {
 								break
 							case "Lighthouse":
 							case "Swagger":
-								techIcon = faSquare
+								techIcon = faClipboard
 								break
 							default:
 						}
 						return (
 							<>
-								<FontAwesomeIcon className='tech-icon' icon={techIcon} />
-								<p className='tech-name'>{technology}</p>
+								<FontAwesomeIcon className={`selected-right-tech-icon color--${technology}`} icon={techIcon} />
+								<p className='selected-right-tech-name'>{technology}</p>
 							</>
 						)
 					})}
 				</div>
-				<div className='return'>
-					<Link to='/'>
-						<FontAwesomeIcon className='return-home' icon={faHouse} />
-						<p className='return-text'>retour</p>
+				<div className={!touchScreen ? "selected-right-return" : "selected-right-return selected-right-return--ts"}>
+					<Link className='return-link' to='/'>
+						<FontAwesomeIcon className='return-link-icon' icon={faHouse} />
+						<p>retour</p>
 					</Link>
 				</div>
-			</article>
+			</div>
 		</section>
 	)
 }

@@ -8,7 +8,6 @@ import "../../style/Home.scss"
 
 export default function Home() {
 	const touchScreen = useContext(DeviceContext)
-	console.log(touchScreen)
 	return (
 		// for classes names a '' at the end mean for cursor events and a '-ts' mean for Touch Screen events
 		<div className='home'>

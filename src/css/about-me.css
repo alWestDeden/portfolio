@@ -67,7 +67,7 @@
 .about-ts {
   display: flex;
   align-items: center;
-  height: 75vh;
+  min-height: 50%;
   border-radius: 10px;
   box-shadow: 0 0 8px #e3e2db;
   margin-top: 5vh;

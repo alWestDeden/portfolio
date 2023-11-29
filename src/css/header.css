@@ -58,7 +58,6 @@
   align-items: center;
   height: 11vh;
   width: 100%;
-  border-bottom: 1px solid #ebd0ac;
 }
 .header .title {
   display: flex;

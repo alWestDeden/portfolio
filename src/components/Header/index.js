@@ -15,11 +15,11 @@ export default function Header() {
 				<h2>Intégrateur Web</h2>
 			</div>
 			<nav className='navigation'>
-				<a href='https://www.linkedin.com/in/deden-a-844302124/details/experience/'>
-					<FontAwesomeIcon className='icon' icon={faLinkedin} />
-				</a>
 				<a href='https://github.com/alWestDeden?tab=repositories'>
 					<FontAwesomeIcon className='icon' icon={faGithub} />
+				</a>
+				<a href='https://www.linkedin.com/in/deden-a-844302124/details/experience/'>
+					<FontAwesomeIcon className='icon' icon={faLinkedin} />
 				</a>
 				<a href='mailto:baboumediene@gmail.com'>
 					<FontAwesomeIcon className='icon' icon={faEnvelope} />

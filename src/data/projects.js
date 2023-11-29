@@ -15,8 +15,10 @@ const projects = [
 		details:
 			"A partir de la maquette Figma, il a fallu développer l'application avec React et React-Router. Le Back-End n'étant pas développé on le simule en récupérant les informations de chaque appartements dans un fichier JSON. SASS a été utilisé pour génerer le style CSS.",
 		constraints:
-			"Il était attendu que le carrousels boucle et que la navigation n'apparaise pas quand il y a qu'une seule image. Les collapse doivent par défaut être fermés et crées à partie d'un seul composant.",
+			"Il était attendu que le carrousel boucle et que la navigation n'apparaise pas quand il y a qu'une seule image. Les collapse doivent par défaut être fermés et crées à partie d'un seul composant.",
 		technologies: ["CSS", "HTML", "Figma", "JavaScript", "React", "React-Router", "SASS"],
+		code: "https://github.com/alWestDeden/Projet8-kasa",
+		site: "https://alwestdeden.github.io/Projet8-kasa",
 	},
 	{
 		nb: 1,
@@ -30,6 +32,8 @@ const projects = [
 		constraints:
 			"Il était attendu qu'une fois optimisé le site passe les audits Lighthouse (performances et SEO) et WAVE (accessibilité).",
 		technologies: ["CSS", "HTML", "JavaScript", "Lighthouse", "WAVE"],
+		code: "https://github.com/alWestDeden/Projet9_new",
+		site: "https://alwestdeden.github.io/Projet9_new/index.html",
 	},
 	{
 		nb: 2,
@@ -43,6 +47,8 @@ const projects = [
 		constraints:
 			"Il était attendu que la connexion soit sécurisée et que toutes les informations de requête (methode HTTP, route, paramètres, réponses, ...) soit fournies.",
 		technologies: ["CSS", "HTML", "JavaScript", "React", "React-Router", "Redux", "SASS", "Swagger"],
+		code: "https://github.com/alWestDeden/ArgentBank-website",
+		site: "https://alwestdeden.github.io/ArgentBank-website/",
 	},
 ]
 export default projects

@@ -54,9 +54,9 @@
 				width: fit-content;
 				background-color: $third-color;
 				border-radius: 5px;
-				border: 1px solid $fourth-color;
+				border: 1px solid $primary-color;
 				padding: 10px 20px;
-				color: $dark-color;
+				color: $light-color;
 				text-align: center;
 				white-space: nowrap;
 			}
@@ -84,7 +84,6 @@
 				color: $primary-color;
 				border: none;
 				margin-bottom: 5px;
-				// margin: 0;
 				padding: 10px;
 				border-top-right-radius: 10px;
 				border-bottom-left-radius: 10px;
@@ -95,7 +94,6 @@
 			}
 			& .project-name-0 {
 				font-family: $kasa-font;
-				// border-top-right-radius: 10px;
 			}
 			& .project-name-0:hover {
 				color: $kasa-color;
@@ -108,8 +106,6 @@
 			}
 			& .project-name-2 {
 				font-family: $argent-font;
-				// border-bottom-left-radius: 10px;
-				// border-bottom-right-radius: 10px;
 			}
 			& .project-name-2:hover {
 				color: $argent-color;
@@ -140,6 +136,8 @@
 			& .caption-ts {
 				display: flex;
 				align-items: center;
+				top: unset;
+				right: unset;
 				bottom: 0;
 				height: 25%;
 				background-color: $light-color;
