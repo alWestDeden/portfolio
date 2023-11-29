@@ -249,6 +249,7 @@
   align-items: center;
   top: 25px;
   right: 0;
+  width: 84%;
   height: 33%;
   background-color: white;
   box-sizing: border-box;
@@ -256,7 +257,6 @@
   text-align: left;
   border-radius: 0;
   border-right: unset;
-  width: 84%;
 }
 .projects-ts .project-ts .figure-ts .caption-ts .caption-text .caption-title {
   display: flex;
@@ -296,7 +296,7 @@
 }
 .projects-ts .arrows-ts {
   position: absolute;
-  width: 100%;
+  width: 96%;
   display: flex;
   justify-content: space-between;
 }
@@ -305,16 +305,17 @@
   font-size: 3rem;
 }
 .projects-ts .arrows-ts .icon > path {
-  color: #e3e2db;
+  color: #fdf8f4;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (max-width: 1024px), only screen and (orientation: landscape) {
   .projects-ts {
     height: 48vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
   }
   .projects-ts .project-ts .figure-ts .caption-ts {
+    width: 66%;
     height: 33%;
   }
 }/*# sourceMappingURL=projects.css.map */
