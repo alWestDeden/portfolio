@@ -1,57 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&display=swap");
-@keyframes slideIn {
-  0% {
-    transform: Scale(0);
-    opacity: 0;
-  }
-  25% {
-    transform: translate(-25px, -10px) scale(0.96);
-  }
-  75% {
-    transform: translate(0) scale(1.01);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&family=Raleway:wght@700&family=Shrikhand&display=swap");
+.fa-css3-alt > path {
+  color: #039fda;
 }
-@keyframes slideOut {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  80% {
-    transform: scale(0.96);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(0.76);
-    opacity: 0;
-  }
+
+.fa-figma > path {
+  color: #eb4b1d;
 }
-@keyframes slideRight {
-  0% {
-    transform: translateX(100%);
-  }
-  79% {
-    transform: translateX(-1%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+.fa-font-awesome > path {
+  color: #538dd6;
 }
-@keyframes slideLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  79% {
-    transform: translateX(1%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+.fa-github > path {
+  color: #1f2328;
 }
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
+}
+
+.booki {
+  font-family: "Raleway", sans-serif;
+  color: #0164fc;
+}
+
+.ohmyfood {
+  font-family: "Shrikhand", serif;
+  color: #101010;
+}
+
+.kasa {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+}
+
+.nina {
+  font-family: "Inter", sans-serif;
+  color: #212529;
+}
+
+.argent {
+  font-family: "Montserrat", sans-serif;
+  color: #00bc77;
+}
+
 .selected {
   display: flex;
   width: 100%;
@@ -89,9 +93,13 @@
   height: -moz-fit-content;
   height: fit-content;
   margin: 0 10px;
+  transition: transform 175ms ease;
 }
 .selected-left-links-link-icon {
   font-size: 2rem;
+}
+.selected-left-links-link:hover {
+  transform: scale(1.4);
 }
 .selected-left-links-link:hover > svg > path {
   color: #ebd0ac;
@@ -111,27 +119,15 @@
   width: 36%;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  overflow-y: auto;
   box-sizing: border-box;
   padding: 10px;
   border-left: 1px solid #e3e2db;
   margin-left: 2px;
+  overflow: auto;
 }
 .selected-right-title {
   font-size: 2rem;
   margin: 0;
-}
-.selected-right-title-kasa {
-  font-family: "Montserrat", sans-serif;
-  color: #ff6060;
-}
-.selected-right-title-nina {
-  font-family: "Inter", sans-serif;
-  color: #212529;
-}
-.selected-right-title-argent {
-  font-family: "Montserrat", sans-serif;
-  color: #00bc77;
 }
 .selected-right h5 {
   font-family: "Black Han Sans", sans-serif;
@@ -161,24 +157,6 @@
 .selected-right-tech-name {
   font-size: 1rem;
 }
-.selected-right-tech .fa-css3-alt > path {
-  color: #039fda;
-}
-.selected-right-tech .fa-figma > path {
-  color: #eb4b1d;
-}
-.selected-right-tech .fa-html5 > path {
-  color: #dc4a25;
-}
-.selected-right-tech .fa-square-js > path {
-  color: #efd81a;
-}
-.selected-right-tech .fa-react > path {
-  color: #5ed2f3;
-}
-.selected-right-tech .fa-sass > path {
-  color: #c56494;
-}
 .selected-right-return {
   position: sticky;
   display: flex;
@@ -194,9 +172,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 175ms ease;
 }
 .selected-right-return .return-link-icon {
   font-size: 1.8rem;
+}
+.selected-right-return .return-link:hover {
+  transform: scale(1.3);
 }
 .selected-right-return .return-link:hover > svg > path {
   color: #ebd0ac;
@@ -209,7 +191,6 @@
 }
 .selected-right--ts {
   width: 100%;
-  overflow-y: visible;
   padding: 10px;
   border-left: none;
   margin-left: 0;

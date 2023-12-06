@@ -7,22 +7,19 @@
 	justify-content: flex-start;
 	margin-top: 8vh;
 	margin-bottom: 8vh;
-	overflow: visible;
 	& .project {
 		position: relative;
-		// !!!! change width regarding responsive 1280 1024 960 760 ... !!!!!!!!
 		width: calc(74% - 30px);
 		height: inherit;
-		box-shadow: 6px 4px 4px -2px $third-color;
-		border-radius: 10px;
-		// use media querries to place the picture
-		& .me-svg {
+		border-radius: 20px;
+		&--mask {
 			position: absolute;
-			width: 17%;
-			top: 14vh;
-			left: 42%;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $primary-color;
 		}
-		& span {
+		&-tip {
 			position: absolute;
 			display: inline-block;
 			width: 90%;
@@ -31,44 +28,67 @@
 			padding-top: 10px;
 			text-align: right;
 			align-items: center;
-			& .icon {
+			&-icon {
 				margin-left: 10px;
 				& > path {
 					color: $third-color;
 				}
 			}
 		}
-		& .figure {
-			transform-origin: top left;
+		&-figure {
+			position: absolute;
+			top: 0;
+			right: 0;
 			margin: 0;
-			& img {
+			width: 100%;
+			height: 100%;
+			scale: 0.98;
+			border-radius: 20px;
+			&-image {
 				width: 100%;
-				height: inherit;
-				border-radius: 10px;
+				height: 100%;
+				border-radius: 20px;
 				object-fit: cover;
 			}
-			& .caption {
+			&-caption {
 				position: absolute;
-				top: 20px;
-				right: 20px;
+				top: 40px;
+				left: 40px;
 				width: fit-content;
-				background-color: $third-color;
-				border-radius: 5px;
-				border: 1px solid $primary-color;
+				background-color: $light-color;
+				box-shadow: 0 0 8px $secondary-color;
 				padding: 10px 20px;
-				color: $light-color;
+				color: $dark-color;
 				text-align: center;
 				white-space: nowrap;
+				font-size: 1.1rem;
 			}
-		}
-		& .animation-in {
-			animation: 400ms ease-out forwards slideIn;
-		}
-		& .animation-out {
-			animation: 100ms ease-out forwards slideOut;
-		}
-		& .hide {
-			display: none;
+			&--masks {
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 20px;
+				overflow: hidden;
+				& .figure--mask {
+					width: 100%;
+					height: 2.5%;
+					background-color: $fourth-color;
+					&:nth-child(odd) {
+						transform-origin: right;
+					}
+					&:nth-child(even) {
+						transform-origin: left;
+					}
+				}
+			}
+			@for $i from 1 through 5 {
+				&--#{$i} {
+					z-index: -1;
+				}
+			}
 		}
 	}
 	& .projects-menu {
@@ -76,49 +96,33 @@
 		width: 200px;
 		margin: 0;
 		padding-left: 20px;
-		& li {
-			& button {
-				box-sizing: border-box;
-				width: inherit;
-				background-color: $third-color;
-				color: $primary-color;
-				border: none;
-				margin-bottom: 5px;
-				padding: 10px;
-				border-top-right-radius: 10px;
-				border-bottom-left-radius: 10px;
-			}
-			& button:hover {
+		&-button {
+			box-sizing: border-box;
+			background-color: $third-color;
+			color: $primary-color;
+			border: none;
+			margin-bottom: 5px;
+			padding: 10px;
+			border-top-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			box-shadow: 0 0 8px $secondary-color;
+			transition: transform 175ms ease;
+			z-index: 11;
+			&:hover {
 				background-color: $fourth-color;
-				font-size: 1.1rem;
-			}
-			& .project-name-0 {
-				font-family: $kasa-font;
-			}
-			& .project-name-0:hover {
-				color: $kasa-color;
-			}
-			& .project-name-1 {
-				font-family: $nina-font;
-			}
-			& .project-name-1:hover {
-				color: $nina-color;
-			}
-			& .project-name-2 {
-				font-family: $argent-font;
-			}
-			& .project-name-2:hover {
-				color: $argent-color;
+				transform: scale(1.35);
 			}
 		}
+		@include project-button;
 	}
 }
-.projects-ts {
+// touch screen classes
+.projects--ts {
 	position: relative;
 	height: 40vh;
 	margin-top: 2vh;
 	margin-bottom: 2vh;
-	& .project-ts {
+	& .project--ts {
 		position: absolute;
 		display: flex;
 		flex-direction: column;
@@ -126,18 +130,18 @@
 		align-items: center;
 		height: 100%;
 		width: 100%;
-		box-shadow: none;
 		border-radius: 0;
-		& .figure-ts {
+		& .figure--ts {
 			transform-origin: center center;
 			overflow: hidden;
 			height: 100%;
 			width: 100%;
 			box-shadow: 0 0 8px $secondary-color;
-			& img {
+			box-sizing: border-box;
+			& .image--ts {
 				border-radius: 0;
 			}
-			& .caption-ts {
+			& .caption--ts {
 				display: flex;
 				align-items: center;
 				top: 25px;
@@ -150,56 +154,30 @@
 				text-align: left;
 				border-radius: 0;
 				border-right: unset;
-				& .caption-text {
-					& .caption-title {
-						display: flex;
-						justify-content: flex-start;
-						align-items: flex-end;
-						& h4 {
-							display: inline-block;
-							margin: 0;
-							font-family: $font-title;
-						}
-						& p {
-							display: inline-block;
-							margin-left: 5px;
-							font-size: 1.2rem;
-						}
-						& .project-name-0 {
-							font-family: $kasa-font;
-							color: $kasa-color;
-						}
-						& .project-name-1 {
-							font-family: $nina-font;
-							color: $nina-color;
-						}
-						& .project-name-2 {
-							font-family: $argent-font;
-							color: $argent-color;
-						}
+				& .title--ts {
+					display: flex;
+					justify-content: flex-start;
+					align-items: flex-end;
+					& h4 {
+						display: inline-block;
+						margin: 0;
+						font-family: $font-title;
 					}
-					// & p {
-					// 	margin-top: 5px;
-					// }
+					& p {
+						display: inline-block;
+						margin-left: 5px;
+						font-size: 1.2rem;
+					}
 				}
 			}
 		}
 	}
-	& .hide {
-		display: none;
-	}
-	& .slide-right {
-		animation: slideRight 400ms forwards;
-	}
-	& .slide-left {
-		animation: slideLeft 400ms forwards;
-	}
-	& .arrows-ts {
+	& .arrows--ts {
 		position: absolute;
 		width: 96%;
 		display: flex;
 		justify-content: space-between;
-		& .icon {
+		& .arrow-icon--ts {
 			display: inline-block;
 			font-size: 3rem;
 			& > path {
@@ -208,33 +186,25 @@
 		}
 	}
 }
-@include devices(tablet) {
-	.projects-ts {
+@include tablet {
+	.projects--ts {
 		height: 48vh;
 		margin-top: 5vh;
 		margin-bottom: 5vh;
-		& .project-ts {
-			& .figure-ts {
-				& .caption-ts {
-					height: 25%;
-				}
-			}
+		& .caption--ts {
+			height: 20%;
 		}
 	}
 }
-@include devices(landscape) {
-	.projects-ts {
+@include landscape {
+	.projects--ts {
 		height: 48vh;
 		margin-top: 5vh;
 		margin-bottom: 5vh;
-		& .project-ts {
-			& .figure-ts {
-				& .caption-ts {
-					width: 66%;
-					height: 33%;
-					overflow-y: hidden;
-				}
-			}
+		& .caption--ts {
+			width: 66%;
+			height: 33%;
+			overflow-y: hidden;
 		}
 	}
 }

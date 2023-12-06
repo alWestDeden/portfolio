@@ -4,13 +4,13 @@
 	width: 100%;
 	box-sizing: border-box;
 	background-color: $third-color;
-	border-radius: 10px;
+	border-radius: 30px;
 	margin-top: 5vh;
-	padding: 25px;
+	padding: 40px 40px;
+	box-shadow: 0 0 8px $secondary-color;
 }
 .about-ts {
 	border-radius: 0;
-	box-shadow: 0 0 8px $secondary-color;
 	margin-top: 2vh;
 	padding: 20px;
 	& p {

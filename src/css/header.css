@@ -1,57 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&display=swap");
-@keyframes slideIn {
-  0% {
-    transform: Scale(0);
-    opacity: 0;
-  }
-  25% {
-    transform: translate(-25px, -10px) scale(0.96);
-  }
-  75% {
-    transform: translate(0) scale(1.01);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&family=Raleway:wght@700&family=Shrikhand&display=swap");
+.fa-css3-alt > path {
+  color: #039fda;
 }
-@keyframes slideOut {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  80% {
-    transform: scale(0.96);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(0.76);
-    opacity: 0;
-  }
+
+.fa-figma > path {
+  color: #eb4b1d;
 }
-@keyframes slideRight {
-  0% {
-    transform: translateX(100%);
-  }
-  79% {
-    transform: translateX(-1%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+.fa-font-awesome > path {
+  color: #538dd6;
 }
-@keyframes slideLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  79% {
-    transform: translateX(1%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+.fa-github > path {
+  color: #1f2328;
 }
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
+}
+
+.booki {
+  font-family: "Raleway", sans-serif;
+  color: #0164fc;
+}
+
+.ohmyfood {
+  font-family: "Shrikhand", serif;
+  color: #101010;
+}
+
+.kasa {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+}
+
+.nina {
+  font-family: "Inter", sans-serif;
+  color: #212529;
+}
+
+.argent {
+  font-family: "Montserrat", sans-serif;
+  color: #00bc77;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -78,13 +82,18 @@
 .header nav a .icon > path {
   color: #4e4e4e;
 }
-
-.header-ts {
+.header nav a .icon:hover {
+  transform: scale(1.2);
+}
+.header nav a .icon:hover > path {
+  color: #ebd0ac;
+}
+.header--ts {
   height: 15vh;
 }
 
-@media only screen and (orientation: landscape) {
-  .header-ts {
+@media (orientation: landscape) {
+  .header--ts {
     height: 24vh;
   }
 }/*# sourceMappingURL=header.css.map */

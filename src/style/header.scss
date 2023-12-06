@@ -23,15 +23,21 @@
 				& > path {
 					color: $dark-color;
 				}
+				&:hover {
+					transform: scale(1.2);
+					& > path {
+						color: $fourth-color;
+					}
+				}
 			}
 		}
 	}
+	&--ts {
+		height: 15vh;
+	}
 }
-.header-ts {
-	height: 15vh;
-}
-@include devices(landscape) {
-	.header-ts {
+@include landscape {
+	.header--ts {
 		height: 24vh;
 	}
 }

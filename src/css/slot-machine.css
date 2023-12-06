@@ -1,0 +1,30 @@
+.machine-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.machine-container .slot-machine-column {
+  display: block;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.machine-container .slot-machine-column .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.machine-container .slot-machine-column .icon-container .slot-machine-icon {
+  display: inline-block;
+  font-size: 5rem;
+}
+.machine-container .slot-machine-column .icon-container .hide-svg > path {
+  opacity: 0;
+}
+.machine-container .slot-machine-column .icon-container .show-svg > path {
+  opacity: 1;
+}/*# sourceMappingURL=slot-machine.css.map */

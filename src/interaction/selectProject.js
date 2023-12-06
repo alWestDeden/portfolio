@@ -1,81 +1,27 @@
 // show project when mouse enter the button
-export function showProjectEnter(project) {
-	//define the images elements
-	const kasa = document.getElementById("kasa")
-	const nina = document.getElementById("nina")
-	const argent = document.getElementById("argent")
-	switch (project) {
-		case "kasa":
-			kasa.classList.remove("hide")
-			kasa.classList.add("animation-in")
-			break
-		case "nina":
-			nina.classList.remove("hide")
-			nina.classList.add("animation-in")
-			break
-		case "argent":
-			argent.classList.remove("hide")
-			argent.classList.add("animation-in")
-			break
-		default:
-			break
+export function showProject(actualProject, index) {
+	const selectedProject = document.getElementById(`project--${actualProject}`)
+	const selectedProjectMask = document.getElementById(`project--masks-${actualProject}`)
+	// end the exit's animation of the previous selected project before starting the animation of the selected one
+	if (index !== null) {
+		const previousProject = document.getElementById(`project--${index}`)
+		const previousProjectMask = document.getElementById(`project--masks-${index}`)
+		previousProject.classList.add(`project-figure--${index}`)
+		previousProjectMask.classList.remove("strips-in")
 	}
-}
-// show project when mouse get hover the button after being hover another one
-export function showProjectHover(currentProject) {
-	//define the images elements
-	const kasa = document.getElementById("kasa")
-	const nina = document.getElementById("nina")
-	const argent = document.getElementById("argent")
-	switch (currentProject) {
-		case "kasa":
-			kasa.classList.remove("animation-in")
-			kasa.classList.add("hide")
-			break
-		case "nina":
-			nina.classList.remove("animation-in")
-			nina.classList.add("hide")
-			break
-		case "argent":
-			argent.classList.remove("animation-in")
-			argent.classList.add("hide")
-			break
-		default:
-			break
-	}
+	selectedProject.classList.remove(`project-figure--${actualProject}`)
+	selectedProjectMask.classList.add("strips-out")
+	selectedProject.classList.add("zoom-in")
 }
 // hide projects when mouse leave button
-export function hideProjectLeave(currentProject) {
-	//define the images elements
-	const kasa = document.getElementById("kasa")
-	const nina = document.getElementById("nina")
-	const argent = document.getElementById("argent")
-	switch (currentProject) {
-		case "kasa":
-			kasa.classList.remove("animation-in")
-			kasa.classList.add("animation-out")
-			setTimeout(() => {
-				kasa.classList.remove("animation-out")
-				kasa.classList.add("hide")
-			}, 100)
-			break
-		case "nina":
-			nina.classList.remove("animation-in")
-			nina.classList.add("animation-out")
-			setTimeout(() => {
-				nina.classList.remove("animation-out")
-				nina.classList.add("hide")
-			}, 100)
-			break
-		case "argent":
-			argent.classList.remove("animation-in")
-			argent.classList.add("animation-out")
-			setTimeout(() => {
-				argent.classList.remove("animation-out")
-				argent.classList.add("hide")
-			}, 100)
-			break
-		default:
-			break
-	}
+export function hideProject(project) {
+	const unSelectedProject = document.getElementById(`project--${project}`)
+	const unSelectedProjectMask = document.getElementById(`project--masks-${project}`)
+	unSelectedProject.classList.remove("zoom-in")
+	unSelectedProjectMask.classList.remove("strips-out")
+	unSelectedProjectMask.classList.add("strips-in")
+	setTimeout(() => {
+		unSelectedProjectMask.classList.remove("strips-in")
+		unSelectedProject.classList.add(`project-figure--${project}`)
+	}, 400)
 }

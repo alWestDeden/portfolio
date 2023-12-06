@@ -3,14 +3,10 @@
 	font-family: $font-text;
 	color: $dark-color;
 	font-size: 1rem;
-	overflow-x: hidden;
-	// height: 100%;
+	// overflow-x: hidden;
 	body {
 		margin: 0 6%;
 		background-color: $primary-color;
-		// #root {
-		// 	box-shadow: 0 0 4px 2px $primary-color;
-		// }
 		& a {
 			text-decoration: none;
 			font-weight: bold;
@@ -33,6 +29,9 @@
 			display: inline-block;
 			font-family: $font-cursive;
 			margin: 0;
+		}
+		& .hide {
+			display: none;
 		}
 	}
 }

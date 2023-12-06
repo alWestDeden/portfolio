@@ -8,7 +8,7 @@ import "../../style/header.scss"
 export default function Header() {
 	const touchScreen = useContext(DeviceContext)
 	return (
-		<div className={!touchScreen ? "header" : "header header-ts"}>
+		<div className={!touchScreen ? "header" : "header header--ts"}>
 			<div className='title'>
 				<h3>portfolio</h3>
 				<h1>{!touchScreen ? "BEN AOUMAR BOUMEDIENE" : "BAB"}</h1>
