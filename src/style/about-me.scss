@@ -5,8 +5,8 @@
 	background-color: $third-color;
 	border: 5px solid $light-color;
 	border-radius: 10px;
-	margin-top: 5vh;
-	padding: 20px;
+	margin: 5vh 0 0;
+	padding: 15px 20px 10px;
 	// box-shadow: 0 0 6px $primary-color;
 	& p {
 		text-align: justify;
@@ -17,7 +17,8 @@
 	&--ts {
 		width: 100%;
 		border-radius: 0;
-		margin-top: 2vh;
+		border: unset;
+		margin: 2vh 0;
 		& p {
 			font-size: 1.1rem;
 			margin-bottom: 0.7rem;

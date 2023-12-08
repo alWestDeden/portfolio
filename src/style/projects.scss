@@ -5,23 +5,24 @@
 	width: 66%;
 	display: flex;
 	justify-content: flex-start;
-	margin-top: 8vh;
+	// margin-top: 8vh;
 	margin-bottom: 8vh;
-	// background-color: $light-color;
 	& .project {
 		position: relative;
-		width: calc(74% - 30px);
-		height: inherit;
-		border-radius: 5px;
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
 		border: 5px solid $light-color;
+		padding: 10px;
 		&--mask {
 			position: absolute;
+			top: 0;
+			right: 0;
 			z-index: 0;
-			width: 100%;
-			height: 100%;
-			border-radius: 5px;
+			width: inherit;
+			height: inherit;
+			border-radius: inherit;
 			background-color: $fourth-color;
-			// box-shadow: 0 0 6px $primary-color;
 		}
 		&-tip {
 			position: absolute;
@@ -29,18 +30,17 @@
 			justify-content: flex-end;
 			width: 90%;
 			padding-top: 10px;
-			text-align: right;
 			align-items: center;
 			& span {
 				font-size: 1.1rem;
-				color: $fourth-color;
+				color: $light-color;
 			}
 			&-icon {
 				display: inline-block;
 				margin-left: 10px;
 				font-size: 2rem;
 				& > path {
-					color: $fourth-color;
+					color: $light-color;
 				}
 			}
 		}
@@ -49,21 +49,26 @@
 			top: 0;
 			right: 0;
 			margin: 0;
-			width: 100%;
-			height: 100%;
-			scale: 0.98;
-			border-radius: 5px;
+			padding: 0px;
+			box-sizing: border-box;
+			width: inherit;
+			height: inherit;
+			border-radius: inherit;
+			background-color: $fourth-color;
+			// scale: 0.98;
 			overflow: hidden;
 			&-image {
-				width: 100%;
-				height: 100%;
+				width: inherit;
+				height: inherit;
 				object-fit: cover;
+				border-radius: inherit;
 			}
 			&-caption {
 				position: absolute;
-				top: 10px;
-				left: 0;
-				width: fit-content;
+				top: 40px;
+				left: 20px;
+				width: 66%;
+				height: fit-content;
 				background-color: $light-color;
 				box-shadow: 0 0 4px $primary-color;
 				padding: 10px 20px;
@@ -77,9 +82,9 @@
 				display: flex;
 				flex-direction: column;
 				top: 0;
+				right: 0;
 				width: 100%;
 				height: 100%;
-				border-radius: 20px;
 				& .figure--mask {
 					width: 100%;
 					height: calc(100% / 14);
@@ -93,7 +98,7 @@
 					}
 				}
 			}
-			@for $i from 1 through 5 {
+			@for $i from 0 through 4 {
 				&--#{$i} {
 					z-index: -1;
 				}
@@ -133,41 +138,34 @@
 .projects--ts {
 	position: relative;
 	width: 100%;
-	height: 40vh;
+	height: 50vh;
 	margin-top: 2vh;
 	margin-bottom: 2vh;
+	border-radius: 0;
+	display: unset;
 	& .project--ts {
 		position: absolute;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 100%;
-		width: 100%;
 		border-radius: 0;
+		border: none;
+		box-shadow: 0 0 8px $secondary-color;
+		box-sizing: border-box;
 		& .figure--ts {
-			transform-origin: center center;
-			overflow: hidden;
-			height: 100%;
-			width: 100%;
-			box-shadow: 0 0 8px $secondary-color;
-			box-sizing: border-box;
+			background-color: unset;
+			padding: 0;
+			overflow: unset;
 			& .image--ts {
 				border-radius: 0;
 			}
 			& .caption--ts {
-				display: flex;
-				align-items: center;
+				// display: flex;
+				// align-items: center;
 				top: 25px;
-				right: 0;
-				width: 84%;
-				height: 33%;
-				background-color: $light-color;
-				box-sizing: border-box;
+				left: 28px;
 				white-space: unset;
-				text-align: left;
-				border-radius: 0;
-				border-right: unset;
 				& .title--ts {
 					display: flex;
 					justify-content: flex-start;
@@ -188,14 +186,14 @@
 	}
 	& .arrows--ts {
 		position: absolute;
-		width: 96%;
+		width: 93%;
 		display: flex;
 		justify-content: space-between;
 		& .arrow-icon--ts {
 			display: inline-block;
 			font-size: 3rem;
 			& > path {
-				color: $secondary-color;
+				color: $fourth-color;
 			}
 		}
 	}

@@ -60,6 +60,9 @@
   font-variant: small-caps;
   font-size: 1.2rem;
 }
+.open:hover {
+  color: #3f72af;
+}
 
 .about {
   box-sizing: border-box;
@@ -67,8 +70,8 @@
   background-color: #dbe2ef;
   border: 5px solid white;
   border-radius: 10px;
-  margin-top: 5vh;
-  padding: 20px;
+  margin: 5vh 0 0;
+  padding: 15px 20px 10px;
 }
 .about p {
   text-align: justify;
@@ -79,7 +82,8 @@
 .about--ts {
   width: 100%;
   border-radius: 0;
-  margin-top: 2vh;
+  border: unset;
+  margin: 2vh 0;
 }
 .about--ts p {
   font-size: 1.1rem;

@@ -50,51 +50,54 @@ export default function Projects({ touchScreen }) {
 							/>
 							<FontAwesomeIcon className='project-tip-icon' icon={faArrowRightLong} />
 						</span>
-						{projects.map((project) => (
-							<>
-								<figure
-									key={`${project.id}-figure`}
-									id={`project--${project.nb + 1}`}
-									className={`project-figure project-figure--${project.nb + 1}`}>
-									<img key={`${project.id}-image`} className='project-figure-image' src={project.image} alt={project.name} />
-									<figcaption key={`${project.id}-caption`} className='project-figure-caption'>
-										<div key={`${project.id}-caption`}>
-											<p className={`${project.id}`}>{project.name}</p>
-											<p>{project.description}</p>
+						{projects.map((project) => {
+							const { nb, id, name, image, description } = project
+							return (
+								<>
+									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
+										<img key={`${id}-image`} className='project-figure-image' src={image} alt={name} />
+										<figcaption key={`${id}-caption`} className='project-figure-caption'>
+											<div key={`${id}-caption`}>
+												<p className={`${id}`}>{name}</p>
+												<p>{description}</p>
+											</div>
+										</figcaption>
+										<div id={`project--masks-${nb}`} className='project-figure--masks'>
+											{[...Array(14)].map((x, i) => (
+												<div key={`mask${i}`} className={`figure--mask`}></div>
+											))}
 										</div>
-									</figcaption>
-									<div id={`project--masks-${project.nb + 1}`} className='project-figure--masks'>
-										{[...Array(14)].map((x, i) => (
-											<div key={`mask${i}`} className={`figure--mask`}></div>
-										))}
-									</div>
-								</figure>
-							</>
-						))}
+									</figure>
+								</>
+							)
+						})}
 					</div>
 					<ul className='projects-menu'>
-						{projects.map((project) => (
-							<li key={`${project.id}-list`}>
-								<button
-									key={`${project.id}-button`}
-									className={`projects-menu-button ${project.id}--hover`}
-									onMouseEnter={(e) => {
-										e.preventDefault()
-										setIndex(project.nb + 1)
-										showProject(project.nb + 1, index)
-									}}
-									onMouseLeave={(e) => {
-										e.preventDefault()
-										hideProject(project.nb + 1)
-										setIndex(null)
-									}}
-									onClick={(e) => {
-										navigate(`/project/${project.id}`)
-									}}>
-									{project.name}
-								</button>
-							</li>
-						))}
+						{projects.map((project) => {
+							const { nb, id, name } = project
+							return (
+								<li key={`${id}-list`}>
+									<button
+										key={`${id}-button`}
+										className={`projects-menu-button ${id}--hover`}
+										onMouseEnter={(e) => {
+											e.preventDefault()
+											setIndex(nb)
+											showProject(nb, index)
+										}}
+										onMouseLeave={(e) => {
+											e.preventDefault()
+											hideProject(index)
+											setIndex(null)
+										}}
+										onClick={(e) => {
+											navigate(`/project/${id}`)
+										}}>
+										{name}
+									</button>
+								</li>
+							)
+						})}
 					</ul>
 				</section>
 			) : (
@@ -110,11 +113,13 @@ export default function Projects({ touchScreen }) {
 									<img key={`${id}-image`} className='project-figure-image image--ts' src={image} alt={name} />
 									<figcaption key={`${id}-caption`} className='project-figure-caption caption--ts'>
 										<div key={`${id}-caption`}>
-											<div className='title--ts'>
+											<div key={`${id}-caption-title`} className='title--ts'>
 												<h4>Projet : </h4>
-												<p className={`${id}`}>{name}</p>
+												<p key={`${id}-name`} className={`${id}`}>
+													{name}
+												</p>
 											</div>
-											<p>{description}</p>
+											<p key={`${id}-caption-description`}>{description}</p>
 										</div>
 									</figcaption>
 								</figure>

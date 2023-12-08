@@ -68,13 +68,15 @@
   align-items: center;
   display: grid;
   justify-content: center;
-  width: 33%;
-  height: 20vh;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 10px;
   box-sizing: border-box;
   background-color: #3f72af;
   border: 5px solid white;
-  padding: 10px 0;
+  padding: 20px 0 10px;
 }
 .cv-list {
   align-items: end;
@@ -99,7 +101,6 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  margin-bottom: 10px;
   height: 100%;
 }
 .cv-list-infos .cv-details .cv-detail-container > p {
@@ -119,6 +120,8 @@
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  border-radius: 0;
+  border: none;
 }
 
 .active {

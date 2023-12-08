@@ -146,7 +146,7 @@
 
 .strips-out > * {
   transform: scaleX(0) scaleY(0);
-  transition: all 900ms ease;
+  transition: all 800ms ease;
   z-index: 1;
 }
 
@@ -191,22 +191,24 @@
   width: 66%;
   display: flex;
   justify-content: flex-start;
-  margin-top: 8vh;
   margin-bottom: 8vh;
 }
 .projects .project {
   position: relative;
-  width: calc(74% - 30px);
-  height: inherit;
-  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
   border: 5px solid white;
+  padding: 10px;
 }
 .projects .project--mask {
   position: absolute;
+  top: 0;
+  right: 0;
   z-index: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
   background-color: #3f72af;
 }
 .projects .project-tip {
@@ -215,12 +217,11 @@
   justify-content: flex-end;
   width: 90%;
   padding-top: 10px;
-  text-align: right;
   align-items: center;
 }
 .projects .project-tip span {
   font-size: 1.1rem;
-  color: #3f72af;
+  color: white;
 }
 .projects .project-tip-icon {
   display: inline-block;
@@ -228,31 +229,35 @@
   font-size: 2rem;
 }
 .projects .project-tip-icon > path {
-  color: #3f72af;
+  color: white;
 }
 .projects .project-figure {
   position: absolute;
   top: 0;
   right: 0;
   margin: 0;
-  width: 100%;
-  height: 100%;
-  scale: 0.98;
-  border-radius: 5px;
+  padding: 0px;
+  box-sizing: border-box;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: #3f72af;
   overflow: hidden;
 }
 .projects .project-figure-image {
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: inherit;
 }
 .projects .project-figure-caption {
   position: absolute;
-  top: 10px;
-  left: 0;
-  width: -moz-fit-content;
-  width: fit-content;
+  top: 40px;
+  left: 20px;
+  width: 66%;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: white;
   box-shadow: 0 0 4px #f9f7f7;
   padding: 10px 20px;
@@ -264,9 +269,9 @@
   display: flex;
   flex-direction: column;
   top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
 }
 .projects .project-figure--masks .figure--mask {
   width: 100%;
@@ -279,6 +284,9 @@
 .projects .project-figure--masks .figure--mask:nth-child(even) {
   transform-origin: left;
 }
+.projects .project-figure--0 {
+  z-index: -1;
+}
 .projects .project-figure--1 {
   z-index: -1;
 }
@@ -289,9 +297,6 @@
   z-index: -1;
 }
 .projects .project-figure--4 {
-  z-index: -1;
-}
-.projects .project-figure--5 {
   z-index: -1;
 }
 .projects .projects-menu {
@@ -351,9 +356,11 @@
 .projects--ts {
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  border-radius: 0;
+  display: unset;
 }
 .projects--ts .project--ts {
   position: absolute;
@@ -361,34 +368,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
   border-radius: 0;
-}
-.projects--ts .project--ts .figure--ts {
-  transform-origin: center center;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
+  border: none;
   box-shadow: 0 0 8px #e8dfca;
   box-sizing: border-box;
+}
+.projects--ts .project--ts .figure--ts {
+  background-color: unset;
+  padding: 0;
+  overflow: unset;
 }
 .projects--ts .project--ts .figure--ts .image--ts {
   border-radius: 0;
 }
 .projects--ts .project--ts .figure--ts .caption--ts {
-  display: flex;
-  align-items: center;
   top: 25px;
-  right: 0;
-  width: 84%;
-  height: 33%;
-  background-color: white;
-  box-sizing: border-box;
+  left: 28px;
   white-space: unset;
-  text-align: left;
-  border-radius: 0;
-  border-right: unset;
 }
 .projects--ts .project--ts .figure--ts .caption--ts .title--ts {
   display: flex;
@@ -407,7 +403,7 @@
 }
 .projects--ts .arrows--ts {
   position: absolute;
-  width: 96%;
+  width: 93%;
   display: flex;
   justify-content: space-between;
 }
@@ -416,7 +412,7 @@
   font-size: 3rem;
 }
 .projects--ts .arrows--ts .arrow-icon--ts > path {
-  color: #e8dfca;
+  color: #3f72af;
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
