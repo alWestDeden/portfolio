@@ -2,36 +2,45 @@
 @import "./animation.scss";
 .projects {
 	height: 44vh;
-	width: 100%;
+	width: 66%;
 	display: flex;
 	justify-content: flex-start;
 	margin-top: 8vh;
 	margin-bottom: 8vh;
+	// background-color: $light-color;
 	& .project {
 		position: relative;
 		width: calc(74% - 30px);
 		height: inherit;
-		border-radius: 20px;
+		border-radius: 5px;
+		border: 5px solid $light-color;
 		&--mask {
 			position: absolute;
 			z-index: 0;
 			width: 100%;
 			height: 100%;
-			background-color: $primary-color;
+			border-radius: 5px;
+			background-color: $fourth-color;
+			// box-shadow: 0 0 6px $primary-color;
 		}
 		&-tip {
 			position: absolute;
-			display: inline-block;
+			display: flex;
+			justify-content: flex-end;
 			width: 90%;
-			font-family: $font-cursive;
-			color: $third-color;
 			padding-top: 10px;
 			text-align: right;
 			align-items: center;
+			& span {
+				font-size: 1.1rem;
+				color: $fourth-color;
+			}
 			&-icon {
+				display: inline-block;
 				margin-left: 10px;
+				font-size: 2rem;
 				& > path {
-					color: $third-color;
+					color: $fourth-color;
 				}
 			}
 		}
@@ -43,24 +52,24 @@
 			width: 100%;
 			height: 100%;
 			scale: 0.98;
-			border-radius: 20px;
+			border-radius: 5px;
+			overflow: hidden;
 			&-image {
 				width: 100%;
 				height: 100%;
-				border-radius: 20px;
 				object-fit: cover;
 			}
 			&-caption {
 				position: absolute;
-				top: 40px;
-				left: 40px;
+				top: 10px;
+				left: 0;
 				width: fit-content;
 				background-color: $light-color;
-				box-shadow: 0 0 8px $secondary-color;
+				box-shadow: 0 0 4px $primary-color;
 				padding: 10px 20px;
 				color: $dark-color;
-				text-align: center;
-				white-space: nowrap;
+				// text-align: center;
+				// white-space: nowrap;
 				font-size: 1.1rem;
 			}
 			&--masks {
@@ -71,16 +80,16 @@
 				width: 100%;
 				height: 100%;
 				border-radius: 20px;
-				overflow: hidden;
 				& .figure--mask {
 					width: 100%;
-					height: 2.5%;
-					background-color: $fourth-color;
+					height: calc(100% / 14);
+					background-color: $dark-color;
 					&:nth-child(odd) {
 						transform-origin: right;
 					}
 					&:nth-child(even) {
 						transform-origin: left;
+						// background-color: $third-color;
 					}
 				}
 			}
@@ -97,20 +106,24 @@
 		margin: 0;
 		padding-left: 20px;
 		&-button {
+			cursor: pointer;
 			box-sizing: border-box;
-			background-color: $third-color;
-			color: $primary-color;
+			background-color: $fourth-color;
+			color: $light-color;
 			border: none;
 			margin-bottom: 5px;
 			padding: 10px;
-			border-top-right-radius: 10px;
-			border-bottom-left-radius: 10px;
-			box-shadow: 0 0 8px $secondary-color;
+			border-radius: 5px;
+			// border: 1px solid $light-color;
+			// box-shadow: 0 0 4px $fourth-color;
 			transition: transform 175ms ease;
+			transform-origin: left bottom;
 			z-index: 11;
 			&:hover {
-				background-color: $fourth-color;
-				transform: scale(1.35);
+				background-color: $primary-color;
+				// border: 1px solid $light-color;
+				// box-shadow: 0 0 4px $primary-color;
+				transform: scale(1.4);
 			}
 		}
 		@include project-button;
@@ -119,6 +132,7 @@
 // touch screen classes
 .projects--ts {
 	position: relative;
+	width: 100%;
 	height: 40vh;
 	margin-top: 2vh;
 	margin-bottom: 2vh;
@@ -181,7 +195,7 @@
 			display: inline-block;
 			font-size: 3rem;
 			& > path {
-				color: $primary-color;
+				color: $secondary-color;
 			}
 		}
 	}

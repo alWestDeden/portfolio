@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&family=Raleway:wght@700&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .fa-css3-alt > path {
   color: #039fda;
 }
@@ -10,10 +10,6 @@
 
 .fa-font-awesome > path {
   color: #538dd6;
-}
-
-.fa-github > path {
-  color: #1f2328;
 }
 
 .fa-html5 > path {
@@ -50,11 +46,23 @@
 .nina {
   font-family: "Inter", sans-serif;
   color: #212529;
+  font-weight: 400;
 }
 
 .argent {
   font-family: "Montserrat", sans-serif;
   color: #00bc77;
+}
+
+.open {
+  font-family: "Inter", sans-sherif;
+  color: #7450eb;
+  font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+.open:hover {
+  color: #3f72af;
 }
 
 .fa-css3-alt > path {
@@ -67,10 +75,6 @@
 
 .fa-font-awesome > path {
   color: #538dd6;
-}
-
-.fa-github > path {
-  color: #1f2328;
 }
 
 .fa-html5 > path {
@@ -107,42 +111,42 @@
 .nina {
   font-family: "Inter", sans-serif;
   color: #212529;
+  font-weight: 400;
 }
 
 .argent {
   font-family: "Montserrat", sans-serif;
   color: #00bc77;
+}
+
+.open {
+  font-family: "Inter", sans-sherif;
+  color: #7450eb;
+  font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+.open:hover {
+  color: #3f72af;
 }
 
 @keyframes zoomIn {
   0% {
     transform: scale(1);
   }
-  50% {
-    transform: scale(0.98);
-  }
-  100% {
-    transform: scale(1.01);
-  }
-}
-@keyframes fadeOut {
-  0%, 75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+  28%, 100% {
+    transform: scale(1.02);
   }
 }
 .zoom-in {
   z-index: 0;
   transform: scale(1);
-  box-shadow: 0 0 4px #e3e2db;
-  animation: 300ms ease-in-out 150ms forwards zoomIn;
+  animation: 500ms ease-in-out 200ms forwards zoomIn;
 }
 
 .strips-out > * {
   transform: scaleX(0) scaleY(0);
-  transition: all 800ms ease;
+  transition: all 900ms ease;
   z-index: 1;
 }
 
@@ -184,7 +188,7 @@
 
 .projects {
   height: 44vh;
-  width: 100%;
+  width: 66%;
   display: flex;
   justify-content: flex-start;
   margin-top: 8vh;
@@ -194,30 +198,37 @@
   position: relative;
   width: calc(74% - 30px);
   height: inherit;
-  border-radius: 20px;
+  border-radius: 5px;
+  border: 5px solid white;
 }
 .projects .project--mask {
   position: absolute;
   z-index: 0;
   width: 100%;
   height: 100%;
-  background-color: #fdf8f4;
+  border-radius: 5px;
+  background-color: #3f72af;
 }
 .projects .project-tip {
   position: absolute;
-  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
   width: 90%;
-  font-family: "Handlee", cursive;
-  color: #e3c08f;
   padding-top: 10px;
   text-align: right;
   align-items: center;
 }
+.projects .project-tip span {
+  font-size: 1.1rem;
+  color: #3f72af;
+}
 .projects .project-tip-icon {
+  display: inline-block;
   margin-left: 10px;
+  font-size: 2rem;
 }
 .projects .project-tip-icon > path {
-  color: #e3c08f;
+  color: #3f72af;
 }
 .projects .project-figure {
   position: absolute;
@@ -227,27 +238,25 @@
   width: 100%;
   height: 100%;
   scale: 0.98;
-  border-radius: 20px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .projects .project-figure-image {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .projects .project-figure-caption {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 10px;
+  left: 0;
   width: -moz-fit-content;
   width: fit-content;
   background-color: white;
-  box-shadow: 0 0 8px #e3e2db;
+  box-shadow: 0 0 4px #f9f7f7;
   padding: 10px 20px;
-  color: #4e4e4e;
-  text-align: center;
-  white-space: nowrap;
+  color: #09192c;
   font-size: 1.1rem;
 }
 .projects .project-figure--masks {
@@ -258,12 +267,11 @@
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  overflow: hidden;
 }
 .projects .project-figure--masks .figure--mask {
   width: 100%;
-  height: 2.5%;
-  background-color: #ebd0ac;
+  height: 7.1428571429%;
+  background-color: #09192c;
 }
 .projects .project-figure--masks .figure--mask:nth-child(odd) {
   transform-origin: right;
@@ -293,21 +301,21 @@
   padding-left: 20px;
 }
 .projects .projects-menu-button {
+  cursor: pointer;
   box-sizing: border-box;
-  background-color: #e3c08f;
-  color: #fdf8f4;
+  background-color: #3f72af;
+  color: white;
   border: none;
   margin-bottom: 5px;
   padding: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  box-shadow: 0 0 8px #e3e2db;
+  border-radius: 5px;
   transition: transform 175ms ease;
+  transform-origin: left bottom;
   z-index: 11;
 }
 .projects .projects-menu-button:hover {
-  background-color: #ebd0ac;
-  transform: scale(1.35);
+  background-color: #f9f7f7;
+  transform: scale(1.4);
 }
 .projects .projects-menu .booki--hover {
   font-family: "Raleway", sans-serif;
@@ -342,6 +350,7 @@
 
 .projects--ts {
   position: relative;
+  width: 100%;
   height: 40vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -361,7 +370,7 @@
   overflow: hidden;
   height: 100%;
   width: 100%;
-  box-shadow: 0 0 8px #e3e2db;
+  box-shadow: 0 0 8px #e8dfca;
   box-sizing: border-box;
 }
 .projects--ts .project--ts .figure--ts .image--ts {
@@ -389,7 +398,7 @@
 .projects--ts .project--ts .figure--ts .caption--ts .title--ts h4 {
   display: inline-block;
   margin: 0;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Bowlby One", sans-serif;
 }
 .projects--ts .project--ts .figure--ts .caption--ts .title--ts p {
   display: inline-block;
@@ -407,7 +416,7 @@
   font-size: 3rem;
 }
 .projects--ts .arrows--ts .arrow-icon--ts > path {
-  color: #fdf8f4;
+  color: #e8dfca;
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {

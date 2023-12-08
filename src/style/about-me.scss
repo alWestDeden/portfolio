@@ -1,21 +1,26 @@
 @import "./variable.scss";
 .about {
-	min-height: fit-content;
-	width: 100%;
 	box-sizing: border-box;
+	width: 33%;
 	background-color: $third-color;
-	border-radius: 30px;
+	border: 5px solid $light-color;
+	border-radius: 10px;
 	margin-top: 5vh;
-	padding: 40px 40px;
-	box-shadow: 0 0 8px $secondary-color;
-}
-.about-ts {
-	border-radius: 0;
-	margin-top: 2vh;
 	padding: 20px;
+	// box-shadow: 0 0 6px $primary-color;
 	& p {
 		text-align: justify;
+		margin-bottom: 0.5rem;
 		font-size: 1.1rem;
-		margin-bottom: 0.7rem;
+		color: $dark-color;
+	}
+	&--ts {
+		width: 100%;
+		border-radius: 0;
+		margin-top: 2vh;
+		& p {
+			font-size: 1.1rem;
+			margin-bottom: 0.7rem;
+		}
 	}
 }

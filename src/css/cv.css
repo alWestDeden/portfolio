@@ -64,52 +64,70 @@
   color: #3f72af;
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
+.cv {
   align-items: center;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-  min-width: 840px;
-  margin: 0;
-}
-.home .square-background {
-  position: absolute;
-  z-index: -1;
-  top: 33%;
-  width: 66%;
-  max-width: 1258px;
-  height: 60%;
-  background-color: #f9f7f7;
-  border-radius: 10%;
-}
-.home-top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.home-top--ts {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  width: 33%;
+  height: 20vh;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #3f72af;
+  border: 5px solid white;
+  padding: 10px 0;
 }
-.home-bottom {
-  width: 100%;
+.cv-list {
+  align-items: end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 12fr 1fr;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 20px;
+  height: 100%;
+}
+.cv-list-infos {
+  grid-column: 1;
+  grid-row: 1;
+  line-height: 1.2rem;
+  transition: transform 200ms;
+  height: 100%;
+}
+.cv-list-infos .cv-details {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  height: 100%;
 }
-.home-bottom-left {
-  width: 66%;
+.cv-list-infos .cv-details .cv-detail-container > p {
+  color: white;
+  margin: 0 0 1px;
+  font-size: 1.1rem;
 }
-.home-bottom-left--ts {
-  display: none;
+.cv-list-infos .cv-details h4 {
+  color: white;
+  display: inline-block;
+  text-align: right;
+  font-size: 1.6rem;
+  margin: 0;
+  font-family: "Paytone One", sans-serif;
+}
+.cv--ts {
+  width: 100%;
+  height: 25vh;
 }
 
-.home--ts {
-  overflow-x: hidden;
-  min-width: unset;
-}/*# sourceMappingURL=Home.css.map */
+.active {
+  transform: translateX(0);
+}
+
+.left {
+  transform: translateX(-110%);
+}
+
+.right {
+  transform: translateX(110%);
+}/*# sourceMappingURL=cv.css.map */

@@ -1,12 +1,48 @@
+@import "./variable.scss";
 .home {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
 	min-height: fit-content;
-	min-width: 1024px;
+	min-width: 840px;
 	margin: 0;
+	.square-background {
+		position: absolute;
+		z-index: -1;
+		top: 33%;
+		width: 66%;
+		max-width: 1258px;
+		height: 60%;
+		background-color: $primary-color;
+		border-radius: 10%;
+	}
+	&-top {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+	&-top--ts {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	&-bottom {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		&-left {
+			width: 66%;
+			&--ts {
+				display: none;
+			}
+		}
+	}
 }
 .home--ts {
 	overflow-x: hidden;
+	min-width: unset;
 }

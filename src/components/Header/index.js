@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { DeviceContext } from "../../index"
+import addClassExtension from "../../functions/addClassExtension"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
@@ -8,11 +9,10 @@ import "../../style/header.scss"
 export default function Header() {
 	const touchScreen = useContext(DeviceContext)
 	return (
-		<div className={!touchScreen ? "header" : "header header--ts"}>
+		<div className={addClassExtension(touchScreen, "header")}>
 			<div className='title'>
-				<h3>portfolio</h3>
 				<h1>{!touchScreen ? "BEN AOUMAR BOUMEDIENE" : "BAB"}</h1>
-				<h2>Intégrateur Web</h2>
+				<h2>Développeur/Intégrateur Web</h2>
 			</div>
 			<nav className='navigation'>
 				<a href='https://github.com/alWestDeden?tab=repositories'>

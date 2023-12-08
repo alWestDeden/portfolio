@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react"
 import { useParams } from "react-router"
 import { Link, useLocation } from "react-router-dom"
 import { DeviceContext } from "../../index"
+import addClassExtension from "../../functions/addClassExtension"
 import projects from "../../data/projects"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe, faHouse, faScroll } from "@fortawesome/free-solid-svg-icons"
@@ -19,25 +20,26 @@ export default function Project() {
 		window.scrollTo(0, 0)
 	}, [pathname])
 	return (
-		<section className={!touchScreen ? "selected" : "selected selected--ts"}>
-			<div className={!touchScreen ? "selected-left" : "selected-left selected-left--ts"}>
-				<img
-					className={!touchScreen ? "selected-left-image" : "selected-left-image selected-left-image-hide"}
-					src={image}
-					alt={name}
-				/>
-				<div className='selected-left-links'>
-					<Link className='selected-left-links-link' to={site}>
-						<FontAwesomeIcon className='selected-left-links-link-icon' icon={faGlobe} />
-						<p>site</p>
-					</Link>
-					<Link className='selected-left-links-link' to={code}>
-						<FontAwesomeIcon className='selected-left-links-link-icon' icon={faGithub} />
-						<p>code</p>
-					</Link>
-				</div>
+		<section className={addClassExtension(touchScreen, "selected")}>
+			<div className='square-background'></div>
+			<div className={addClassExtension(touchScreen, "selected-left")}>
+				<img className={addClassExtension(touchScreen, "selected-left-image")} src={image} alt={name} />
+				{!touchScreen ? (
+					""
+				) : (
+					<div className='selected-left-links--ts'>
+						<Link className='left-link' to={site}>
+							<FontAwesomeIcon className='left-link-icon' icon={faGlobe} />
+							<p>site</p>
+						</Link>
+						<Link className='left-link' to={code}>
+							<FontAwesomeIcon className='left-link-icon' icon={faGithub} />
+							<p>code</p>
+						</Link>
+					</div>
+				)}
 			</div>
-			<div className={!touchScreen ? "selected-right" : "selected-right selected-right--ts"}>
+			<div className={addClassExtension(touchScreen, "selected-right")}>
 				<h4 className={`selected-right-title ${id}`}>{name}</h4>
 				<p className='selected-right-details'>{details}</p>
 				<h5>Contraintes :</h5>
@@ -93,9 +95,23 @@ export default function Project() {
 						}
 					})}
 				</div>
-				<div className={!touchScreen ? "selected-right-return" : "selected-right-return selected-right-return--ts"}>
-					<Link className='return-link' to='/'>
-						<FontAwesomeIcon className='return-link-icon' icon={faHouse} />
+				<div className={addClassExtension(touchScreen, "selected-right-icons")}>
+					{touchScreen ? (
+						""
+					) : (
+						<>
+							<Link className='right-link' to={site}>
+								<FontAwesomeIcon className='right-link-icon' icon={faGlobe} />
+								<p>site</p>
+							</Link>
+							<Link className='right-link' to={code}>
+								<FontAwesomeIcon className='right-link-icon' icon={faGithub} />
+								<p>code</p>
+							</Link>
+						</>
+					)}
+					<Link className='right-link' to='/'>
+						<FontAwesomeIcon className='right-link-icon' icon={faHouse} />
 						<p>retour</p>
 					</Link>
 				</div>

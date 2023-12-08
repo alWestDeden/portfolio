@@ -1,12 +1,13 @@
 @import "./variable.scss";
 * {
 	font-family: $font-text;
+	font-weight: 300;
 	color: $dark-color;
 	font-size: 1rem;
-	// overflow-x: hidden;
+	max-width: 1920px;
 	body {
 		margin: 0 6%;
-		background-color: $primary-color;
+		background-color: $light-color;
 		& a {
 			text-decoration: none;
 			font-weight: bold;
@@ -27,7 +28,7 @@
 		}
 		& h3 {
 			display: inline-block;
-			font-family: $font-cursive;
+			font-family: $font-subtitle;
 			margin: 0;
 		}
 		& .hide {

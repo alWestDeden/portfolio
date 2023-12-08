@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .fa-css3-alt > path {
   color: #039fda;
 }
@@ -9,10 +9,6 @@
 
 .fa-font-awesome > path {
   color: #538dd6;
-}
-
-.fa-github > path {
-  color: #1f2328;
 }
 
 .fa-html5 > path {
@@ -59,9 +55,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 11vh;
   width: 100%;
+  margin-top: 2vh;
 }
 .header .title {
   display: flex;
@@ -80,13 +77,13 @@
   margin-left: 10px;
 }
 .header nav a .icon > path {
-  color: #4e4e4e;
+  color: #09192c;
 }
 .header nav a .icon:hover {
   transform: scale(1.2);
 }
 .header nav a .icon:hover > path {
-  color: #ebd0ac;
+  color: #dbe2ef;
 }
 .header--ts {
   height: 15vh;

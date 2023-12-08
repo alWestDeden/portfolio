@@ -1,16 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&family=Raleway:wght@700&family=Shrikhand&display=swap");
-// colors
-$primary-color: #fdf8f4;
-$secondary-color: #e3e2db;
-$third-color: #e3c08f;
-$fourth-color: #ebd0ac;
-$fifth-color: #222222;
+// @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap"); // colors
+$primary-color: #f9f7f7;
+$secondary-color: #e8dfca;
+$third-color: #dbe2ef;
+$fourth-color: #3f72af;
 $light-color: white;
 // tester des variantes de noir
-$dark-color: #4e4e4e;
+$dark-color: #09192c;
+// $dark-color: #112d4e;
+// $dark-color: #4e4e4e;
 // site's fonts
-$font-text: "Didact Gothic", sans-serif;
-$font-title: "Black Han Sans", sans-serif;
+// $font-text: "Didact Gothic", sans-serif;
+// $font-title: "Black Han Sans", sans-serif;
+// $font-cursive: "Handlee", cursive;
+$font-text: "Jost", sans-serif;
+$font-title: "Bowlby One", sans-serif;
+$font-subtitle: "Paytone One", sans-serif;
 $font-cursive: "Handlee", cursive;
 // external sites fonts and colors
 $booki-font: "Raleway", sans-serif;
@@ -23,6 +28,36 @@ $nina-font: "Inter", sans-serif;
 $nina-color: #212529;
 $argent-font: "Montserrat", sans-serif;
 $argent-color: #00bc77;
+$open-font: "Inter", sans-sherif;
+$open-color: #7450eb;
+// @mixin booki {
+// 	font-family: "Raleway", sans-serif;
+// 	color: #0164fc;
+// }
+// @mixin ohmyfood {
+// 	font-family: "Shrikhand", serif;
+// 	color: #101010;
+// }
+// @mixin kasa {
+// 	font-family: "Montserrat", sans-serif;
+// 	color: #ff6060;
+// }
+// @mixin nina {
+// 	font-family: "Inter", sans-serif;
+// 	color: #212529;
+// 	font-weight: 400;
+// }
+// @mixin argent {
+// 	font-family: "Montserrat", sans-serif;
+// 	color: #00bc77;
+// }
+// @mixin open {
+// 	font-family: "Inter", sans-serif;
+// 	color: #7450eb;
+// 	font-weight: 900;
+// 	font-variant: small-caps;
+// 	// font-synthesis-small-caps: auto;
+// }
 // awesome icons colors
 .fa-css3-alt > path {
 	color: #039fda;
@@ -33,9 +68,9 @@ $argent-color: #00bc77;
 .fa-font-awesome > path {
 	color: #538dd6;
 }
-.fa-github > path {
-	color: #1f2328;
-}
+// .fa-github > path {
+// 	color: #1f2328;
+// }
 .fa-html5 > path {
 	color: #dc4a25;
 }
@@ -64,10 +99,21 @@ $argent-color: #00bc77;
 .nina {
 	font-family: $nina-font;
 	color: $nina-color;
+	font-weight: 400;
 }
 .argent {
 	font-family: $argent-font;
 	color: $argent-color;
+}
+.open {
+	font-family: $open-font;
+	color: $open-color;
+	font-weight: 900;
+	font-variant: small-caps;
+	font-size: 1.2rem;
+	&:hover {
+		color: $fourth-color;
+	}
 }
 // hover effect's classes
 @mixin project-button {
