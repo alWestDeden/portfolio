@@ -12,7 +12,7 @@ export default function Header() {
 		<div className={addClassExtension(touchScreen, "header")}>
 			<div className='title'>
 				<h1>{!touchScreen ? "BEN AOUMAR BOUMEDIENE" : "BAB"}</h1>
-				<h2>Développeur/Intégrateur Web</h2>
+				<h2 className={addClassExtension(touchScreen, "subtitle")}>Développeur/Intégrateur Web</h2>
 			</div>
 			<nav className='navigation'>
 				<a href='https://github.com/alWestDeden?tab=repositories'>

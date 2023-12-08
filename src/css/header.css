@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .fa-css3-alt > path {
   color: #039fda;
 }
@@ -45,11 +45,23 @@
 .nina {
   font-family: "Inter", sans-serif;
   color: #212529;
+  font-weight: 400;
 }
 
 .argent {
   font-family: "Montserrat", sans-serif;
   color: #00bc77;
+}
+
+.open {
+  font-family: "Inter", sans-sherif;
+  color: #7450eb;
+  font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+.open:hover {
+  color: #3f72af;
 }
 
 .header {
@@ -65,8 +77,11 @@
   flex-direction: column;
   margin: 0 0 0 10px;
 }
-.header .title h2 {
+.header .title .subtitle {
   text-align: right;
+}
+.header .title .subtitle--ts {
+  font-size: 0.9rem;
 }
 .header nav {
   display: flex;

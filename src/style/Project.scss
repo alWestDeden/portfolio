@@ -144,9 +144,9 @@
 				}
 				&:hover {
 					transform: scale(1.3);
-					& > * {
-						// color: $third-color;
-					}
+					// & > * {
+					// 	color: $third-color;
+					// }
 					& path {
 						color: $third-color;
 					}
