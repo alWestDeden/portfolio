@@ -82,12 +82,12 @@ export default function Projects({ touchScreen }) {
 										className={`projects-menu-button ${id}--hover`}
 										onMouseEnter={(e) => {
 											e.preventDefault()
+											showProject(nb)
 											setIndex(nb)
-											showProject(nb, index)
 										}}
 										onMouseLeave={(e) => {
 											e.preventDefault()
-											hideProject(index)
+											hideProject(nb, index)
 											setIndex(null)
 										}}
 										onClick={(e) => {
