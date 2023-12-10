@@ -1,17 +1,17 @@
 @import "./variable.scss";
 @import "./animation.scss";
 .projects {
-	grid-area: 10 / 5 / 14 / 11;
+	grid-area: 8 / 5 / 12 / 11;
 	display: contents;
 	.project {
-		grid-area: 10 / 5 / 14 / 9;
+		grid-area: 8 / 5 / 12 / 9;
 		display: flex;
 		flex-direction: column;
 		position: relative;
 		border-radius: 10px;
 		border: 10px solid $light-color;
 		padding: 10px;
-		overflow: hidden;
+		// overflow: hidden;
 		&-tip {
 			position: absolute;
 			display: flex;
@@ -43,21 +43,22 @@
 			height: 100%;
 			border-radius: inherit;
 			background-color: $fourth-color;
+			border: 10px solid $fourth-color;
 			overflow: hidden;
 			&-image {
 				width: inherit;
 				height: inherit;
 				object-fit: cover;
-				border-radius: inherit;
+				// border-radius: inherit;
 			}
 			&-caption {
 				position: absolute;
-				top: 40px;
-				left: 20px;
-				width: 66%;
+				top: 20px;
+				left: 10px;
+				width: 74%;
 				height: fit-content;
 				background-color: $light-color;
-				box-shadow: 0 0 4px $primary-color;
+				box-shadow: 0 0 2px $fourth-color;
 				padding: 10px 20px;
 				color: $dark-color;
 				// text-align: center;
@@ -75,13 +76,16 @@
 				height: 100%;
 				& .figure--mask {
 					width: 100%;
-					height: calc(100% / 14);
+					height: calc(100% / 25);
 					background-color: $fourth-color;
 					&:nth-child(odd) {
 						transform-origin: right;
 					}
 					&:nth-child(even) {
 						transform-origin: left;
+					}
+					&:nth-child(3n + 4) {
+						transition-delay: calc(n * 100ms);
 					}
 				}
 			}
@@ -93,14 +97,14 @@
 		}
 	}
 	.projects-menu {
-		grid-area: 10 / 9 / 14 / 11;
+		grid-area: 8 / 9 / 12 / 11;
 		list-style: none;
 		margin: 0;
 		padding-left: 20px;
 		&-button {
 			cursor: pointer;
 			box-sizing: border-box;
-			background-color: $fourth-color;
+			background-color: $third-color;
 			color: $light-color;
 			border: none;
 			margin-bottom: 5px;
@@ -131,14 +135,15 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 0;
-		border: 1px solid $third-color;
+		border: unset;
 		box-sizing: border-box;
 		& .figure--ts {
+			border: 3px solid $fourth-color;
 			background-color: unset;
 			padding: 0;
 			overflow: unset;
 			& .image--ts {
-				border-radius: 0;
+				border-radius: 10px;
 			}
 			& .caption--ts {
 				top: 25px;
@@ -171,7 +176,7 @@
 			display: inline-block;
 			font-size: 3rem;
 			& > path {
-				color: $fourth-color;
+				color: $primary-color;
 			}
 		}
 	}

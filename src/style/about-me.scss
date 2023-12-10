@@ -1,7 +1,7 @@
 @import "./variable.scss";
 .about {
-	grid-area: 2/2/7/6;
-	background-color: $third-color;
+	grid-area: 2/2/6/6;
+	background-color: $secondary-color;
 	border: 10px solid $light-color;
 	border-radius: 20px;
 	padding: 15px 20px 10px;
@@ -21,6 +21,10 @@
 		& p {
 			font-size: 1.1rem;
 			margin-bottom: 0.7rem;
+			color: $light-color;
+			& > h3 {
+				color: $light-color;
+			}
 		}
 	}
 }

@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3f72af;
+  color: #3d3d3d;
 }
 
 .fa-css3-alt > path {
@@ -65,8 +65,8 @@
 }
 
 .about {
-  grid-area: 2/2/7/6;
-  background-color: #dbe2ef;
+  grid-area: 2/2/6/6;
+  background-color: #d5d5d5;
   border: 10px solid white;
   border-radius: 20px;
   padding: 15px 20px 10px;
@@ -75,7 +75,7 @@
   text-align: justify;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  color: #09192c;
+  color: #242424;
 }
 .about--ts {
   grid-area: 1/1/6/1;
@@ -83,9 +83,13 @@
   border: unset;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  background-color: #3f72af;
+  background-color: #3d3d3d;
 }
 .about--ts p {
   font-size: 1.1rem;
   margin-bottom: 0.7rem;
+  color: white;
+}
+.about--ts p > h3 {
+  color: white;
 }/*# sourceMappingURL=about-me.css.map */

@@ -39,7 +39,7 @@ export default function Projects({ touchScreen }) {
 			{!touchScreen ? (
 				<section key='cursor' className='projects'>
 					<div className='project'>
-						<div className='project--mask'></div>
+						{/* <div className='project--mask'></div> */}
 						<span className='project-tip'>
 							<ReactTyped
 								strings={["   Choisissez un projet", "   Puis cliquez dessus", "", ""]}
@@ -63,8 +63,8 @@ export default function Projects({ touchScreen }) {
 											</div>
 										</figcaption>
 										<div id={`project--masks-${nb}`} className='project-figure--masks'>
-											{[...Array(14)].map((x, i) => (
-												<div key={`mask${i}`} className={`figure--mask`}></div>
+											{[...Array(25)].map((x, i) => (
+												<div key={`mask${i}`} className={`figure--mask figure--mask-${i}`}></div>
 											))}
 										</div>
 									</figure>

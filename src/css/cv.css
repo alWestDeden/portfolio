@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3f72af;
+  color: #3d3d3d;
 }
 
 .fa-css3-alt > path {
@@ -65,12 +65,12 @@
 }
 
 .cv {
-  grid-area: 4/8/7/11;
+  grid-area: 3/8/5/11;
   align-items: center;
   display: grid;
   justify-content: center;
   border-radius: 20px;
-  background-color: #3f72af;
+  background-color: #3d3d3d;
   border: 10px solid white;
   padding: 20px 0 10px;
   overflow: hidden;
