@@ -5,7 +5,6 @@ import "../../style/cv.scss"
 export default function Cv({ touchScreen }) {
 	const [activeSlide, setActiveSlide] = useState(1)
 	useEffect(() => {
-		// This variable prevents race condition
 		let current = 1
 		const cycleReviews = () => {
 			if (current === cv.length) {
@@ -46,12 +45,6 @@ export default function Cv({ touchScreen }) {
 						</li>
 					)
 				})}
-				{/* <li className='cv-dots'>
-					{cv.map((info) => {
-						const { nb } = info
-						return <span key={`cv-dot--${nb}`} className={`cv-dot ${activeSlide === nb ? "cv-dot--active" : ""}`} />
-					})}
-				</li> */}
 			</ul>
 		</section>
 	)

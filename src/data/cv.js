@@ -7,7 +7,7 @@ const cv = [
 	{
 		nb: 2,
 		title: "Langues parlées",
-		details: ["Français", "Anglais, niveau B2", "Espagnol, niveau B1", "Arabe dialectal, niveau B1"],
+		details: ["Français", "Anglais niveau B2", "Espagnol niveau B1", "Arabe dialectal niveau B1"],
 	},
 	{
 		nb: 3,
@@ -22,7 +22,7 @@ const cv = [
 	{
 		nb: 5,
 		title: "Loisirs",
-		details: ["Randonnée,", "lecture,", "photographie,", "musique"],
+		details: ["Randonnée,", "Lecture,", "Photographie,", "Musique"],
 	},
 ]
 export default cv

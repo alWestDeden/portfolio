@@ -1,32 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
-.fa-css3-alt > path {
-  color: #039fda;
-}
-
-.fa-figma > path {
-  color: #eb4b1d;
-}
-
-.fa-font-awesome > path {
-  color: #538dd6;
-}
-
-.fa-html5 > path {
-  color: #dc4a25;
-}
-
-.fa-square-js > path {
-  color: #efd81a;
-}
-
-.fa-react > path {
-  color: #5ed2f3;
-}
-
-.fa-sass > path {
-  color: #c56494;
-}
-
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -64,19 +36,44 @@
   color: #3f72af;
 }
 
+.fa-css3-alt > path {
+  color: #039fda;
+}
+
+.fa-figma > path {
+  color: #eb4b1d;
+}
+
+.fa-font-awesome > path {
+  color: #538dd6;
+}
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
+}
+
 .cv {
+  grid-area: 4/8/7/11;
   align-items: center;
   display: grid;
   justify-content: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-radius: 10px;
-  box-sizing: border-box;
+  border-radius: 20px;
   background-color: #3f72af;
-  border: 5px solid white;
+  border: 10px solid white;
   padding: 20px 0 10px;
+  overflow: hidden;
 }
 .cv-list {
   align-items: end;
@@ -107,6 +104,7 @@
   color: white;
   margin: 0 0 1px;
   font-size: 1.1rem;
+  font-variant: small-caps;
 }
 .cv-list-infos .cv-details h4 {
   color: white;
@@ -115,11 +113,11 @@
   font-size: 1.6rem;
   margin: 0;
   font-family: "Paytone One", sans-serif;
+  font-variant: small-caps;
 }
 .cv--ts {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  grid-area: 12/1/14/1;
+  margin-top: 2vh;
   border-radius: 0;
   border: none;
 }

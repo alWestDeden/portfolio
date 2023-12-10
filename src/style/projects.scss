@@ -1,29 +1,17 @@
 @import "./variable.scss";
 @import "./animation.scss";
 .projects {
-	height: 44vh;
-	width: 66%;
-	display: flex;
-	justify-content: flex-start;
-	// margin-top: 8vh;
-	margin-bottom: 8vh;
-	& .project {
+	grid-area: 10 / 5 / 14 / 11;
+	display: contents;
+	.project {
+		grid-area: 10 / 5 / 14 / 9;
+		display: flex;
+		flex-direction: column;
 		position: relative;
-		width: 100%;
-		height: 100%;
 		border-radius: 10px;
-		border: 5px solid $light-color;
+		border: 10px solid $light-color;
 		padding: 10px;
-		&--mask {
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 0;
-			width: inherit;
-			height: inherit;
-			border-radius: inherit;
-			background-color: $fourth-color;
-		}
+		overflow: hidden;
 		&-tip {
 			position: absolute;
 			display: flex;
@@ -51,11 +39,10 @@
 			margin: 0;
 			padding: 0px;
 			box-sizing: border-box;
-			width: inherit;
-			height: inherit;
+			width: 100%;
+			height: 100%;
 			border-radius: inherit;
 			background-color: $fourth-color;
-			// scale: 0.98;
 			overflow: hidden;
 			&-image {
 				width: inherit;
@@ -81,6 +68,7 @@
 				position: absolute;
 				display: flex;
 				flex-direction: column;
+				grid-area: inherit;
 				top: 0;
 				right: 0;
 				width: 100%;
@@ -88,13 +76,12 @@
 				& .figure--mask {
 					width: 100%;
 					height: calc(100% / 14);
-					background-color: $dark-color;
+					background-color: $fourth-color;
 					&:nth-child(odd) {
 						transform-origin: right;
 					}
 					&:nth-child(even) {
 						transform-origin: left;
-						// background-color: $third-color;
 					}
 				}
 			}
@@ -105,9 +92,9 @@
 			}
 		}
 	}
-	& .projects-menu {
+	.projects-menu {
+		grid-area: 10 / 9 / 14 / 11;
 		list-style: none;
-		width: 200px;
 		margin: 0;
 		padding-left: 20px;
 		&-button {
@@ -119,15 +106,11 @@
 			margin-bottom: 5px;
 			padding: 10px;
 			border-radius: 5px;
-			// border: 1px solid $light-color;
-			// box-shadow: 0 0 4px $fourth-color;
 			transition: transform 175ms ease;
 			transform-origin: left bottom;
 			z-index: 11;
 			&:hover {
 				background-color: $primary-color;
-				// border: 1px solid $light-color;
-				// box-shadow: 0 0 4px $primary-color;
 				transform: scale(1.4);
 			}
 		}
@@ -136,22 +119,19 @@
 }
 // touch screen classes
 .projects--ts {
-	position: relative;
-	width: 100%;
-	height: 50vh;
+	grid-area: 6/1/12/1;
 	margin-top: 2vh;
-	margin-bottom: 2vh;
 	border-radius: 0;
-	display: unset;
 	& .project--ts {
-		position: absolute;
+		grid-area: inherit;
+		width: 100%;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		border-radius: 0;
-		border: none;
-		box-shadow: 0 0 8px $secondary-color;
+		border: 1px solid $third-color;
 		box-sizing: border-box;
 		& .figure--ts {
 			background-color: unset;
@@ -161,8 +141,6 @@
 				border-radius: 0;
 			}
 			& .caption--ts {
-				// display: flex;
-				// align-items: center;
 				top: 25px;
 				left: 28px;
 				white-space: unset;

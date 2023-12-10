@@ -1,65 +1,81 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&display=swap");
-@keyframes slideIn {
-  0% {
-    transform: Scale(0);
-    opacity: 0;
-  }
-  25% {
-    transform: translate(-25px, -10px) scale(0.96);
-  }
-  75% {
-    transform: translate(0) scale(1.01);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+.booki {
+  font-family: "Raleway", sans-serif;
+  color: #0164fc;
 }
-@keyframes slideOut {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  80% {
-    transform: scale(0.96);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(0.76);
-    opacity: 0;
-  }
+
+.ohmyfood {
+  font-family: "Shrikhand", serif;
+  color: #101010;
 }
-@keyframes slideRight {
-  0% {
-    transform: translateX(100%);
-  }
-  79% {
-    transform: translateX(-1%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+.kasa {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
 }
-@keyframes slideLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  79% {
-    transform: translateX(1%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+.nina {
+  font-family: "Inter", sans-serif;
+  color: #212529;
+  font-weight: 400;
 }
+
+.argent {
+  font-family: "Montserrat", sans-serif;
+  color: #00bc77;
+}
+
+.open {
+  font-family: "Inter", sans-sherif;
+  color: #7450eb;
+  font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+.open:hover {
+  color: #3f72af;
+}
+
+.fa-css3-alt > path {
+  color: #039fda;
+}
+
+.fa-figma > path {
+  color: #eb4b1d;
+}
+
+.fa-font-awesome > path {
+  color: #538dd6;
+}
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
+}
+
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 11vh;
-  border-top: 1px solid #4e4e4e;
+  border-top: 1px solid #09192c;
 }
 .footer h3 {
   display: inline-block;
   margin: 0;
+}
+
+.footer-ts {
+  height: 13vh;
 }/*# sourceMappingURL=footer.css.map */

@@ -1,13 +1,10 @@
 @import "./variable.scss";
 .about {
-	box-sizing: border-box;
-	width: 33%;
+	grid-area: 2/2/7/6;
 	background-color: $third-color;
-	border: 5px solid $light-color;
-	border-radius: 10px;
-	margin: 5vh 0 0;
+	border: 10px solid $light-color;
+	border-radius: 20px;
 	padding: 15px 20px 10px;
-	// box-shadow: 0 0 6px $primary-color;
 	& p {
 		text-align: justify;
 		margin-bottom: 0.5rem;
@@ -15,10 +12,12 @@
 		color: $dark-color;
 	}
 	&--ts {
-		width: 100%;
+		grid-area: 1/1/6/1;
 		border-radius: 0;
 		border: unset;
-		margin: 2vh 0;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		background-color: $fourth-color;
 		& p {
 			font-size: 1.1rem;
 			margin-bottom: 0.7rem;

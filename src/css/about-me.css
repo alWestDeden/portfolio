@@ -1,32 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
-.fa-css3-alt > path {
-  color: #039fda;
-}
-
-.fa-figma > path {
-  color: #eb4b1d;
-}
-
-.fa-font-awesome > path {
-  color: #538dd6;
-}
-
-.fa-html5 > path {
-  color: #dc4a25;
-}
-
-.fa-square-js > path {
-  color: #efd81a;
-}
-
-.fa-react > path {
-  color: #5ed2f3;
-}
-
-.fa-sass > path {
-  color: #c56494;
-}
-
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -64,13 +36,39 @@
   color: #3f72af;
 }
 
+.fa-css3-alt > path {
+  color: #039fda;
+}
+
+.fa-figma > path {
+  color: #eb4b1d;
+}
+
+.fa-font-awesome > path {
+  color: #538dd6;
+}
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
+}
+
 .about {
-  box-sizing: border-box;
-  width: 33%;
+  grid-area: 2/2/7/6;
   background-color: #dbe2ef;
-  border: 5px solid white;
-  border-radius: 10px;
-  margin: 5vh 0 0;
+  border: 10px solid white;
+  border-radius: 20px;
   padding: 15px 20px 10px;
 }
 .about p {
@@ -80,10 +78,12 @@
   color: #09192c;
 }
 .about--ts {
-  width: 100%;
+  grid-area: 1/1/6/1;
   border-radius: 0;
   border: unset;
-  margin: 2vh 0;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: #3f72af;
 }
 .about--ts p {
   font-size: 1.1rem;

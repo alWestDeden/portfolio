@@ -1,33 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
-.fa-css3-alt > path {
-  color: #039fda;
-}
-
-.fa-figma > path {
-  color: #eb4b1d;
-}
-
-.fa-font-awesome > path {
-  color: #538dd6;
-}
-
-.fa-html5 > path {
-  color: #dc4a25;
-}
-
-.fa-square-js > path {
-  color: #efd81a;
-}
-
-.fa-react > path {
-  color: #5ed2f3;
-}
-
-.fa-sass > path {
-  color: #c56494;
-}
-
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -128,6 +100,34 @@
 }
 .open:hover {
   color: #3f72af;
+}
+
+.fa-css3-alt > path {
+  color: #039fda;
+}
+
+.fa-figma > path {
+  color: #eb4b1d;
+}
+
+.fa-font-awesome > path {
+  color: #538dd6;
+}
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
 }
 
 @keyframes zoomIn {
@@ -187,29 +187,18 @@
 }
 
 .projects {
-  height: 44vh;
-  width: 66%;
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 8vh;
+  grid-area: 10/5/14/11;
+  display: contents;
 }
 .projects .project {
+  grid-area: 10/5/14/9;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  width: 100%;
-  height: 100%;
   border-radius: 10px;
-  border: 5px solid white;
+  border: 10px solid white;
   padding: 10px;
-}
-.projects .project--mask {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
-  background-color: #3f72af;
+  overflow: hidden;
 }
 .projects .project-tip {
   position: absolute;
@@ -238,8 +227,8 @@
   margin: 0;
   padding: 0px;
   box-sizing: border-box;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   border-radius: inherit;
   background-color: #3f72af;
   overflow: hidden;
@@ -268,6 +257,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+  grid-area: inherit;
   top: 0;
   right: 0;
   width: 100%;
@@ -276,7 +266,7 @@
 .projects .project-figure--masks .figure--mask {
   width: 100%;
   height: 7.1428571429%;
-  background-color: #09192c;
+  background-color: #3f72af;
 }
 .projects .project-figure--masks .figure--mask:nth-child(odd) {
   transform-origin: right;
@@ -300,8 +290,8 @@
   z-index: -1;
 }
 .projects .projects-menu {
+  grid-area: 10/9/14/11;
   list-style: none;
-  width: 200px;
   margin: 0;
   padding-left: 20px;
 }
@@ -354,23 +344,20 @@
 }
 
 .projects--ts {
-  position: relative;
-  width: 100%;
-  height: 50vh;
+  grid-area: 6/1/12/1;
   margin-top: 2vh;
-  margin-bottom: 2vh;
   border-radius: 0;
-  display: unset;
 }
 .projects--ts .project--ts {
-  position: absolute;
+  grid-area: inherit;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 0;
-  border: none;
-  box-shadow: 0 0 8px #e8dfca;
+  border: 1px solid #dbe2ef;
   box-sizing: border-box;
 }
 .projects--ts .project--ts .figure--ts {

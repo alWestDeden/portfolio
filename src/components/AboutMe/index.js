@@ -11,8 +11,8 @@ export default function AboutMe({ touchScreen }) {
 				avec l'envie de réorienter ma carrière professionnelle.
 			</p>
 			<p>
-				Vous trouverez sur ce site quelques uns des Projets validés dans le cadre de la formation de <h3>Développeur</h3>/
-				<h3>Intégrateur Web</h3> que j'ai suivi chez{" "}
+				Vous trouverez sur ce site quelques uns des Projets validés dans le cadre de la formation de{" "}
+				<h3>Développeur/Intégrateur Web</h3> que j'ai suivi chez{" "}
 				<a className='open' href='https://openclassrooms.com/fr/'>
 					OpenClassRooms
 				</a>
