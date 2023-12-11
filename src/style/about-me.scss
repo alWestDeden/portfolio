@@ -11,8 +11,10 @@
 		font-size: 1.1rem;
 		color: $dark-color;
 	}
-	&--ts {
-		grid-area: 1/1/6/1;
+}
+@include devices(mobile-2) {
+	.about--ts {
+		grid-area: 1/1/4/1;
 		border-radius: 0;
 		border: unset;
 		margin-top: 2vh;
@@ -26,5 +28,20 @@
 				color: $light-color;
 			}
 		}
+	}
+}
+@include devices(mobile-1) {
+	.about--ts {
+		grid-area: 1/1/3/1;
+	}
+}
+@include devices(desktop-1) {
+	.about {
+		grid-area: 1/2/3/11;
+	}
+}
+@include devices(desktop-2) {
+	.about {
+		grid-area: 2/2/6/7;
 	}
 }

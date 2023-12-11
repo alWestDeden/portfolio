@@ -5,41 +5,42 @@
 	grid-template-columns: repeat(11, 1fr);
 	grid-auto-columns: 1fr;
 	margin: 0;
-	.square-background {
+	& .square-background {
 		grid-area: 4/3/9/10;
 		z-index: -1;
 		background-color: $primary-color;
 		border-radius: 20px;
 	}
-	&-top {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-	}
-	&-top--ts {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-	}
-	&-bottom {
-		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-		&-left {
-			width: 66%;
-			&--ts {
-				display: none;
-			}
+}
+@include devices(mobile-2) {
+	.home--ts {
+		overflow-x: hidden;
+		grid-template-rows: repeat(11, 1fr);
+		grid-template-columns: 1fr;
+		grid-auto-columns: unset;
+		& .square-background {
+			display: none;
 		}
 	}
 }
-.home--ts {
-	overflow-x: hidden;
-	grid-template-rows: repeat(13, 1fr);
-	grid-template-columns: 1fr;
-	grid-auto-columns: unset;
+@include devices(mobile-1) {
+	.home--ts {
+		grid-template-rows: repeat(5, 1fr);
+	}
+}
+@include devices(desktop-1) {
+	.home {
+		grid-template-rows: repeat(5, 1fr);
+		& .square-background {
+			grid-area: 2/1/5/12;
+		}
+	}
+}
+@include devices(desktop-2) {
+	.home {
+		grid-template-rows: repeat(12, 1fr);
+		& .square-background {
+			grid-area: 3/1/12/12;
+		}
+	}
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3f72af;
+  color: #3d3d3d;
 }
 
 .fa-css3-alt > path {
@@ -69,13 +69,15 @@
   justify-content: center;
   align-items: center;
   height: 11vh;
-  border-top: 1px solid #09192c;
+  border-top: 1px solid #242424;
 }
 .footer h3 {
   display: inline-block;
   margin: 0;
 }
 
-.footer-ts {
-  height: 13vh;
+@media (max-width: 1024px) and (hover: none) {
+  .footer-ts {
+    height: 13vh;
+  }
 }/*# sourceMappingURL=footer.css.map */

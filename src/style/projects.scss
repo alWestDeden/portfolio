@@ -1,17 +1,16 @@
 @import "./variable.scss";
 @import "./animation.scss";
 .projects {
-	grid-area: 8 / 5 / 12 / 11;
+	grid-area: 8/5/12/11;
 	display: contents;
 	.project {
-		grid-area: 8 / 5 / 12 / 9;
+		grid-area: 8/5/12/9;
 		display: flex;
 		flex-direction: column;
 		position: relative;
 		border-radius: 10px;
 		border: 10px solid $light-color;
 		padding: 10px;
-		// overflow: hidden;
 		&-tip {
 			position: absolute;
 			display: flex;
@@ -49,6 +48,7 @@
 				width: inherit;
 				height: inherit;
 				object-fit: cover;
+				// border: 1px solid $fourth-color;
 				// border-radius: inherit;
 			}
 			&-caption {
@@ -67,25 +67,27 @@
 			}
 			&--masks {
 				position: absolute;
+				top: 0;
+				right: -1px;
 				display: flex;
 				flex-direction: column;
 				grid-area: inherit;
-				top: 0;
-				right: 0;
-				width: 100%;
+				width: 101%;
 				height: 100%;
 				& .figure--mask {
 					width: 100%;
-					height: calc(100% / 25);
 					background-color: $fourth-color;
-					&:nth-child(odd) {
+					&-0 {
+						transform-origin: top;
+						height: 8%;
+					}
+					&-1 {
 						transform-origin: right;
+						height: 19%;
 					}
-					&:nth-child(even) {
-						transform-origin: left;
-					}
-					&:nth-child(3n + 4) {
-						transition-delay: calc(n * 100ms);
+					&-2 {
+						transform-origin: bottom;
+						height: 73%;
 					}
 				}
 			}
@@ -97,9 +99,9 @@
 		}
 	}
 	.projects-menu {
-		grid-area: 8 / 9 / 12 / 11;
+		grid-area: 8/9/12/11;
 		list-style: none;
-		margin: 0;
+		margin: 10px 0 0;
 		padding-left: 20px;
 		&-button {
 			cursor: pointer;
@@ -121,67 +123,96 @@
 		@include project-button;
 	}
 }
-// touch screen classes
-.projects--ts {
-	grid-area: 6/1/12/1;
-	margin-top: 2vh;
-	border-radius: 0;
-	& .project--ts {
-		grid-area: inherit;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+@include devices(mobile-2) {
+	// touch screen classes
+	.projects--ts {
+		grid-area: 4/1/10/1;
+		margin-top: 2vh;
 		border-radius: 0;
-		border: unset;
-		box-sizing: border-box;
-		& .figure--ts {
-			border: 3px solid $fourth-color;
-			background-color: unset;
-			padding: 0;
-			overflow: unset;
-			& .image--ts {
-				border-radius: 10px;
-			}
-			& .caption--ts {
-				top: 25px;
-				left: 28px;
-				white-space: unset;
-				& .title--ts {
-					display: flex;
-					justify-content: flex-start;
-					align-items: flex-end;
-					& h4 {
-						display: inline-block;
-						margin: 0;
-						font-family: $font-title;
-					}
-					& p {
-						display: inline-block;
-						margin-left: 5px;
-						font-size: 1.2rem;
+		& .project--ts {
+			grid-area: inherit;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0;
+			border: unset;
+			box-sizing: border-box;
+			& .figure--ts {
+				border: 3px solid $fourth-color;
+				background-color: unset;
+				padding: 0;
+				overflow: unset;
+				& .image--ts {
+					border-radius: 10px;
+				}
+				& .caption--ts {
+					top: 25px;
+					left: 28px;
+					white-space: unset;
+					& .title--ts {
+						display: flex;
+						justify-content: flex-start;
+						align-items: flex-end;
+						& h4 {
+							display: inline-block;
+							margin: 0;
+							font-family: $font-title;
+						}
+						& p {
+							display: inline-block;
+							margin-left: 5px;
+							font-size: 1.2rem;
+						}
 					}
 				}
 			}
 		}
-	}
-	& .arrows--ts {
-		position: absolute;
-		width: 93%;
-		display: flex;
-		justify-content: space-between;
-		& .arrow-icon--ts {
-			display: inline-block;
-			font-size: 3rem;
-			& > path {
-				color: $primary-color;
+		& .arrows--ts {
+			position: absolute;
+			width: 93%;
+			display: flex;
+			justify-content: space-between;
+			& .arrow-icon--ts {
+				display: inline-block;
+				font-size: 3rem;
+				& > path {
+					color: $primary-color;
+				}
 			}
 		}
 	}
 }
-@include tablet {
+@include devices(mobile-1) {
+	// touch screen classes
+	.projects--ts {
+		grid-area: 3/1/5/1;
+	}
+}
+@include devices(landscape) {
+	.projects--ts {
+		height: 48vh;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		& .caption--ts {
+			width: 66%;
+			height: 33%;
+			overflow-y: hidden;
+		}
+	}
+}
+@include devices(desktop-1) {
+	.projects {
+		grid-area: 4/2/6/11;
+		& .project {
+			grid-area: 4/2/6/8;
+		}
+		& .projects-menu {
+			grid-area: 4/8/6/11;
+		}
+	}
 	.projects--ts {
 		height: 48vh;
 		margin-top: 5vh;
@@ -191,15 +222,22 @@
 		}
 	}
 }
-@include landscape {
+@include devices(desktop-2) {
+	.projects {
+		grid-area: 7/2/11/11;
+		& .project {
+			grid-area: 7/2/11/8;
+		}
+		& .projects-menu {
+			grid-area: 7/8/11/11;
+		}
+	}
 	.projects--ts {
 		height: 48vh;
 		margin-top: 5vh;
 		margin-bottom: 5vh;
 		& .caption--ts {
-			width: 66%;
-			height: 33%;
-			overflow-y: hidden;
+			height: 20%;
 		}
 	}
 }

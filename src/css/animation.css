@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -64,23 +64,41 @@
   color: #c56494;
 }
 
+@keyframes stripsOut {
+  0% {
+    transform: scaleY(1);
+  }
+  33% {
+    transform: scaleY(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
 @keyframes zoomIn {
   0% {
     transform: scale(1);
   }
   28%, 100% {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    z-index: 0;
   }
 }
 .zoom-in {
-  z-index: 0;
   transform: scale(1);
-  animation: 500ms ease-in-out 200ms forwards zoomIn;
+  animation: 200ms ease-in-out 350ms forwards zoomIn;
 }
 
-.strips-out > * {
-  transform: scaleX(0) scaleY(0);
-  transition: all 800ms ease;
+.strips-out > .figure--mask-1 {
+  transform: ScaleX(0);
+  transition: all 400ms ease;
+  z-index: 1;
+}
+.strips-out > .figure--mask-0,
+.strips-out .figure--mask-2 {
+  animation: 150ms ease 300ms forwards stripsOut;
   z-index: 1;
 }
 

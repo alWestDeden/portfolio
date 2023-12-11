@@ -63,7 +63,7 @@ export default function Projects({ touchScreen }) {
 											</div>
 										</figcaption>
 										<div id={`project--masks-${nb}`} className='project-figure--masks'>
-											{[...Array(25)].map((x, i) => (
+											{[...Array(3)].map((x, i) => (
 												<div key={`mask${i}`} className={`figure--mask figure--mask-${i}`}></div>
 											))}
 										</div>

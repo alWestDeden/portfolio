@@ -10,6 +10,8 @@
 		margin: 0;
 	}
 }
-.footer-ts {
-	height: 13vh;
+@include devices(mobile-2) {
+	.footer-ts {
+		height: 13vh;
+	}
 }

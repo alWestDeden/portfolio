@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3f72af;
+  color: #3d3d3d;
 }
 
 .fa-css3-alt > path {
@@ -80,9 +80,6 @@
 .header .title .subtitle {
   text-align: right;
 }
-.header .title .subtitle--ts {
-  font-size: 0.9rem;
-}
 .header nav {
   display: flex;
   margin-right: 10px;
@@ -92,20 +89,20 @@
   margin-left: 10px;
 }
 .header nav a .icon > path {
-  color: #09192c;
+  color: #242424;
 }
 .header nav a .icon:hover {
   transform: scale(1.2);
 }
 .header nav a .icon:hover > path {
-  color: #dbe2ef;
-}
-.header--ts {
-  height: 13vh;
+  color: #aac1f0;
 }
 
-@media (orientation: landscape) {
+@media (max-width: 1024px) and (hover: none) {
   .header--ts {
-    height: 24vh;
+    height: 13vh;
+  }
+  .header--ts .subtitle--ts {
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=header.css.map */

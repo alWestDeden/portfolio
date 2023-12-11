@@ -12,9 +12,6 @@
 		margin: 0 0 0 10px;
 		& .subtitle {
 			text-align: right;
-			&--ts {
-				font-size: 0.9rem;
-			}
 		}
 	}
 	& nav {
@@ -36,12 +33,17 @@
 			}
 		}
 	}
-	&--ts {
-		height: 13vh;
-	}
 }
-@include landscape {
+@include devices(mobile-2) {
 	.header--ts {
-		height: 24vh;
+		height: 13vh;
+		& .subtitle--ts {
+			font-size: 0.9rem;
+		}
 	}
 }
+// @include devices(mobile-2) {
+// 	.header--ts {
+// 		height: 24vh;
+// 	}
+// }

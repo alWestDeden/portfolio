@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -104,6 +104,7 @@
   color: white;
   margin: 0 0 1px;
   font-size: 1.1rem;
+  font-weight: 400;
   font-variant: small-caps;
 }
 .cv-list-infos .cv-details h4 {
@@ -114,12 +115,6 @@
   margin: 0;
   font-family: "Paytone One", sans-serif;
   font-variant: small-caps;
-}
-.cv--ts {
-  grid-area: 12/1/14/1;
-  margin-top: 2vh;
-  border-radius: 0;
-  border: none;
 }
 
 .active {
@@ -132,4 +127,31 @@
 
 .right {
   transform: translateX(110%);
+}
+
+@media (max-width: 1024px) and (hover: none) {
+  .cv--ts {
+    grid-area: 10/1/12/1;
+    margin-top: 2vh;
+    border-radius: 0;
+    border: none;
+  }
+}
+@media (max-width: 768px) and (hover: none) {
+  .cv--ts {
+    grid-area: 5/1/6/1;
+    margin-top: 2vh;
+    border-radius: 0;
+    border: none;
+  }
+}
+@media (max-width: 768px) and (hover: hover) {
+  .cv {
+    grid-area: 3/2/4/11;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (hover: hover) {
+  .cv {
+    grid-area: 4/7/6/11;
+  }
 }/*# sourceMappingURL=cv.css.map */

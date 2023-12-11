@@ -1,32 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
-.fa-css3-alt > path {
-  color: #039fda;
-}
-
-.fa-figma > path {
-  color: #eb4b1d;
-}
-
-.fa-font-awesome > path {
-  color: #538dd6;
-}
-
-.fa-html5 > path {
-  color: #dc4a25;
-}
-
-.fa-square-js > path {
-  color: #efd81a;
-}
-
-.fa-react > path {
-  color: #5ed2f3;
-}
-
-.fa-sass > path {
-  color: #c56494;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -61,18 +33,47 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3f72af;
+  color: #3d3d3d;
+}
+
+.fa-css3-alt > path {
+  color: #039fda;
+}
+
+.fa-figma > path {
+  color: #eb4b1d;
+}
+
+.fa-font-awesome > path {
+  color: #538dd6;
+}
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
 }
 
 * {
   font-family: "Jost", sans-serif;
   font-weight: 300;
-  color: #09192c;
+  color: #242424;
   font-size: 1rem;
-  max-width: 1920px;
+  font-weight: 200;
 }
 * body {
   margin: 0 6%;
+  max-width: 1480px;
   background-color: white;
 }
 * body a {
@@ -100,4 +101,10 @@
 }
 * body .hide {
   display: none;
+}
+@media (min-width: 1420px) {
+  * .body--ws {
+    margin: 0 auto !important;
+    float: none !important;
+  }
 }/*# sourceMappingURL=global.css.map */

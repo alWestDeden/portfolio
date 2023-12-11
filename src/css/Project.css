@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -81,11 +81,6 @@
   border-radius: 10%;
   margin: auto;
 }
-.selected--ts {
-  flex-direction: column;
-  height: unset;
-  margin: 0;
-}
 .selected-left {
   display: flex;
   flex-direction: column;
@@ -101,48 +96,8 @@
   border: 3px solid #3d3d3d;
   border-radius: 7px;
 }
-.selected-left-image--ts {
-  display: none;
-}
 .selected-left-image-hide {
   display: none;
-}
-.selected-left--ts {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 10px;
-}
-.selected-left-links--ts {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 20px;
-}
-.selected-left-links--ts .left-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: content-box;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0 10px 0 0;
-  transition: transform 175ms ease;
-  transform-origin: bottom;
-}
-.selected-left-links--ts .left-link-icon {
-  font-size: 2rem;
-}
-.selected-left-links--ts .left-link-icon > path {
-  color: #242424;
-}
-.selected-left-links--ts .left-link:hover {
-  transform: scale(1.1);
-}
-.selected-left-links--ts .left-link p {
-  font-size: 0.8rem;
-  color: #242424;
 }
 .selected-right {
   width: 66%;
@@ -161,6 +116,9 @@
   font-family: "Bowlby One", sans-serif;
   font-size: 0.8rem;
   margin: 30px 0 10px;
+}
+.selected-right > * {
+  font-weight: 300;
 }
 .selected-right-details {
   margin-top: 10px;
@@ -223,15 +181,6 @@
   font-size: 0.8rem;
   color: #242424;
 }
-.selected-right--ts {
-  width: 100%;
-  padding: 10px;
-  border-left: none;
-  margin-left: 0;
-  height: -moz-fit-content;
-  height: fit-content;
-  max-height: unset;
-}
 .selected-right::-webkit-scrollbar {
   width: 4px;
 }
@@ -244,4 +193,78 @@
 }
 .selected-right::-webkit-scrollbar-thumb:hover {
   background: #242424;
+}
+
+@media (max-width: 1024px) and (hover: none) {
+  .selected--ts {
+    flex-direction: column;
+    height: unset;
+    margin: 0;
+  }
+  .selected--ts > .square-background {
+    top: 25vh;
+    left: 11%;
+    width: 50%;
+    height: 12.5%;
+    border-radius: 5px;
+    margin: auto;
+  }
+  .selected--ts .selected-left--ts {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px;
+  }
+  .selected--ts .selected-left--ts .selected-left-image--ts {
+    display: none;
+  }
+  .selected--ts .selected-left--ts .selected-left-links--ts {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  .selected--ts .selected-left--ts .selected-left-links--ts .left-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: content-box;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 10px 0 0;
+    transition: transform 175ms ease;
+    transform-origin: bottom;
+  }
+  .selected--ts .selected-left--ts .selected-left-links--ts .left-link-icon {
+    font-size: 2rem;
+  }
+  .selected--ts .selected-left--ts .selected-left-links--ts .left-link-icon > path {
+    color: #242424;
+  }
+  .selected--ts .selected-left--ts .selected-left-links--ts .left-link:hover {
+    transform: scale(1.1);
+  }
+  .selected--ts .selected-left--ts .selected-left-links--ts .left-link p {
+    font-size: 0.8rem;
+    color: #242424;
+  }
+  .selected--ts .selected-right--ts {
+    width: 100%;
+    padding: 10px;
+    border-left: none;
+    margin-left: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: unset;
+  }
+}
+@media (max-width: 768px) and (hover: none) {
+  .selected--ts > .square-background {
+    top: 33vh;
+    left: 11%;
+    width: 75%;
+    height: 10%;
+    border-radius: 5px;
+  }
 }/*# sourceMappingURL=Project.css.map */

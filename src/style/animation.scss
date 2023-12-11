@@ -1,25 +1,43 @@
 @import "./variable.scss";
 // hover effect's animation
+@keyframes stripsOut {
+	0% {
+		transform: scaleY(1);
+	}
+	33% {
+		transform: scaleY(1.1);
+		opacity: 1;
+	}
+	100% {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+}
 @keyframes zoomIn {
 	0% {
 		transform: scale(1);
 	}
 	28%,
 	100% {
-		transform: scale(1.02);
+		transform: scale(1.05);
+		z-index: 0;
 	}
 }
 // animation classes for effect's animations
 .zoom-in {
-	z-index: 0;
 	transform: scale(1);
-	animation: 500ms ease-in-out 200ms forwards zoomIn;
+	animation: 200ms ease-in-out 350ms forwards zoomIn;
 }
 // animation classes for effect's animations
 .strips-out {
-	& > * {
-		transform: scaleX(0) scaleY(0);
-		transition: all 800ms ease;
+	& > .figure--mask-1 {
+		transform: ScaleX(0);
+		transition: all 400ms ease;
+		z-index: 1;
+	}
+	& > .figure--mask-0,
+	.figure--mask-2 {
+		animation: 150ms ease 300ms forwards stripsOut;
 		z-index: 1;
 	}
 }

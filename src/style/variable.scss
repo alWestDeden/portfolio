@@ -1,5 +1,4 @@
-// @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Didact+Gothic&family=Handlee&family=Inter&family=Montserrat:wght@700&family=Raleway:wght@700&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap"); // colors
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap"); // colors
 // color's variable
 // $primary-color: #f9f7f7;
 // $secondary-color: #e8dfca;
@@ -121,13 +120,35 @@ $open-color: #7450eb;
 	color: #c56494;
 }
 // media queries
-@mixin tablet {
-	@media (min-width: 600px) and (max-width: 1024px) {
-		@content;
+@mixin devices($breakpoint) {
+	@if $breakpoint == mobile-1 {
+		@media (max-width: 768px) and (hover: none) {
+			@content;
+		}
 	}
-}
-@mixin landscape {
-	@media (orientation: landscape) {
-		@content;
+	@if $breakpoint == mobile-2 {
+		@media (max-width: 1024px) and (hover: none) {
+			@content;
+		}
+	}
+	@if $breakpoint == landscape {
+		@media (orientation: landscape) and (hover: none) {
+			@content;
+		}
+	}
+	@if $breakpoint == desktop-1 {
+		@media (max-width: 768px) and (hover: hover) {
+			@content;
+		}
+	}
+	@if $breakpoint == desktop-2 {
+		@media (min-width: 768px) and (max-width: 1024px) and (hover: hover) {
+			@content;
+		}
+	}
+	@if $breakpoint == wide-screen {
+		@media (min-width: 1420px) and (hover: hover) {
+			@content;
+		}
 	}
 }

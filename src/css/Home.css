@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -77,35 +77,36 @@
   background-color: #f7f8f9;
   border-radius: 20px;
 }
-.home-top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.home-top--ts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.home-bottom {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.home-bottom-left {
-  width: 66%;
-}
-.home-bottom-left--ts {
-  display: none;
-}
 
-.home--ts {
-  overflow-x: hidden;
-  grid-template-rows: repeat(13, 1fr);
-  grid-template-columns: 1fr;
-  grid-auto-columns: unset;
+@media (max-width: 1024px) and (hover: none) {
+  .home--ts {
+    overflow-x: hidden;
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-columns: 1fr;
+    grid-auto-columns: unset;
+  }
+  .home--ts .square-background {
+    display: none;
+  }
+}
+@media (max-width: 768px) and (hover: none) {
+  .home--ts {
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+@media (max-width: 768px) and (hover: hover) {
+  .home {
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .home .square-background {
+    grid-area: 2/1/5/12;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (hover: hover) {
+  .home {
+    grid-template-rows: repeat(12, 1fr);
+  }
+  .home .square-background {
+    grid-area: 3/1/12/12;
+  }
 }/*# sourceMappingURL=Home.css.map */

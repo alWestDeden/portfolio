@@ -4,9 +4,10 @@
 	font-weight: 300;
 	color: $dark-color;
 	font-size: 1rem;
-	max-width: 1920px;
+	font-weight: 200;
 	body {
 		margin: 0 6%;
+		max-width: 1480px;
 		background-color: $light-color;
 		& a {
 			text-decoration: none;
@@ -33,6 +34,12 @@
 		}
 		& .hide {
 			display: none;
+		}
+	}
+	@include devices(wide-screen) {
+		.body--ws {
+			margin: 0 auto !important;
+			float: none !important;
 		}
 	}
 }
