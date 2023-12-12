@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400;600&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -64,12 +64,20 @@
   color: #c56494;
 }
 
+.upfront {
+  font-weight: 400;
+}
+
+.figma {
+  color: #eb4b1d;
+}
+
 * {
   font-family: "Jost", sans-serif;
   font-weight: 300;
   color: #242424;
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 * body {
   margin: 0 6%;
@@ -90,19 +98,21 @@
   margin: 0;
 }
 * body h2 {
-  display: inline-block;
+  display: inline;
   font-size: 1.1rem;
+  font-weight: 600;
   margin: 0;
 }
 * body h3 {
-  display: inline-block;
+  display: inline;
+  font-size: 1.3rem;
   font-family: "Paytone One", sans-serif;
   margin: 0;
 }
 * body .hide {
   display: none;
 }
-@media (min-width: 1420px) {
+@media (min-width: 1420px) and (hover: hover) {
   * .body--ws {
     margin: 0 auto !important;
     float: none !important;

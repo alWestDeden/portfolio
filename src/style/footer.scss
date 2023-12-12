@@ -1,13 +1,26 @@
 @import "./variable.scss";
 .footer {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 11vh;
 	border-top: 1px solid $dark-color;
-	& h3 {
-		display: inline-block;
-		margin: 0;
+	& .languages {
+		position: absolute;
+		right: 0;
+		margin-right: 10px;
+		&-select {
+			border: none;
+			font-family: $font-subtitle;
+			&::after {
+				background-color: $light-color;
+			}
+			& .language {
+				appearance: none;
+				background-color: $light-color;
+			}
+		}
 	}
 }
 @include devices(mobile-2) {

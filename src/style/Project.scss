@@ -36,20 +36,23 @@
 		width: 66%;
 		max-height: fit-content;
 		box-sizing: border-box;
-		padding: 15px 10px 0;
+		padding: 15px 20px 0 0;
 		margin-left: 2px;
 		overflow: auto;
 		&-title {
-			font-size: 2rem;
+			font-size: 2.5rem;
 			margin: 0;
 		}
 		& h5 {
 			font-family: $font-title;
-			font-size: 0.8rem;
 			margin: 30px 0 10px;
 		}
-		& > * {
+		& > p {
 			font-weight: 300;
+			font-size: 1.2rem;
+			& > a:hover {
+				color: $third-color;
+			}
 		}
 		&-details {
 			margin-top: 10px;
@@ -95,7 +98,7 @@
 				transform-origin: bottom right;
 				&-icon {
 					margin-top: 10px;
-					font-size: 1.8rem;
+					font-size: 1.9rem;
 					& > path {
 						color: $fourth-color;
 					}

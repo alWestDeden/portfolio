@@ -1,23 +1,20 @@
 import addClassExtension from "../../functions/addClassExtension"
+import { useTouchScreen } from "../../functions/ScreenTypeContext"
+import { useLanguage } from "../../functions/LanguageContext"
+import { about_fr, about_en } from "../../data/about"
 import "../../style/about-me.scss"
-export default function AboutMe({ touchScreen }) {
-	return (
-		<section className={addClassExtension(touchScreen, "about")}>
-			<p>
-				Bienvenue sur mon <h3>Portfolio</h3>,
-			</p>
-			<p>
-				De formation technique industrielle, j'ai souhaité valider des connaissances que j'avais acquis dans le développement Web
-				avec l'envie de réorienter ma carrière professionnelle.
-			</p>
-			<p>
-				Vous trouverez sur ce site quelques uns des Projets validés dans le cadre de la formation de{" "}
-				<h3>Développeur/Intégrateur Web</h3> que j'ai suivi chez{" "}
-				<a className='open' href='https://openclassrooms.com/fr/'>
-					OpenClassRooms
-				</a>
-				.
-			</p>
-		</section>
-	)
+export default function AboutMe() {
+	const { touchScreen } = useTouchScreen()
+	const { language } = useLanguage()
+	let about
+	switch (language) {
+		case "fr":
+			about = { __html: about_fr }
+			break
+		case "en":
+			about = { __html: about_en }
+			break
+		default:
+	}
+	return <section className={addClassExtension(touchScreen, "about")} dangerouslySetInnerHTML={about}></section>
 }

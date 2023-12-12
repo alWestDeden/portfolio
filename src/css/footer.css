@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400;600&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -64,16 +64,39 @@
   color: #c56494;
 }
 
+.upfront {
+  font-weight: 400;
+}
+
+.figma {
+  color: #eb4b1d;
+}
+
 .footer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 11vh;
   border-top: 1px solid #242424;
 }
-.footer h3 {
-  display: inline-block;
-  margin: 0;
+.footer .languages {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+.footer .languages-select {
+  border: none;
+  font-family: "Paytone One", sans-serif;
+}
+.footer .languages-select::after {
+  background-color: white;
+}
+.footer .languages-select .language {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: white;
 }
 
 @media (max-width: 1024px) and (hover: none) {

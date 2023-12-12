@@ -1,5 +1,5 @@
-import { useContext } from "react"
-import { DeviceContext } from "../../index"
+import { useTouchScreen } from "../../functions/ScreenTypeContext"
+import { useLanguage } from "../../functions/LanguageContext"
 import addClassExtension from "../../functions/addClassExtension"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -7,12 +7,23 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import "../../style/header.scss"
 
 export default function Header() {
-	const touchScreen = useContext(DeviceContext)
+	const { touchScreen } = useTouchScreen()
+	const { language } = useLanguage()
+	let subtitle
+	switch (language) {
+		case "fr":
+			subtitle = "Développeur/Intégrateur Web"
+			break
+		case "en":
+			subtitle = "Web Developer/Integrator"
+			break
+		default:
+	}
 	return (
-		<div className={addClassExtension(touchScreen, "header")}>
+		<header className={addClassExtension(touchScreen, "header")}>
 			<div className='title'>
 				<h1>{!touchScreen ? "BEN AOUMAR BOUMEDIENE" : "BAB"}</h1>
-				<h2 className={addClassExtension(touchScreen, "subtitle")}>Développeur/Intégrateur Web</h2>
+				<h2 className={addClassExtension(touchScreen, "subtitle")}>{subtitle}</h2>
 			</div>
 			<nav className='navigation'>
 				<a href='https://github.com/alWestDeden?tab=repositories'>
@@ -25,6 +36,6 @@ export default function Header() {
 					<FontAwesomeIcon className='icon' icon={faEnvelope} />
 				</a>
 			</nav>
-		</div>
+		</header>
 	)
 }

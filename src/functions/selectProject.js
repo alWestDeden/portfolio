@@ -23,5 +23,5 @@ export function hideProject(actualProject, index) {
 	setTimeout(() => {
 		unSelectedProjectMask.classList.remove("strips-in")
 		unSelectedProject.classList.add(`project-figure--${actualProject}`)
-	}, 400)
+	}, 800)
 }

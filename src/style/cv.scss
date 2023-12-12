@@ -2,12 +2,12 @@
 .cv {
 	grid-area: 3/8/5/11;
 	align-items: center;
-	display: grid;
+	// display: grid;
 	justify-content: center;
 	border-radius: 20px;
 	background-color: $fourth-color;
 	border: 10px solid $light-color;
-	padding: 20px 0 10px;
+	padding: 20px 0 20px;
 	overflow: hidden;
 	&-list {
 		align-items: end;

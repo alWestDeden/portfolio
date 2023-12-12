@@ -1,9 +1,12 @@
-import { useContext, useEffect } from "react"
+// import { useContext, useEffect } from "react"
+import { useEffect } from "react"
 import { useParams } from "react-router"
 import { Link, useLocation } from "react-router-dom"
-import { DeviceContext } from "../../index"
+// import { DeviceContext } from "../../index"
+import { useTouchScreen } from "../../functions/ScreenTypeContext"
+import { useLanguage } from "../../functions/LanguageContext"
 import addClassExtension from "../../functions/addClassExtension"
-import projects from "../../data/projects"
+import { projects_fr, projects_en } from "../../data/projects"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe, faHouse, faScroll } from "@fortawesome/free-solid-svg-icons"
 import { faCss3Alt, faFontAwesome, faGithub, faHtml5, faSquareJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons"
@@ -11,10 +14,24 @@ import figma from "../../images/figma.svg"
 import "../../style/Project.scss"
 
 export default function Project() {
-	const touchScreen = useContext(DeviceContext)
+	// const touchScreen = useContext(DeviceContext)
+	const { touchScreen } = useTouchScreen()
+	const { language } = useLanguage()
+	let projects
+	switch (language) {
+		case "fr":
+			projects = projects_fr
+			break
+		case "en":
+			projects = projects_en
+			break
+		default:
+	}
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
 	const { name, image, details, constraints, technologies, code, site } = selectedProject[0]
+	const detailsHTML = { __html: details }
+	const constraintsHTML = { __html: constraints }
 	const { pathname } = useLocation()
 	useEffect(() => {
 		window.scrollTo(0, 0)
@@ -41,9 +58,9 @@ export default function Project() {
 			</div>
 			<div className={addClassExtension(touchScreen, "selected-right")}>
 				<h4 className={`selected-right-title ${id}`}>{name}</h4>
-				<p className='selected-right-details'>{details}</p>
+				<p className='selected-right-details' dangerouslySetInnerHTML={detailsHTML}></p>
 				<h5>Contraintes :</h5>
-				<p className='selected-right-constraints'>{constraints}</p>
+				<p className='selected-right-constraints' dangerouslySetInnerHTML={constraintsHTML}></p>
 				<h5>Technologies :</h5>
 				<div className='selected-right-tech'>
 					{technologies.map((technology) => {

@@ -4,7 +4,7 @@
 	font-weight: 300;
 	color: $dark-color;
 	font-size: 1rem;
-	font-weight: 200;
+	font-weight: 300;
 	body {
 		margin: 0 6%;
 		max-width: 1480px;
@@ -23,12 +23,15 @@
 			margin: 0;
 		}
 		& h2 {
-			display: inline-block;
+			display: inline;
 			font-size: 1.1rem;
+			font-weight: 600;
+			// font-family: $font-subtitle;
 			margin: 0;
 		}
 		& h3 {
-			display: inline-block;
+			display: inline;
+			font-size: 1.3rem;
 			font-family: $font-subtitle;
 			margin: 0;
 		}

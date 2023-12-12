@@ -2,13 +2,30 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSwipeable } from "react-swipeable"
 import ReactTyped from "react-typed"
+import { useLanguage } from "../../functions/LanguageContext"
+import { useTouchScreen } from "../../functions/ScreenTypeContext"
 import { showProject, hideProject } from "../../functions/selectProject"
-import projects from "../../data/projects"
+import { projects_fr, projects_en } from "../../data/projects"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRightLong, faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 import "../../style/projects.scss"
 
-export default function Projects({ touchScreen }) {
+export default function Projects() {
+	const { touchScreen } = useTouchScreen()
+	const { language } = useLanguage()
+	let projects
+	let tips
+	switch (language) {
+		case "fr":
+			projects = projects_fr
+			tips = ["   Choisissez un projet  ", "   Puis cliquez dessus  ", "", ""]
+			break
+		case "en":
+			projects = projects_en
+			tips = ["   Choose a project  ", "   Then click on it  ", "", ""]
+			break
+		default:
+	}
 	const [index, setIndex] = useState(null)
 	const [indexTS, setIndexTS] = useState(0)
 	const [direction, setDirection] = useState("")
@@ -41,13 +58,7 @@ export default function Projects({ touchScreen }) {
 					<div className='project'>
 						{/* <div className='project--mask'></div> */}
 						<span className='project-tip'>
-							<ReactTyped
-								strings={["   Choisissez un projet", "   Puis cliquez dessus", "", ""]}
-								typeSpeed={100}
-								startDelay={100}
-								backSpeed={50}
-								loop
-							/>
+							<ReactTyped strings={tips} typeSpeed={100} startDelay={100} backSpeed={50} loop />
 							<FontAwesomeIcon className='project-tip-icon' icon={faArrowRightLong} />
 						</span>
 						{projects.map((project) => {
@@ -87,8 +98,8 @@ export default function Projects({ touchScreen }) {
 										}}
 										onMouseLeave={(e) => {
 											e.preventDefault()
-											hideProject(nb, index)
 											setIndex(null)
+											hideProject(nb, index)
 										}}
 										onClick={(e) => {
 											navigate(`/project/${id}`)

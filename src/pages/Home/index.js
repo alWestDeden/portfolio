@@ -1,5 +1,4 @@
-import { useContext } from "react"
-import { DeviceContext } from "../../index"
+import { useTouchScreen } from "../../functions/ScreenTypeContext"
 import addClassExtension from "../../functions/addClassExtension"
 import AboutMe from "../../components/AboutMe"
 import Projects from "../../components/Projects"
@@ -8,14 +7,14 @@ import Cv from "../../components/Cv"
 import "../../style/Home.scss"
 
 export default function Home() {
-	const touchScreen = useContext(DeviceContext)
+	const { touchScreen } = useTouchScreen()
 	return (
 		// for classes names a '' at the end mean for cursor events and a '-ts' mean for Touch Screen events
-		<div className={addClassExtension(touchScreen, "home")}>
+		<main className={addClassExtension(touchScreen, "home")}>
 			<div className='square-background'></div>
-			<AboutMe touchScreen={touchScreen} />
-			<Cv touchScreen={touchScreen} />
-			<Projects touchScreen={touchScreen} />
-		</div>
+			<AboutMe />
+			<Cv />
+			<Projects />
+		</main>
 	)
 }

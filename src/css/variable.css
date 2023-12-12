@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400;600&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3d3d3d;
+  color: #aac1f0;
 }
 
 .fa-css3-alt > path {
@@ -62,4 +62,17 @@
 
 .fa-sass > path {
   color: #c56494;
+}
+
+.upfront {
+  font-weight: 400;
+}
+
+.figma {
+  color: #eb4b1d;
+}
+
+.upfront,
+.figma {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=variable.css.map */

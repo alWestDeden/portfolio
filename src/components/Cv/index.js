@@ -1,8 +1,22 @@
 import { useEffect, useState } from "react"
+import { useTouchScreen } from "../../functions/ScreenTypeContext"
+import { useLanguage } from "../../functions/LanguageContext"
 import addClassExtension from "../../functions/addClassExtension"
-import cv from "../../data/cv"
+import { cv_fr, cv_en } from "../../data/cv"
 import "../../style/cv.scss"
-export default function Cv({ touchScreen }) {
+export default function Cv() {
+	const { touchScreen } = useTouchScreen()
+	const { language } = useLanguage()
+	let cv
+	switch (language) {
+		case "fr":
+			cv = cv_fr
+			break
+		case "en":
+			cv = cv_en
+			break
+		default:
+	}
 	const [activeSlide, setActiveSlide] = useState(1)
 	useEffect(() => {
 		let current = 1
@@ -17,10 +31,10 @@ export default function Cv({ touchScreen }) {
 		// intervalId identified so it can be canceled on unmount
 		const intervalId = setInterval(() => {
 			cycleReviews()
-		}, 8000)
+		}, 3000)
 		// Removes interval on unmount
 		return () => clearInterval(intervalId)
-	}, [])
+	}, [cv.length])
 	return (
 		<section className={addClassExtension(touchScreen, "cv")}>
 			<ul className='cv-list'>

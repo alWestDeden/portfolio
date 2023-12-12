@@ -18,9 +18,11 @@
 			width: 90%;
 			padding-top: 10px;
 			align-items: center;
+			font-variant: small-caps;
 			& span {
 				font-size: 1.1rem;
 				color: $light-color;
+				font-weight: 400;
 			}
 			&-icon {
 				display: inline-block;
@@ -42,7 +44,7 @@
 			height: 100%;
 			border-radius: inherit;
 			background-color: $fourth-color;
-			border: 10px solid $fourth-color;
+			border: 2px solid $fourth-color;
 			overflow: hidden;
 			&-image {
 				width: inherit;
@@ -77,6 +79,7 @@
 				& .figure--mask {
 					width: 100%;
 					background-color: $fourth-color;
+					z-index: 1;
 					&-0 {
 						transform-origin: top;
 						height: 8%;
@@ -114,10 +117,25 @@
 			border-radius: 5px;
 			transition: transform 175ms ease;
 			transform-origin: left bottom;
-			z-index: 11;
+			overflow: hidden;
+			// z-index: 11;
+			&::before {
+				content: "";
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				transition: opacity 250ms;
+				z-index: -1;
+				background-color: $light-color;
+			}
 			&:hover {
-				background-color: $primary-color;
 				transform: scale(1.4);
+			}
+			&:hover::before {
+				opacity: 0.75;
 			}
 		}
 		@include project-button;
@@ -141,7 +159,7 @@
 			border: unset;
 			box-sizing: border-box;
 			& .figure--ts {
-				border: 3px solid $fourth-color;
+				border: 1px solid $fourth-color;
 				background-color: unset;
 				padding: 0;
 				overflow: unset;

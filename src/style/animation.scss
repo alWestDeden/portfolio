@@ -33,19 +33,21 @@
 	& > .figure--mask-1 {
 		transform: ScaleX(0);
 		transition: all 400ms ease;
-		z-index: 1;
 	}
 	& > .figure--mask-0,
 	.figure--mask-2 {
 		animation: 150ms ease 300ms forwards stripsOut;
-		z-index: 1;
 	}
 }
 .strips-in {
-	& > * {
-		transform: scaleX(1);
+	& > .figure--mask-0,
+	.figure--mask-2 {
+		transform: ScaleY(1);
+		transition: 200ms ease 300ms;
+	}
+	& > .figure--mask-1 {
+		transform: ScaleX(1);
 		transition: all 400ms ease;
-		z-index: 1;
 	}
 }
 // slider's animations
