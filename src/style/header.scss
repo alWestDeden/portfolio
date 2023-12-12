@@ -37,8 +37,12 @@
 @include devices(mobile-2) {
 	.header--ts {
 		height: 13vh;
-		& .subtitle--ts {
-			font-size: 0.9rem;
+		& .title {
+			& .subtitle--ts {
+				font-size: 0.9rem;
+				text-align: left;
+				white-space: nowrap;
+			}
 		}
 	}
 }
