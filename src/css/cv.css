@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3d3d3d;
+  color: #aac1f0;
 }
 
 .fa-css3-alt > path {
@@ -70,6 +70,11 @@
 
 .figma {
   color: #eb4b1d;
+}
+
+.upfront,
+.figma {
+  font-size: 1.2rem;
 }
 
 .cv {
