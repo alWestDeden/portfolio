@@ -11,6 +11,8 @@
 	& span {
 		font-size: 1.1rem;
 		color: $dark-color;
+		// text-align: justify;
+		// text-justify: distribute-all-lines;
 	}
 }
 @include devices(mobile-2) {
@@ -27,6 +29,9 @@
 			font-size: 1.1rem;
 			margin-bottom: 0.7rem;
 			color: $light-color;
+		}
+		a {
+			color: #b09bf4;
 		}
 	}
 }

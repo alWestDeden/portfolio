@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3d3d3d;
+  color: #aac1f0;
 }
 
 .fa-css3-alt > path {
@@ -72,12 +72,16 @@
   color: #eb4b1d;
 }
 
+.upfront,
+.figma {
+  font-size: 1.2rem;
+}
+
 * {
   font-family: "Jost", sans-serif;
   font-weight: 300;
   color: #242424;
   font-size: 1rem;
-  font-weight: 300;
 }
 * body {
   margin: 0 6%;

@@ -26,13 +26,13 @@ export default function Header() {
 				<h2 className={addClassExtension(touchScreen, "subtitle")}>{subtitle}</h2>
 			</div>
 			<nav className='navigation'>
-				<a href='https://github.com/alWestDeden?tab=repositories'>
+				<a href='https://github.com/alWestDeden?tab=repositories' aria-label='GitHub'>
 					<FontAwesomeIcon className='icon' icon={faGithub} />
 				</a>
-				<a href='https://www.linkedin.com/in/deden-a-844302124/details/experience/'>
+				<a href='https://www.linkedin.com/in/deden-a-844302124/details/experience/' aria-label='Linked In'>
 					<FontAwesomeIcon className='icon' icon={faLinkedin} />
 				</a>
-				<a href='mailto:baboumediene@gmail.com'>
+				<a href='mailto:baboumediene@gmail.com' aria-label='Contact'>
 					<FontAwesomeIcon className='icon' icon={faEnvelope} />
 				</a>
 			</nav>

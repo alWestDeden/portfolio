@@ -62,11 +62,21 @@ export default function Projects() {
 							<FontAwesomeIcon className='project-tip-icon' icon={faArrowRightLong} />
 						</span>
 						{projects.map((project) => {
-							const { nb, id, name, image, description } = project
+							const { nb, id, name, image_34, image_54, description } = project
 							return (
 								<>
 									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
-										<img key={`${id}-image`} className='project-figure-image' src={image} alt={name} />
+										<picture>
+											<img
+												key={`${id}-image`}
+												className='project-figure-image'
+												srcSet={`${image_34} 768w, ${image_54} 1480w`}
+												sizes='(max-width: 768px) 768px, 1480px'
+												width='515'
+												height='425'
+												alt={name}
+											/>
+										</picture>
 										<figcaption key={`${id}-caption`} className='project-figure-caption'>
 											<div key={`${id}-caption`}>
 												<p className={`${id}`}>{name}</p>
@@ -102,8 +112,10 @@ export default function Projects() {
 											hideProject(nb, index)
 										}}
 										onClick={(e) => {
+											e.preventDefault()
 											navigate(`/project/${id}`)
-										}}>
+										}}
+										aria-label={`Projet ${name}`}>
 										{name}
 									</button>
 								</li>
@@ -115,13 +127,23 @@ export default function Projects() {
 				<section key='touch-screen' className='projects projects--ts'>
 					<div {...handlers} className='project project--ts'>
 						{projects.map((project) => {
-							const { nb, id, name, image, description } = project
+							const { nb, id, name, image_45, image_43, image_21, description } = project
 							return (
 								<figure
 									key={`${id}-figure`}
 									id={id}
 									className={`project-figure figure--ts ${indexTS === nb ? direction : "hide"}`}>
-									<img key={`${id}-image`} className='project-figure-image image--ts' src={image} alt={name} />
+									<picture>
+										<img
+											key={`${id}-image`}
+											className='project-figure-image image--ts'
+											srcSet={`${image_45} 431w, ${image_21} 821w, ${image_43} 1025w`}
+											sizes='(max-width: 431px) 431px, (max-width: 821px) 821px, 1025px'
+											width='890'
+											height='605'
+											alt={name}
+										/>
+									</picture>
 									<figcaption key={`${id}-caption`} className='project-figure-caption caption--ts'>
 										<div key={`${id}-caption`}>
 											<div key={`${id}-caption-title`} className='title--ts'>

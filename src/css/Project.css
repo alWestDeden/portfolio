@@ -136,13 +136,10 @@
 .selected-right > p > a:hover {
   color: #aac1f0;
 }
-.selected-right-details {
+.selected-right-details, .selected-right-constraints {
   margin-top: 10px;
   text-align: justify;
-}
-.selected-right-constraints {
-  margin-top: 10px;
-  text-align: justify;
+  text-justify: inter-character;
 }
 .selected-right-tech {
   display: flex;

@@ -33,7 +33,7 @@
   font-size: 1.2rem;
 }
 .open:hover {
-  color: #3d3d3d;
+  color: #aac1f0;
 }
 
 .fa-css3-alt > path {
@@ -72,6 +72,11 @@
   color: #eb4b1d;
 }
 
+.upfront,
+.figma {
+  font-size: 1.2rem;
+}
+
 .about {
   grid-area: 2/2/6/6;
   background-color: #d5d5d5;
@@ -102,6 +107,9 @@
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
     color: white;
+  }
+  .about--ts a {
+    color: #b09bf4;
   }
 }
 @media (max-width: 768px) and (hover: none) {

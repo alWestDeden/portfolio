@@ -54,13 +54,11 @@
 				color: $third-color;
 			}
 		}
-		&-details {
-			margin-top: 10px;
-			text-align: justify;
-		}
+		&-details,
 		&-constraints {
 			margin-top: 10px;
 			text-align: justify;
+			text-justify: inter-character;
 		}
 		&-tech {
 			display: flex;

@@ -10,7 +10,11 @@
 		position: absolute;
 		right: 0;
 		margin-right: 10px;
+		&-label {
+			visibility: hidden;
+		}
 		&-select {
+			display: inline-block;
 			border: none;
 			font-family: $font-subtitle;
 			&::after {
