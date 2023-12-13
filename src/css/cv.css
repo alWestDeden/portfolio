@@ -90,7 +90,7 @@
   overflow: hidden;
 }
 .cv-list {
-  align-items: end;
+  align-items: flex-end;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 12fr 1fr;
