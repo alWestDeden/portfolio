@@ -81,9 +81,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 11vh;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
-  margin-top: 2vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .header .title {
   display: flex;
@@ -111,13 +113,15 @@
   color: #aac1f0;
 }
 
-@media (max-width: 1024px) and (hover: none) {
-  .header--ts {
-    height: 13vh;
-  }
+@media (max-width: 600px) and (hover: none) {
   .header--ts .title .subtitle--ts {
     font-size: 0.9rem;
     text-align: left;
     white-space: nowrap;
+  }
+}
+@media (max-width: 896px) and (hover: hover) {
+  .header .title .subtitle {
+    text-align: left;
   }
 }/*# sourceMappingURL=header.css.map */

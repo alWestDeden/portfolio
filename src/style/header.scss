@@ -3,9 +3,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	height: 11vh;
+	height: fit-content;
 	width: 100%;
-	margin-top: 2vh;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	& .title {
 		display: flex;
 		flex-direction: column;
@@ -34,9 +35,8 @@
 		}
 	}
 }
-@include devices(mobile-2) {
+@include devices(mobile) {
 	.header--ts {
-		height: 13vh;
 		& .title {
 			& .subtitle--ts {
 				font-size: 0.9rem;
@@ -46,8 +46,17 @@
 		}
 	}
 }
-// @include devices(mobile-2) {
+// @include devices(tablet) {
 // 	.header--ts {
 // 		height: 24vh;
 // 	}
 // }
+@include devices(desktop-1) {
+	.header {
+		& .title {
+			& .subtitle {
+				text-align: left;
+			}
+		}
+	}
+}

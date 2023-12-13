@@ -82,7 +82,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 11vh;
+  min-height: 50px;
+  margin-top: 10px;
   border-top: 1px solid #242424;
 }
 .footer .languages {
@@ -106,10 +107,4 @@
      -moz-appearance: none;
           appearance: none;
   background-color: white;
-}
-
-@media (max-width: 1024px) and (hover: none) {
-  .footer-ts {
-    height: 13vh;
-  }
 }/*# sourceMappingURL=footer.css.map */

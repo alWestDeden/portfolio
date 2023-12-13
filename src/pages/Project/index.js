@@ -29,7 +29,7 @@ export default function Project() {
 	}
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
-	const { name, image, details, constraints, technologies, code, site } = selectedProject[0]
+	const { name, image_11, details, constraints, technologies, code, site } = selectedProject[0]
 	const detailsHTML = { __html: details }
 	const constraintsHTML = { __html: constraints }
 	const { pathname } = useLocation()
@@ -40,7 +40,7 @@ export default function Project() {
 		<section className={addClassExtension(touchScreen, "selected")}>
 			<div className='square-background'></div>
 			<div className={addClassExtension(touchScreen, "selected-left")}>
-				<img className={addClassExtension(touchScreen, "selected-left-image")} src={image} alt={name} />
+				<img className={addClassExtension(touchScreen, "selected-left-image")} src={image_11} alt={name} />
 				{!touchScreen ? (
 					""
 				) : (

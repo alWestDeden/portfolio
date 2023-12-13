@@ -1,13 +1,20 @@
 @import "./variable.scss";
 @import "./animation.scss";
 .projects {
-	grid-area: 8/5/12/11;
-	display: contents;
+	// 	grid-area: 8/5/12/11;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	// max-height: 350px;
 	.project {
-		grid-area: 8/5/12/9;
+		position: relative;
+		// grid-area: 8/5/12/9;
 		display: flex;
 		flex-direction: column;
-		position: relative;
+		width: 350px;
+		min-height: 330px;
 		border-radius: 10px;
 		border: 10px solid $light-color;
 		padding: 10px;
@@ -96,10 +103,16 @@
 		}
 	}
 	.projects-menu {
-		grid-area: 8/9/12/11;
+		// grid-area: 8/9/12/11;
 		list-style: none;
 		margin: 10px 0 0;
 		padding-left: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		// &-list {
+		// display: inline-block;
+		// }
 		&-button {
 			position: relative;
 			cursor: pointer;
@@ -107,7 +120,6 @@
 			background-color: $third-color;
 			color: $light-color;
 			border: none;
-			margin-bottom: 5px;
 			padding: 10px;
 			border-radius: 5px;
 			transition: transform 175ms ease;
@@ -135,14 +147,13 @@
 		@include project-button;
 	}
 }
-@include devices(mobile-2) {
+@include devices(tablet) {
 	// touch screen classes
 	.projects--ts {
-		grid-area: 4/1/10/1;
-		margin-top: 2vh;
 		border-radius: 0;
 		& .project--ts {
-			grid-area: inherit;
+			grid-row-start: 2;
+			grid-row-end: 3;
 			width: 100%;
 			height: 100%;
 			display: flex;
@@ -198,32 +209,28 @@
 		}
 	}
 }
-@include devices(mobile-1) {
-	// touch screen classes
-	.projects--ts {
-		grid-area: 3/1/5/1;
-	}
-}
-@include devices(landscape) {
-	.projects--ts {
-		height: 48vh;
-		margin-top: 5vh;
-		margin-bottom: 5vh;
-		& .caption--ts {
-			width: 66%;
-			height: 33%;
-			overflow-y: hidden;
-		}
-	}
-}
 @include devices(desktop-1) {
 	.projects {
-		grid-area: 4/2/6/11;
 		& .project {
-			grid-area: 4/2/6/8;
+			width: 100%;
 		}
 		& .projects-menu {
-			grid-area: 4/8/6/11;
+			flex-direction: row;
+			flex-wrap: wrap;
+			flex-grow: 1;
+			justify-content: center;
+			align-items: end;
+			width: 100%;
+			margin: 0 10px;
+			padding: 0;
+			gap: 5px;
+			&-list {
+				flex-grow: 1;
+			}
+			&-button {
+				width: 100%;
+				transform-origin: right bottom;
+			}
 		}
 	}
 	.projects--ts {
@@ -237,20 +244,21 @@
 }
 @include devices(desktop-2) {
 	.projects {
-		grid-area: 7/2/11/11;
 		& .project {
-			grid-area: 7/2/11/8;
-		}
-		& .projects-menu {
-			grid-area: 7/8/11/11;
+			max-height: 350px;
 		}
 	}
-	.projects--ts {
-		height: 48vh;
-		margin-top: 5vh;
-		margin-bottom: 5vh;
-		& .caption--ts {
-			height: 20%;
-		}
+	// .projects--ts {
+	// 	height: 48vh;
+	// 	margin-top: 5vh;
+	// 	margin-bottom: 5vh;
+	// 	& .caption--ts {
+	// 		height: 20%;
+	// 	}
+	// }
+}
+@include devices(wide-screen) {
+	.projects {
+		max-height: 350px;
 	}
 }

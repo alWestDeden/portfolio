@@ -1,6 +1,9 @@
 @import "./variable.scss";
 .cv {
-	grid-area: 3/8/5/11;
+	flex-grow: 1;
+	flex-basis: 300px;
+	max-width: 390px;
+	// grid-area: 3/8/5/11;
 	align-items: center;
 	// display: grid;
 	justify-content: center;
@@ -62,29 +65,17 @@
 .right {
 	transform: translateX(110%);
 }
-@include devices(mobile-2) {
+@include devices(tablet) {
 	.cv--ts {
-		grid-area: 10/1/12/1;
-		margin-top: 2vh;
-		border-radius: 0;
-		border: none;
-	}
-}
-@include devices(mobile-1) {
-	.cv--ts {
-		grid-area: 5/1/6/1;
-		margin-top: 2vh;
+		grid-row-start: 3;
+		grid-row-end: 4;
+		max-width: 100%;
 		border-radius: 0;
 		border: none;
 	}
 }
 @include devices(desktop-1) {
 	.cv {
-		grid-area: 3/2/4/11;
-	}
-}
-@include devices(desktop-2) {
-	.cv {
-		grid-area: 4/7/6/11;
+		max-width: unset;
 	}
 }

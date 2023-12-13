@@ -4,7 +4,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 11vh;
+	min-height: 50px;
+	margin-top: 10px;
 	border-top: 1px solid $dark-color;
 	& .languages {
 		position: absolute;
@@ -25,10 +26,5 @@
 				background-color: $light-color;
 			}
 		}
-	}
-}
-@include devices(mobile-2) {
-	.footer-ts {
-		height: 13vh;
 	}
 }

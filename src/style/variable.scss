@@ -132,33 +132,28 @@ $open-color: #7450eb;
 }
 // media queries
 @mixin devices($breakpoint) {
-	@if $breakpoint == mobile-1 {
-		@media (max-width: 768px) and (hover: none) {
+	@if $breakpoint == mobile {
+		@media (max-width: 600px) and (hover: none) {
 			@content;
 		}
 	}
-	@if $breakpoint == mobile-2 {
-		@media (max-width: 1024px) and (hover: none) {
-			@content;
-		}
-	}
-	@if $breakpoint == landscape {
-		@media (orientation: landscape) and (hover: none) {
+	@if $breakpoint == tablet {
+		@media (max-width: 1200px) and (hover: none) {
 			@content;
 		}
 	}
 	@if $breakpoint == desktop-1 {
-		@media (max-width: 768px) and (hover: hover) {
+		@media (max-width: 896px) and (hover: hover) {
 			@content;
 		}
 	}
 	@if $breakpoint == desktop-2 {
-		@media (min-width: 768px) and (max-width: 1024px) and (hover: hover) {
+		@media (min-width: 896px) and (max-width: 1200px) and (hover: hover) {
 			@content;
 		}
 	}
 	@if $breakpoint == wide-screen {
-		@media (min-width: 1420px) and (hover: hover) {
+		@media (min-width: 1200px) and (hover: hover) {
 			@content;
 		}
 	}

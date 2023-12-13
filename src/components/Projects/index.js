@@ -62,7 +62,7 @@ export default function Projects() {
 							<FontAwesomeIcon className='project-tip-icon' icon={faArrowRightLong} />
 						</span>
 						{projects.map((project) => {
-							const { nb, id, name, image_34, image_54, description } = project
+							const { nb, id, name, image_11, image_74, description } = project
 							return (
 								<>
 									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
@@ -70,10 +70,10 @@ export default function Projects() {
 											<img
 												key={`${id}-image`}
 												className='project-figure-image'
-												srcSet={`${image_34} 768w, ${image_54} 1480w`}
-												sizes='(max-width: 768px) 768px, 1480px'
-												width='515'
-												height='425'
+												srcSet={`${image_74} 896w, ${image_11} 1200w`}
+												sizes='(max-width: 896px) 896px, 1200px'
+												width='724'
+												height='412'
 												alt={name}
 											/>
 										</picture>
@@ -97,7 +97,7 @@ export default function Projects() {
 						{projects.map((project) => {
 							const { nb, id, name } = project
 							return (
-								<li key={`${id}-list`}>
+								<li key={`${id}-list`} className='projects-menu-list'>
 									<button
 										key={`${id}-button`}
 										className={`projects-menu-button ${id}--hover`}
@@ -127,7 +127,7 @@ export default function Projects() {
 				<section key='touch-screen' className='projects projects--ts'>
 					<div {...handlers} className='project project--ts'>
 						{projects.map((project) => {
-							const { nb, id, name, image_45, image_43, image_21, description } = project
+							const { nb, id, name, image_11, image_52, description } = project
 							return (
 								<figure
 									key={`${id}-figure`}
@@ -137,10 +137,10 @@ export default function Projects() {
 										<img
 											key={`${id}-image`}
 											className='project-figure-image image--ts'
-											srcSet={`${image_45} 431w, ${image_21} 821w, ${image_43} 1025w`}
-											sizes='(max-width: 431px) 431px, (max-width: 821px) 821px, 1025px'
-											width='890'
-											height='605'
+											srcSet={`${image_11} 400w, ${image_52} 1200w`}
+											sizes='(max-width: 400px) 400px, 1200px'
+											width='825'
+											height='330'
 											alt={name}
 										/>
 									</picture>
