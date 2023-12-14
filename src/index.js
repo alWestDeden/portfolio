@@ -8,21 +8,18 @@ import Home from "./pages/Home"
 import Project from "./pages/Project"
 import Footer from "./components/Footer"
 import "./style/global.scss"
-
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
 	<React.StrictMode>
 		<Router basename='/portfolio'>
 			<LanguageProvider>
 				<ScreenTypeProvider>
-					{/* <DeviceContext.Provider value={touchDevice}> */}
 					<Header />
 					<Routes>
 						<Route path='/' element={<Home />} />
 						<Route path='/project/:id' element={<Project />} />
 					</Routes>
 					<Footer />
-					{/* </DeviceContext.Provider> */}
 				</ScreenTypeProvider>
 			</LanguageProvider>
 		</Router>

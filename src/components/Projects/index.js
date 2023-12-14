@@ -6,28 +6,32 @@ import { useLanguage } from "../../functions/LanguageContext"
 import { useTouchScreen } from "../../functions/ScreenTypeContext"
 import { showProject, hideProject } from "../../functions/selectProject"
 import { projects_fr, projects_en } from "../../data/projects"
+import { tips } from "../../data/tips"
 import "../../style/projects.scss"
 
 export default function Projects() {
 	const { touchScreen } = useTouchScreen()
 	const { language } = useLanguage()
+	// trick to use the hook useNavigate at other levels
+	const navigate = useNavigate()
+	// select data regarding language
 	let projects
-	let tips
 	switch (language) {
 		case "fr":
 			projects = projects_fr
-			tips = ["   Choisissez un projet  ", "   Puis cliquez dessus  ", "", ""]
 			break
 		case "en":
 			projects = projects_en
-			tips = ["   Choose a project  ", "   Then click on it  ", "", ""]
 			break
 		default:
 	}
+	// project's index for cursor
 	const [index, setIndex] = useState(null)
+	// project's index for Touch Screen
 	const [indexTS, setIndexTS] = useState(0)
+	// manage swipe for react-swipeable
 	const [direction, setDirection] = useState("")
-	const navigate = useNavigate()
+	// react-swipeable
 	const handlers = useSwipeable({
 		onSwipedLeft: () => {
 			indexTS === projects.length - 1 ? setIndexTS(0) : setIndexTS(indexTS + 1)
@@ -51,30 +55,34 @@ export default function Projects() {
 	})
 	return (
 		<>
+			{/* Cursor or Touch Screen versions  */}
 			{!touchScreen ? (
+				// Cursor version
 				<section className='projects'>
 					<div className='project'>
-						{/* <div className='project--mask'></div> */}
 						<span className='project-tip'>
-							<ReactTyped strings={tips} typeSpeed={100} startDelay={100} backSpeed={50} loop />
+							{/* react-typed */}
+							<ReactTyped strings={tips} typeSpeed={50} startDelay={100} backSpeed={25} loop />
 						</span>
 						{projects.map((project) => {
 							const { nb, id, name, image_11, image_74, description } = project
 							return (
 								<>
 									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
-										<picture>
-											<source srcSet={image_74} media='(max-width: 896px)' />
-											<source srcSet={image_11} media='(min-width: 896px)' />
+										<picture key={`${id}-picture`}>
+											<source key={`${id}-image_74`} srcSet={image_74} media='(max-width: 896px)' />
+											<source key={`${id}-image_11`} srcSet={image_11} media='(min-width: 896px)' />
 											<img key={`${id}-image`} className='project-figure-image' src={image_74} alt={name} />
 										</picture>
 										<figcaption key={`${id}-caption`} className='project-figure-caption'>
-											<div key={`${id}-caption`}>
-												<p className={`${id}`}>{name}</p>
-												<p>{description}</p>
+											<div key={`${id}-caption-container`}>
+												<p key={`${id}-caption-name`} className={`${id}`}>
+													{name}
+												</p>
+												<p key={`${id}-caption-description`}>{description}</p>
 											</div>
 										</figcaption>
-										<div id={`project--masks-${nb}`} className='project-figure--masks'>
+										<div key={`project--masks-${nb}`} id={`project--masks-${nb}`} className='project-figure--masks'>
 											{[...Array(3)].map((x, i) => (
 												<div key={`mask${i}`} className={`figure--mask figure--mask-${i}`}></div>
 											))}
@@ -115,25 +123,27 @@ export default function Projects() {
 					</ul>
 				</section>
 			) : (
+				// Touch Screen version
 				<section className='projects projects--ts'>
+					{/* {...handlers}  for react-swipeable */}
 					<div {...handlers} className='project project--ts'>
 						{projects.map((project) => {
 							const { nb, id, name, image_11, image_52, description } = project
 							return (
 								<figure
-									key={`${id}-figure`}
+									key={`${id}-figure--ts`}
 									id={id}
 									className={`project-figure figure--ts ${indexTS === nb ? direction : "hide"}`}>
-									<picture>
-										<source srcSet={image_11} media='(max-width: 400px)' />
-										<source srcSet={image_52} media='(min-width: 400px)' />
-										<img key={`${id}-image`} className='project-figure-image image--ts' src={image_52} alt={name} />
+									<picture key={`${id}-picture--ts`}>
+										<source key={`${id}-image_11--ts`} srcSet={image_11} media='(max-width: 400px)' />
+										<source key={`${id}-image_52--ts`} srcSet={image_52} media='(min-width: 400px)' />
+										<img key={`${id}-image--ts`} className='project-figure-image image--ts' src={image_52} alt={name} />
 									</picture>
-									<figcaption key={`${id}-caption`} className='project-figure-caption caption--ts'>
-										<div key={`${id}-caption`}>
-											<div key={`${id}-caption-title`} className='title--ts'>
-												<h4>Projet : </h4>
-												<p key={`${id}-name`} className={`${id}`}>
+									<figcaption key={`${id}-caption--ts`} className='project-figure-caption caption--ts'>
+										<div key={`${id}-caption--ts`}>
+											<div key={`${id}-caption-container--ts`} className='title--ts'>
+												<h4 key={`${id}-caption-title--ts`}>Projet : </h4>
+												<p key={`${id}-name--ts`} className={`${id}`}>
 													{name}
 												</p>
 											</div>

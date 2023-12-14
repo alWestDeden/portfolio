@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400;600&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap"); // colors
-// color's variable
-// $primary-color: #f9f7f7;
-// $secondary-color: #e8dfca;
-// $third-color: #dbe2ef;
-// $fourth-color: #3f72af;
-// $light-color: white;
-// $dark-color: #09192c;
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap"); // colors
 $primary-color: #f7f8f9;
 $secondary-color: #d5d5d5;
 $third-color: #aac1f0;
@@ -16,6 +9,7 @@ $dark-color: #242424;
 $font-text: "Jost", sans-serif;
 $font-title: "Bowlby One", sans-serif;
 $font-subtitle: "Paytone One", sans-serif;
+$font-code: "Courier Prime", monospace;
 // external sites fonts and colors
 $booki-font: "Raleway", sans-serif;
 $booki-color: #0164fc;
@@ -104,6 +98,7 @@ $open-color: #7450eb;
 .fa-font-awesome > path {
 	color: #538dd6;
 }
+// used the global color instead
 // .fa-github > path {
 // 	color: #1f2328;
 // }

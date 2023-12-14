@@ -1,6 +1,5 @@
 // user's hook to manage screen's type
 import React, { createContext, useContext } from "react"
-
 const ScreenTypeContext = createContext()
 const ScreenTypeProvider = ({ children }) => {
 	function isTouchDevice() {

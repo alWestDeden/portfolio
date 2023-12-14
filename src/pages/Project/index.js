@@ -1,8 +1,6 @@
-// import { useContext, useEffect } from "react"
 import { useEffect } from "react"
 import { useParams } from "react-router"
 import { Link, useLocation } from "react-router-dom"
-// import { DeviceContext } from "../../index"
 import { useTouchScreen } from "../../functions/ScreenTypeContext"
 import { useLanguage } from "../../functions/LanguageContext"
 import addClassExtension from "../../functions/addClassExtension"
@@ -14,7 +12,6 @@ import figma from "../../images/figma.svg"
 import "../../style/Project.scss"
 
 export default function Project() {
-	// const touchScreen = useContext(DeviceContext)
 	const { touchScreen } = useTouchScreen()
 	const { language } = useLanguage()
 	let projects
@@ -27,11 +24,14 @@ export default function Project() {
 			break
 		default:
 	}
+	// get the project's id from url
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
 	const { name, image_11, details, constraints, technologies, code, site } = selectedProject[0]
+	// allow the use of HTML tags in the JSON file
 	const detailsHTML = { __html: details }
 	const constraintsHTML = { __html: constraints }
+	// correct the opening of a project at the same scrolling position as previous project
 	const { pathname } = useLocation()
 	useEffect(() => {
 		window.scrollTo(0, 0)
@@ -45,11 +45,11 @@ export default function Project() {
 					""
 				) : (
 					<div className='selected-left-links--ts'>
-						<Link className='left-link' to={site}>
+						<Link className='left-link' to={site} target='_blank' rel='noreferrer'>
 							<FontAwesomeIcon className='left-link-icon' icon={faGlobe} />
 							<p>site</p>
 						</Link>
-						<Link className='left-link' to={code}>
+						<Link className='left-link' to={code} target='_blank' rel='noreferrer'>
 							<FontAwesomeIcon className='left-link-icon' icon={faGithub} />
 							<p>code</p>
 						</Link>

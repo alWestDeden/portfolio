@@ -15,10 +15,13 @@
 			display: inline-block;
 			border: none;
 			font-family: $font-subtitle;
+			appearance: none;
 			&::after {
 				background-color: $light-color;
 			}
 			& .language {
+				-webkit-appearance: none;
+				-moz-appearance: none;
 				appearance: none;
 				background-color: $light-color;
 			}

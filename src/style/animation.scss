@@ -1,5 +1,18 @@
 @import "./variable.scss";
 // hover effect's animation
+@-webkit-keyframes stripsOut {
+	0% {
+		transform: scaleY(1);
+	}
+	33% {
+		transform: scaleY(1.1);
+		opacity: 1;
+	}
+	100% {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+}
 @keyframes stripsOut {
 	0% {
 		transform: scaleY(1);
@@ -13,19 +26,30 @@
 		opacity: 0;
 	}
 }
-@keyframes zoomIn {
+@-webkit-keyframes zoomIn {
 	0% {
-		transform: scale(1);
+		transform: scaleY(1);
 	}
 	28%,
 	100% {
-		transform: scale(1.05);
+		transform: scaleY(1.05);
+		z-index: 0;
+	}
+}
+@keyframes zoomIn {
+	0% {
+		transform: scaleY(1);
+	}
+	28%,
+	100% {
+		transform: scaleY(1.05);
 		z-index: 0;
 	}
 }
 // animation classes for effect's animations
 .zoom-in {
 	transform: scale(1);
+	-webkit-animation: 200ms ease-in-out 350ms forwards zoomIn;
 	animation: 200ms ease-in-out 350ms forwards zoomIn;
 }
 // animation classes for effect's animations
@@ -36,6 +60,7 @@
 	}
 	& > .figure--mask-0,
 	.figure--mask-2 {
+		-webkit-animation: 150ms ease 300ms forwards stripsOut;
 		animation: 150ms ease 300ms forwards stripsOut;
 	}
 }
@@ -51,12 +76,34 @@
 	}
 }
 // slider's animations
+@-webkit-keyframes slideRight {
+	0% {
+		transform: translateX(100%);
+	}
+	79% {
+		transform: translateX(-1%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
 @keyframes slideRight {
 	0% {
 		transform: translateX(100%);
 	}
 	79% {
 		transform: translateX(-1%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@-webkit-keyframes slideLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+	79% {
+		transform: translateX(1%);
 	}
 	100% {
 		transform: translateX(0);
@@ -75,8 +122,10 @@
 }
 // animation classes for slider
 .slide-right {
+	-webkit-animation: slideRight 400ms forwards;
 	animation: slideRight 400ms forwards;
 }
 .slide-left {
+	-webkit-animation: slideLeft 400ms forwards;
 	animation: slideLeft 400ms forwards;
 }

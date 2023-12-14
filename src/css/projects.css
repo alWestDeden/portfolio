@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400;600&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400;600&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -155,7 +155,6 @@
 .figma {
   font-size: 1.2rem;
 }
-
 @keyframes stripsOut {
   0% {
     transform: scaleY(1);
@@ -171,10 +170,10 @@
 }
 @keyframes zoomIn {
   0% {
-    transform: scale(1);
+    transform: scaleY(1);
   }
   28%, 100% {
-    transform: scale(1.05);
+    transform: scaleY(1.05);
     z-index: 0;
   }
 }
@@ -201,7 +200,6 @@
   transform: ScaleX(1);
   transition: all 400ms ease;
 }
-
 @keyframes slideRight {
   0% {
     transform: translateX(100%);
@@ -253,15 +251,38 @@
   position: absolute;
   display: flex;
   justify-content: flex-end;
-  width: 90%;
-  padding-top: 10px;
   align-items: center;
-  font-variant: small-caps;
+  padding: 30px 25px;
 }
 .projects .project-tip span {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: white;
+  font-family: "Courier Prime", monospace;
   font-weight: 400;
+}
+.projects .project-tip span .code--blue {
+  color: cyan;
+}
+.projects .project-tip span .code--gold {
+  color: darkgoldenrod;
+}
+.projects .project-tip span .code--green {
+  color: green;
+}
+.projects .project-tip span .code--orange {
+  color: orange;
+}
+.projects .project-tip span .code--purple {
+  color: blueviolet;
+}
+.projects .project-tip span .code--red {
+  color: red;
+}
+.projects .project-tip span .code--yellow {
+  color: yellow;
+}
+.projects .project-tip span .code--gold {
+  color: darkgoldenrod;
 }
 .projects .project-tip-icon {
   display: inline-block;
@@ -287,7 +308,7 @@
 }
 .projects .project-figure-image {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .projects .project-figure-caption {
   position: absolute;
@@ -437,7 +458,7 @@
   }
   .projects--ts .project--ts .figure--ts .image--ts {
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .projects--ts .project--ts .figure--ts .caption--ts {
     top: 25px;
@@ -502,6 +523,9 @@
   .projects .projects-menu-button {
     width: 100%;
     transform-origin: center bottom;
+  }
+  .projects .projects-menu-button:hover {
+    transform: scale(1.12);
   }
 }
 @media (min-width: 896px) and (max-width: 1200px) and (hover: hover) {

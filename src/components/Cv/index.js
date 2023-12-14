@@ -17,7 +17,9 @@ export default function Cv() {
 			break
 		default:
 	}
+	// slider's state
 	const [activeSlide, setActiveSlide] = useState(1)
+	// slider's rendering
 	useEffect(() => {
 		let current = 1
 		const cycleReviews = () => {

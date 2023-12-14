@@ -1,5 +1,3 @@
-// import { useContext } from "react"
-// import { DeviceContext } from "../.."
 import { useTouchScreen } from "../../functions/ScreenTypeContext"
 import { useLanguage } from "../../functions/LanguageContext"
 import addClassExtension from "../../functions/addClassExtension"

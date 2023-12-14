@@ -24,6 +24,7 @@
 		&-image {
 			max-width: 390px;
 			max-height: 390px;
+			-o-object-fit: cover;
 			object-fit: cover;
 			border: 3px solid $fourth-color;
 			border-radius: 7px;
@@ -34,6 +35,8 @@
 	}
 	&-right {
 		width: 66%;
+		max-height: -webkit-fit-content;
+		max-height: -moz-fit-content;
 		max-height: fit-content;
 		box-sizing: border-box;
 		padding: 15px 20px 0 0;
@@ -76,6 +79,7 @@
 			}
 		}
 		&-icons {
+			position: -webkit-sticky;
 			position: sticky;
 			display: flex;
 			flex-direction: column;
@@ -146,6 +150,8 @@
 		}
 		& .selected-left--ts {
 			width: 100%;
+			height: -webkit-fit-content;
+			height: -moz-fit-content;
 			height: fit-content;
 			padding: 10px;
 			& .selected-left-image--ts {
@@ -162,6 +168,8 @@
 					flex-direction: column;
 					align-items: center;
 					box-sizing: content-box;
+					height: -webkit-fit-content;
+					height: -moz-fit-content;
 					height: fit-content;
 					margin: 0 10px 0 0;
 					transition: transform 175ms ease;
@@ -187,6 +195,8 @@
 			padding: 10px;
 			border-left: none;
 			margin-left: 0;
+			height: -webkit-fit-content;
+			height: -moz-fit-content;
 			height: fit-content;
 			max-height: unset;
 		}

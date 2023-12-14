@@ -6,7 +6,7 @@ export function showProject(project) {
 	selectedProjectMask.classList.add("strips-out")
 	selectedProject.classList.add("zoom-in")
 }
-// hide projects when mouse leave button
+// hide projects when mouse leave the button
 export function hideProject(actualProject, index) {
 	// end the exit's animation of the previous selected project before starting the animation of the selected one
 	if (index !== null) {

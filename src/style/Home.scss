@@ -28,13 +28,9 @@
 @include devices(tablet) {
 	.home--ts {
 		overflow-x: hidden;
+		// using 3 row allow the desired layout
 		grid-template-rows: repeat(3, auto);
 		gap: 7%;
-		// margin-top: 7%;
-		// margin-bottom: 7%;
-		// & .square-background {
-		// display: none;
-		// }
 	}
 }
 @include devices(mobile) {

@@ -1,6 +1,5 @@
 // user's hook to manage language
 import React, { createContext, useContext, useState } from "react"
-
 const LanguageContext = createContext()
 const LanguageProvider = ({ children }) => {
 	const [language, setLanguage] = useState("fr")

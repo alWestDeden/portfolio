@@ -6,7 +6,7 @@
 	font-size: 1rem;
 	body {
 		margin: 0 10%;
-		max-width: 1480px;
+		max-width: 1200px;
 		background-color: $light-color;
 		& a {
 			text-decoration: none;
@@ -25,7 +25,6 @@
 			display: inline;
 			font-size: 1.1rem;
 			font-weight: 600;
-			// font-family: $font-subtitle;
 			margin: 0;
 		}
 		& h3 {

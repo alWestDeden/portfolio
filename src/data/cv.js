@@ -1,4 +1,4 @@
-// french cv infos
+// CV's infos in corresponding languages
 const cv_fr = [
 	{
 		nb: 1,
@@ -26,7 +26,6 @@ const cv_fr = [
 		details: ["Randonnée,", "Lecture,", "Photographie,", "Musique"],
 	},
 ]
-// english cv infos
 const cv_en = [
 	{
 		nb: 1,

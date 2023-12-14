@@ -3,9 +3,7 @@
 	flex-grow: 1;
 	flex-basis: 300px;
 	max-width: 390px;
-	// grid-area: 3/8/5/11;
 	align-items: center;
-	// display: grid;
 	justify-content: center;
 	border-radius: 20px;
 	background-color: $fourth-color;
@@ -70,6 +68,8 @@
 		grid-row-start: 3;
 		grid-row-end: 4;
 		max-width: 100%;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		border-radius: 0;
 		border: none;
