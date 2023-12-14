@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.98866248.css",
-    "main.js": "/portfolio/static/js/main.b0c1e3ac.js",
+    "main.css": "/portfolio/static/css/main.dc0e2c02.css",
+    "main.js": "/portfolio/static/js/main.ff7dd5ee.js",
+    "static/media/kasa_52.jpg": "/portfolio/static/media/kasa_52.29992a3b35ecef882b52.jpg",
+    "static/media/ohmyfood_52.jpg": "/portfolio/static/media/ohmyfood_52.5d17f0beb71a80d60210.jpg",
+    "static/media/booki_52.jpg": "/portfolio/static/media/booki_52.c83ecabefb9d4ad87672.jpg",
     "static/media/ohmyfood_74.jpg": "/portfolio/static/media/ohmyfood_74.3027e896a81ea9f0a72a.jpg",
     "static/media/kasa_74.jpg": "/portfolio/static/media/kasa_74.b7be4162eac3add83c68.jpg",
-    "static/media/kasa_52.jpg": "/portfolio/static/media/kasa_52.7ea642739957562ebe0a.jpg",
-    "static/media/booki_52.jpg": "/portfolio/static/media/booki_52.53e99c3b12a0e87ff16a.jpg",
     "static/media/nina_74.jpg": "/portfolio/static/media/nina_74.f77f2f39d3da397de848.jpg",
-    "static/media/ohmyfood_52.jpg": "/portfolio/static/media/ohmyfood_52.a506212fa9b52368ceb6.jpg",
+    "static/media/nina_52.jpg": "/portfolio/static/media/nina_52.a217c7a47b9fcffbe737.jpg",
     "static/media/booki_74.jpg": "/portfolio/static/media/booki_74.01386c44299d110a4e54.jpg",
-    "static/media/nina_52.jpg": "/portfolio/static/media/nina_52.e3174f863851a563f572.jpg",
     "static/media/booki_11.jpg": "/portfolio/static/media/booki_11.8d2bd0fce779dcdfa14f.jpg",
     "static/media/argent_74.jpg": "/portfolio/static/media/argent_74.3d54aea6bf7a0aa4624c.jpg",
     "static/media/kasa_11.jpg": "/portfolio/static/media/kasa_11.8cf7ca483b720c396d34.jpg",
     "static/media/nina_11.jpg": "/portfolio/static/media/nina_11.4806b6d65eee4531880d.jpg",
+    "static/media/argent_52.jpg": "/portfolio/static/media/argent_52.d61c9ffacdcd66bb8e87.jpg",
     "static/media/ohmyfood_11.jpg": "/portfolio/static/media/ohmyfood_11.1567e0fd65bb1eb2d6d2.jpg",
-    "static/media/argent_52.jpg": "/portfolio/static/media/argent_52.9a55e3d0ccd0d2aadd9b.jpg",
     "static/media/argent_11.jpg": "/portfolio/static/media/argent_11.bbe0196830df42367350.jpg",
     "static/media/figma.svg": "/portfolio/static/media/figma.085cac66df752c79b39e8d055ac7bddd.svg",
     "index.html": "/portfolio/index.html",
-    "main.98866248.css.map": "/portfolio/static/css/main.98866248.css.map",
-    "main.b0c1e3ac.js.map": "/portfolio/static/js/main.b0c1e3ac.js.map"
+    "main.dc0e2c02.css.map": "/portfolio/static/css/main.dc0e2c02.css.map",
+    "main.ff7dd5ee.js.map": "/portfolio/static/js/main.ff7dd5ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.98866248.css",
-    "static/js/main.b0c1e3ac.js"
+    "static/css/main.dc0e2c02.css",
+    "static/js/main.ff7dd5ee.js"
   ]
 }
