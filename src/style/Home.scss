@@ -29,10 +29,17 @@
 	.home--ts {
 		overflow-x: hidden;
 		grid-template-rows: repeat(3, auto);
-		grid-template-columns: 1fr;
+		gap: 7%;
+		// margin-top: 7%;
+		// margin-bottom: 7%;
+		// & .square-background {
+		// display: none;
+		// }
+	}
+}
+@include devices(mobile) {
+	.home--ts {
 		gap: 10px;
-		margin-top: 10%;
-		margin-bottom: 10%;
 		& .square-background {
 			display: none;
 		}

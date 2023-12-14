@@ -91,9 +91,6 @@
   right: 0;
   margin-right: 10px;
 }
-.footer .languages-label {
-  visibility: hidden;
-}
 .footer .languages-select {
   display: inline-block;
   border: none;
@@ -107,4 +104,23 @@
      -moz-appearance: none;
           appearance: none;
   background-color: white;
+}
+
+@media (max-width: 1200px) and (hover: none) {
+  .footer--ts {
+    margin-top: 7%;
+  }
+}
+@media (max-width: 600px) and (hover: none) {
+  .footer--ts {
+    margin-top: 10px;
+  }
+  .footer--ts .languages-label {
+    display: none;
+  }
+}
+@media (max-width: 896px) and (hover: hover) {
+  .footer .languages-label {
+    display: none;
+  }
 }/*# sourceMappingURL=footer.css.map */

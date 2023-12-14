@@ -35,8 +35,14 @@
 		}
 	}
 }
+@include devices(tablet) {
+	.header--ts {
+		margin-bottom: 7%;
+	}
+}
 @include devices(mobile) {
 	.header--ts {
+		margin-bottom: 10px;
 		& .title {
 			& .subtitle--ts {
 				font-size: 0.9rem;
@@ -46,11 +52,6 @@
 		}
 	}
 }
-// @include devices(tablet) {
-// 	.header--ts {
-// 		height: 24vh;
-// 	}
-// }
 @include devices(desktop-1) {
 	.header {
 		& .title {

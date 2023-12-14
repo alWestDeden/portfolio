@@ -113,7 +113,15 @@
   color: #aac1f0;
 }
 
+@media (max-width: 1200px) and (hover: none) {
+  .header--ts {
+    margin-bottom: 7%;
+  }
+}
 @media (max-width: 600px) and (hover: none) {
+  .header--ts {
+    margin-bottom: 10px;
+  }
   .header--ts .title .subtitle--ts {
     font-size: 0.9rem;
     text-align: left;

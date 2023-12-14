@@ -38,10 +38,15 @@
 			display: none;
 		}
 	}
-	// @include devices(wide-screen) {
-	// 	.body--ws {
-	// 		margin: 0 auto !important;
-	// 		float: none !important;
-	// 	}
-	// }
+	@include devices(tablet) {
+		.body--ts {
+			margin: 0 5%;
+		}
+	}
+	@include devices(wide-screen) {
+		.body--ws {
+			margin: 0 auto !important;
+			float: none !important;
+		}
+	}
 }

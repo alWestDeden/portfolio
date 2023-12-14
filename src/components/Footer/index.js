@@ -9,10 +9,10 @@ export default function Footer() {
 	let label
 	switch (language) {
 		case "fr":
-			label = "langue"
+			label = "Langue:"
 			break
 		case "en":
-			label = "language"
+			label = "Language:"
 			break
 		default:
 	}
@@ -20,11 +20,16 @@ export default function Footer() {
 	return (
 		<footer className={addClassExtension(touchScreen, "footer")}>
 			<p>Développé en 2023</p>
-			<div className='languages' id='languages'>
-				<label className='languages-label' for='languages'>
+			<div className='languages'>
+				<label className='languages-label' htmlFor='languages'>
 					{label}
 				</label>
-				<select name='languages' className='languages-select' onChange={(e) => changeLanguage(e.target.value)} defaultValue='fr'>
+				<select
+					name='languages'
+					id='languages'
+					className='languages-select'
+					onChange={(e) => changeLanguage(e.target.value)}
+					defaultValue='fr'>
 					<option className='language' value='fr'>
 						{touchScreen ? "Fr" : "Français"}
 					</option>

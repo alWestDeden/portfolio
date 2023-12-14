@@ -108,10 +108,12 @@
   .home--ts {
     overflow-x: hidden;
     grid-template-rows: repeat(3, auto);
-    grid-template-columns: 1fr;
+    gap: 7%;
+  }
+}
+@media (max-width: 600px) and (hover: none) {
+  .home--ts {
     gap: 10px;
-    margin-top: 10%;
-    margin-bottom: 10%;
   }
   .home--ts .square-background {
     display: none;

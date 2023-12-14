@@ -115,4 +115,15 @@
 }
 * body .hide {
   display: none;
+}
+@media (max-width: 1200px) and (hover: none) {
+  * .body--ts {
+    margin: 0 5%;
+  }
+}
+@media (min-width: 1200px) and (hover: hover) {
+  * .body--ws {
+    margin: 0 auto !important;
+    float: none !important;
+  }
 }/*# sourceMappingURL=global.css.map */

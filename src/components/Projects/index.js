@@ -6,8 +6,6 @@ import { useLanguage } from "../../functions/LanguageContext"
 import { useTouchScreen } from "../../functions/ScreenTypeContext"
 import { showProject, hideProject } from "../../functions/selectProject"
 import { projects_fr, projects_en } from "../../data/projects"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRightLong, faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 import "../../style/projects.scss"
 
 export default function Projects() {
@@ -54,12 +52,11 @@ export default function Projects() {
 	return (
 		<>
 			{!touchScreen ? (
-				<section key='cursor' className='projects'>
+				<section className='projects'>
 					<div className='project'>
 						{/* <div className='project--mask'></div> */}
 						<span className='project-tip'>
 							<ReactTyped strings={tips} typeSpeed={100} startDelay={100} backSpeed={50} loop />
-							<FontAwesomeIcon className='project-tip-icon' icon={faArrowRightLong} />
 						</span>
 						{projects.map((project) => {
 							const { nb, id, name, image_11, image_74, description } = project
@@ -67,15 +64,9 @@ export default function Projects() {
 								<>
 									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
 										<picture>
-											<img
-												key={`${id}-image`}
-												className='project-figure-image'
-												srcSet={`${image_74} 896w, ${image_11} 1200w`}
-												sizes='(max-width: 896px) 896px, 1200px'
-												width='724'
-												height='412'
-												alt={name}
-											/>
+											<source srcSet={image_74} media='(max-width: 896px)' />
+											<source srcSet={image_11} media='(min-width: 896px)' />
+											<img key={`${id}-image`} className='project-figure-image' src={image_74} alt={name} />
 										</picture>
 										<figcaption key={`${id}-caption`} className='project-figure-caption'>
 											<div key={`${id}-caption`}>
@@ -124,7 +115,7 @@ export default function Projects() {
 					</ul>
 				</section>
 			) : (
-				<section key='touch-screen' className='projects projects--ts'>
+				<section className='projects projects--ts'>
 					<div {...handlers} className='project project--ts'>
 						{projects.map((project) => {
 							const { nb, id, name, image_11, image_52, description } = project
@@ -134,15 +125,9 @@ export default function Projects() {
 									id={id}
 									className={`project-figure figure--ts ${indexTS === nb ? direction : "hide"}`}>
 									<picture>
-										<img
-											key={`${id}-image`}
-											className='project-figure-image image--ts'
-											srcSet={`${image_11} 400w, ${image_52} 1200w`}
-											sizes='(max-width: 400px) 400px, 1200px'
-											width='825'
-											height='330'
-											alt={name}
-										/>
+										<source srcSet={image_11} media='(max-width: 400px)' />
+										<source srcSet={image_52} media='(min-width: 400px)' />
+										<img key={`${id}-image`} className='project-figure-image image--ts' src={image_52} alt={name} />
 									</picture>
 									<figcaption key={`${id}-caption`} className='project-figure-caption caption--ts'>
 										<div key={`${id}-caption`}>
@@ -158,9 +143,13 @@ export default function Projects() {
 								</figure>
 							)
 						})}
-						<div className='arrows--ts'>
-							<FontAwesomeIcon className='arrow-icon--ts' icon={faChevronLeft} />
-							<FontAwesomeIcon className='arrow-icon--ts' icon={faChevronRight} />
+						<div className='bullets--ts'>
+							{projects.map((project) => {
+								const { nb } = project
+								return (
+									<div key={`bullet--${nb}`} className={indexTS === nb ? "bullet--ts bullet-active--ts" : "bullet--ts"}></div>
+								)
+							})}
 						</div>
 					</div>
 				</section>
