@@ -478,7 +478,7 @@
   .projects--ts .project--ts .bullets--ts .bullet-active--ts {
     background-color: #3d3d3d;
     border-color: #3d3d3d;
-    transform: scale(1.5);
+    transform: scale(1.75);
   }
 }
 @media (max-width: 896px) and (hover: hover) {
