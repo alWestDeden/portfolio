@@ -28,14 +28,16 @@
 @include devices(tablet) {
 	.home--ts {
 		overflow-x: hidden;
-		// using 3 row allow the desired layout
 		grid-template-rows: repeat(3, auto);
 		gap: 7%;
+		// correct a shift on tablet
+		height: 75vh;
 	}
 }
 @include devices(mobile) {
 	.home--ts {
 		gap: 10px;
+		height: unset;
 		& .square-background {
 			display: none;
 		}

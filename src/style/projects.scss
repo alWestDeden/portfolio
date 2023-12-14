@@ -185,10 +185,6 @@
 				border: 1px solid $fourth-color;
 				background-color: unset;
 				padding: 0;
-				& .image--ts {
-					-o-object-fit: cover;
-					object-fit: cover;
-				}
 				& .caption--ts {
 					top: 25px;
 					left: 28px;

@@ -456,10 +456,6 @@
     background-color: unset;
     padding: 0;
   }
-  .projects--ts .project--ts .figure--ts .image--ts {
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
   .projects--ts .project--ts .figure--ts .caption--ts {
     top: 25px;
     left: 28px;

@@ -109,11 +109,13 @@
     overflow-x: hidden;
     grid-template-rows: repeat(3, auto);
     gap: 7%;
+    height: 75vh;
   }
 }
 @media (max-width: 600px) and (hover: none) {
   .home--ts {
     gap: 10px;
+    height: unset;
   }
   .home--ts .square-background {
     display: none;
