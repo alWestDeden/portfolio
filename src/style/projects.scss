@@ -191,17 +191,18 @@
 				display: flex;
 				gap: 10px;
 				& .bullet--ts {
-					width: 11px;
-					height: 11px;
+					width: 14px;
+					height: 14px;
 					border-radius: 50%;
 					background-color: $primary-color;
-					border: 1px solid $fourth-color;
+					border: 1px solid $secondary-color;
 					transform: scale(1);
 					transition: transform 400ms ease;
 				}
 				& .bullet-active--ts {
 					background-color: $fourth-color;
-					transform: scale(2);
+					border-color: $fourth-color;
+					transform: scale(1.5);
 				}
 			}
 		}
