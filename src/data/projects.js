@@ -1,32 +1,22 @@
-import argent_11 from "../images/argent_11.jpg"
 import argent_52 from "../images/argent_52.jpg"
-import argent_74 from "../images/argent_74.jpg"
-import booki_11 from "../images/booki_11.jpg"
-import booki_52 from "../images/booki_52.jpg"
-import booki_74 from "../images/booki_74.jpg"
-import kasa_11 from "../images/kasa_11.jpg"
-import kasa_52 from "../images/kasa_52.jpg"
-import kasa_74 from "../images/kasa_74.jpg"
-import nina_11 from "../images/nina_11.jpg"
-import nina_52 from "../images/nina_52.jpg"
-import nina_74 from "../images/nina_74.jpg"
-import ohmyfood_11 from "../images/ohmyfood_11.jpg"
-import ohmyfood_52 from "../images/ohmyfood_52.jpg"
-import ohmyfood_74 from "../images/ohmyfood_74.jpg"
-import argent_11W from "../images/argent_11.webp"
 import argent_52W from "../images/argent_52.webp"
+import argent_74 from "../images/argent_74.jpg"
 import argent_74W from "../images/argent_74.webp"
-import booki_11W from "../images/booki_11.webp"
+import booki_52 from "../images/booki_52.jpg"
 import booki_52W from "../images/booki_52.webp"
+import booki_74 from "../images/booki_74.jpg"
 import booki_74W from "../images/booki_74.webp"
-import kasa_11W from "../images/kasa_11.webp"
+import kasa_52 from "../images/kasa_52.jpg"
 import kasa_52W from "../images/kasa_52.webp"
+import kasa_74 from "../images/kasa_74.jpg"
 import kasa_74W from "../images/kasa_74.webp"
-import nina_11W from "../images/nina_11.webp"
+import nina_52 from "../images/nina_52.jpg"
 import nina_52W from "../images/nina_52.webp"
+import nina_74 from "../images/nina_74.jpg"
 import nina_74W from "../images/nina_74.webp"
-import ohmyfood_11W from "../images/ohmyfood_11.webp"
+import ohmyfood_52 from "../images/ohmyfood_52.jpg"
 import ohmyfood_52W from "../images/ohmyfood_52.webp"
+import ohmyfood_74 from "../images/ohmyfood_74.jpg"
 import ohmyfood_74W from "../images/ohmyfood_74.webp"
 // projects data in corresponding language
 const projects_fr = [
@@ -34,10 +24,8 @@ const projects_fr = [
 		nb: 0,
 		id: "booki",
 		name: "Booki",
-		image_11: booki_11,
 		image_52: booki_52,
 		image_74: booki_74,
-		image_11W: booki_11W,
 		image_52W: booki_52W,
 		image_74W: booki_74W,
 		description: "Plateforme de recherche d'hébergements et d'activités",
@@ -53,10 +41,8 @@ const projects_fr = [
 		nb: 1,
 		id: "ohmyfood",
 		name: "Oh My Food !",
-		image_11: ohmyfood_11,
 		image_52: ohmyfood_52,
 		image_74: ohmyfood_74,
-		image_11W: ohmyfood_11W,
 		image_52W: ohmyfood_52W,
 		image_74W: ohmyfood_74W,
 		description: "Site de réservation et de composition de menus",
@@ -72,10 +58,8 @@ const projects_fr = [
 		nb: 2,
 		id: "kasa",
 		name: "Kasa",
-		image_11: kasa_11,
 		image_52: kasa_52,
 		image_74: kasa_74,
-		image_11W: kasa_11W,
 		image_52W: kasa_52W,
 		image_74W: kasa_74W,
 		description: "Plateforme de location d'appartements entre particuliers",
@@ -91,10 +75,8 @@ const projects_fr = [
 		nb: 3,
 		id: "nina",
 		name: "Nina Carducci",
-		image_11: nina_11,
 		image_52: nina_52,
 		image_74: nina_74,
-		image_11W: nina_11W,
 		image_52W: nina_52W,
 		image_74W: nina_74W,
 		description: "Portfolio de la photographe Nina Carducci",
@@ -110,10 +92,8 @@ const projects_fr = [
 		nb: 4,
 		id: "argent",
 		name: "ARGENTBANK",
-		image_11: argent_11,
 		image_52: argent_52,
 		image_74: argent_74,
-		image_11W: argent_11W,
 		image_52W: argent_52W,
 		image_74W: argent_74W,
 		description: "Application Web Bancaire",
@@ -131,10 +111,8 @@ const projects_en = [
 		nb: 0,
 		id: "booki",
 		name: "Booki",
-		image_11: booki_11,
 		image_52: booki_52,
 		image_74: booki_74,
-		image_11W: booki_11W,
 		image_52W: booki_52W,
 		image_74W: booki_74W,
 		description: "Accommodation and activities search website",
@@ -150,10 +128,8 @@ const projects_en = [
 		nb: 1,
 		id: "ohmyfood",
 		name: "Oh My Food !",
-		image_11: ohmyfood_11,
 		image_52: ohmyfood_52,
 		image_74: ohmyfood_74,
-		image_11W: ohmyfood_11W,
 		image_52W: ohmyfood_52W,
 		image_74W: ohmyfood_74W,
 		description: "Reservation and menu composition website",
@@ -169,10 +145,8 @@ const projects_en = [
 		nb: 2,
 		id: "kasa",
 		name: "Kasa",
-		image_11: kasa_11,
 		image_52: kasa_52,
 		image_74: kasa_74,
-		image_11W: kasa_11W,
 		image_52W: kasa_52W,
 		image_74W: kasa_74W,
 		description: "Apartment rental website",
@@ -188,10 +162,8 @@ const projects_en = [
 		nb: 3,
 		id: "nina",
 		name: "Nina Carducci",
-		image_11: nina_11,
 		image_52: nina_52,
 		image_74: nina_74,
-		image_11W: nina_11W,
 		image_52W: nina_52W,
 		image_74W: nina_74W,
 		description: "Portfolio of photographer Nina Carducci",
@@ -207,10 +179,8 @@ const projects_en = [
 		nb: 4,
 		id: "argent",
 		name: "ARGENTBANK",
-		image_11: argent_11,
 		image_52: argent_52,
 		image_74: argent_74,
-		image_11W: argent_11W,
 		image_52W: argent_52W,
 		image_74W: argent_74W,
 		description: "Banking Website",

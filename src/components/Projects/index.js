@@ -65,44 +65,21 @@ export default function Projects() {
 							<ReactTyped strings={tips} typeSpeed={50} startDelay={100} backSpeed={25} loop />
 						</span>
 						{projects.map((project) => {
-							const { nb, id, name, image_11, image_11W, image_74, image_74W, description } = project
+							const { nb, id, name, image_74, image_74W, description } = project
 							return (
 								<React.Fragment key={`${id}-fragment`}>
 									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
 										<picture key={`${id}-picture`}>
-											<source
-												key={`${id}-image_11`}
-												srcSet={image_11}
-												media='(min-width: 896px)'
-												height='390'
-												width='390'
-												type='image/jpg'
-											/>
-											<source
-												key={`${id}-image_11W`}
-												srcSet={image_11W}
-												media='(min-width: 896px)'
-												height='390'
-												width='390'
-												type='image/webp'
-											/>
-											<source
-												key={`${id}-image_74`}
-												srcSet={image_74}
-												media='(max-width: 896px)'
+											<source key={`${id}-image_7411W`} srcSet={image_74W} type='image/webp' />
+											<img
+												key={`${id}-image_7411`}
+												className='project-figure-image'
+												fetchpriority='low'
+												src={image_74}
 												height='414'
 												width='724'
-												type='image/jpg'
+												alt={name}
 											/>
-											<source
-												key={`${id}-image_74W`}
-												srcSet={image_74W}
-												media='(max-width: 896px)'
-												height='414'
-												width='724'
-												type='image/webp'
-											/>
-											<img key={`${id}-image`} className='project-figure-image' src={image_74} alt={name} />
 										</picture>
 										<figcaption key={`${id}-caption`} className='project-figure-caption'>
 											<div key={`${id}-caption-container`}>
@@ -158,46 +135,23 @@ export default function Projects() {
 					{/* {...handlers}  for react-swipeable */}
 					<div key='touch-screen-project' {...handlers} className='project project--ts'>
 						{projects.map((project) => {
-							const { nb, id, name, image_11, image_11W, image_52, image_52W, description } = project
+							const { nb, id, name, image_52, image_52W, description } = project
 							return (
 								<figure
 									key={`${id}-figure--ts`}
 									id={id}
 									className={`project-figure figure--ts ${indexTS === nb ? direction : "hide"}`}>
 									<picture key={`${id}-picture--ts`}>
-										<source
-											key={`${id}-image_11--ts`}
-											srcSet={image_11}
-											media='(max-width: 400px)'
-											height='390'
-											width='390'
-											type='image/jpg'
-										/>
-										<source
-											key={`${id}-image_11W--ts`}
-											srcSet={image_11W}
-											media='(max-width: 400px)'
-											height='390'
-											width='390'
-											type='image/webp'
-										/>
-										<source
-											key={`${id}-image_52--ts`}
-											srcSet={image_52}
-											media='(min-width: 400px)'
+										<source key={`${id}-image_1152W--ts`} srcSet={image_52W} type='image/webp' />
+										<img
+											key={`${id}-image_1152--ts`}
+											className='project-figure-image image--ts'
+											fetchpriority='low'
+											src={image_52}
 											height='368'
 											width='922'
-											type='image/jpg'
+											alt={name}
 										/>
-										<source
-											key={`${id}-image_52W--ts`}
-											srcSet={image_52W}
-											media='(min-width: 400px)'
-											height='368'
-											width='922'
-											type='image/webp'
-										/>
-										<img key={`${id}-image--ts`} className='project-figure-image image--ts' src={image_52} alt={name} />
 									</picture>
 									<figcaption key={`${id}-caption--ts`} className='project-figure-caption caption--ts'>
 										<div key={`${id}-caption--ts`}>
