@@ -42,9 +42,6 @@
 @include devices(mobile) {
 	.footer--ts {
 		margin-top: 10px;
-		& .languages-label {
-			display: none;
-		}
 	}
 }
 @include devices(desktop-1) {

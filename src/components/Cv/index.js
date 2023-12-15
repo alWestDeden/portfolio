@@ -56,7 +56,9 @@ export default function Cv() {
 										<p key={`cv-detail--${nb}${index}`}>{detail}</p>
 									))}
 								</div>
-								<h4 key={`cv-title--${nb}`}>{title}</h4>
+								<p key={`cv-title--${nb}`} className='cv-title'>
+									{title}
+								</p>
 							</div>
 						</li>
 					)
