@@ -7,6 +7,10 @@
 	min-height: 50px;
 	margin-top: 10px;
 	border-top: 1px solid $dark-color;
+	& p {
+		font-size: 1.1rem;
+		font-weight: 500;
+	}
 	& .languages {
 		position: absolute;
 		right: 0;

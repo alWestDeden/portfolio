@@ -17,7 +17,7 @@ export default function Footer() {
 	const { touchScreen } = useTouchScreen()
 	return (
 		<footer className={addClassExtension(touchScreen, "footer")}>
-			<p>Développé en 2023</p>
+			<p>2023-12</p>
 			<div className='languages'>
 				<label className='languages-label' htmlFor='languages'>
 					{label}
