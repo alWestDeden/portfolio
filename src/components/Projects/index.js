@@ -70,10 +70,38 @@ export default function Projects() {
 								<React.Fragment key={`${id}-fragment`}>
 									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
 										<picture key={`${id}-picture`}>
-											<source key={`${id}-image_11`} srcSet={image_11} media='(min-width: 896px)' height='390' width='390' />
-											<source key={`${id}-image_11W`} srcSet={image_11W} media='(min-width: 896px)' height='390' width='390' />
-											<source key={`${id}-image_74`} srcSet={image_74} media='(max-width: 896px)' height='414' width='724' />
-											<source key={`${id}-image_74W`} srcSet={image_74W} media='(max-width: 896px)' height='414' width='724' />
+											<source
+												key={`${id}-image_11`}
+												srcSet={image_11}
+												media='(min-width: 896px)'
+												height='390'
+												width='390'
+												type='image/jpg'
+											/>
+											<source
+												key={`${id}-image_11W`}
+												srcSet={image_11W}
+												media='(min-width: 896px)'
+												height='390'
+												width='390'
+												type='image/webp'
+											/>
+											<source
+												key={`${id}-image_74`}
+												srcSet={image_74}
+												media='(max-width: 896px)'
+												height='414'
+												width='724'
+												type='image/jpg'
+											/>
+											<source
+												key={`${id}-image_74W`}
+												srcSet={image_74W}
+												media='(max-width: 896px)'
+												height='414'
+												width='724'
+												type='image/webp'
+											/>
 											<img key={`${id}-image`} className='project-figure-image' src={image_74} alt={name} />
 										</picture>
 										<figcaption key={`${id}-caption`} className='project-figure-caption'>
@@ -137,10 +165,38 @@ export default function Projects() {
 									id={id}
 									className={`project-figure figure--ts ${indexTS === nb ? direction : "hide"}`}>
 									<picture key={`${id}-picture--ts`}>
-										<source key={`${id}-image_11--ts`} srcSet={image_11} media='(max-width: 400px)' height='390' width='390' />
-										<source key={`${id}-image_11W--ts`} srcSet={image_11W} media='(max-width: 400px)' height='390' width='390' />
-										<source key={`${id}-image_52--ts`} srcSet={image_52} media='(min-width: 400px)' height='368' width='922' />
-										<source key={`${id}-image_52W--ts`} srcSet={image_52W} media='(min-width: 400px)' height='368' width='922' />
+										<source
+											key={`${id}-image_11--ts`}
+											srcSet={image_11}
+											media='(max-width: 400px)'
+											height='390'
+											width='390'
+											type='image/jpg'
+										/>
+										<source
+											key={`${id}-image_11W--ts`}
+											srcSet={image_11W}
+											media='(max-width: 400px)'
+											height='390'
+											width='390'
+											type='image/webp'
+										/>
+										<source
+											key={`${id}-image_52--ts`}
+											srcSet={image_52}
+											media='(min-width: 400px)'
+											height='368'
+											width='922'
+											type='image/jpg'
+										/>
+										<source
+											key={`${id}-image_52W--ts`}
+											srcSet={image_52W}
+											media='(min-width: 400px)'
+											height='368'
+											width='922'
+											type='image/webp'
+										/>
 										<img key={`${id}-image--ts`} className='project-figure-image image--ts' src={image_52} alt={name} />
 									</picture>
 									<figcaption key={`${id}-caption--ts`} className='project-figure-caption caption--ts'>
