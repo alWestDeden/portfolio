@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -65,19 +65,6 @@
   color: #c56494;
 }
 
-.upfront {
-  font-weight: 400;
-}
-
-.figma {
-  color: #eb4b1d;
-}
-
-.upfront,
-.figma {
-  font-size: 1.2rem;
-}
-
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -141,19 +128,6 @@
 
 .fa-sass > path {
   color: #c56494;
-}
-
-.upfront {
-  font-weight: 400;
-}
-
-.figma {
-  color: #eb4b1d;
-}
-
-.upfront,
-.figma {
-  font-size: 1.2rem;
 }
 @keyframes stripsOut {
   0% {
@@ -304,7 +278,7 @@
   border-radius: inherit;
   background-color: #3d3d3d;
   border: 2px solid #3d3d3d;
-  overflow: hidden;
+  overflow: clip;
 }
 .projects .project-figure-image {
   -o-object-fit: cover;
@@ -487,7 +461,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: #f7f8f9;
+    background-color: white;
     border: 1px solid #d5d5d5;
     transform: scale(1);
     transition: transform 400ms ease;

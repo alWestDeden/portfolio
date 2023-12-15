@@ -27,20 +27,18 @@
 }
 @include devices(tablet) {
 	.home--ts {
-		overflow-x: hidden;
-		grid-template-rows: repeat(3, auto);
-		gap: 7%;
-		// correct a shift on tablet
-		height: 75vh;
+		overflow-x: clip;
+		grid-template-rows: 1fr 1fr 0.4fr;
+		gap: 5vh;
+		& .square-background {
+			display: none;
+		}
 	}
 }
 @include devices(mobile) {
 	.home--ts {
 		gap: 10px;
-		height: unset;
-		& .square-background {
-			display: none;
-		}
+		grid-template-rows: repeat(3, auto);
 	}
 }
 @include devices(desktop-1) {

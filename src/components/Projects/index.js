@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSwipeable } from "react-swipeable"
 import ReactTyped from "react-typed"
@@ -67,7 +67,7 @@ export default function Projects() {
 						{projects.map((project) => {
 							const { nb, id, name, image_11, image_74, description } = project
 							return (
-								<>
+								<React.Fragment key={`${id}-fragment`}>
 									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
 										<picture key={`${id}-picture`}>
 											<source key={`${id}-image_74`} srcSet={image_74} media='(max-width: 896px)' />
@@ -88,7 +88,7 @@ export default function Projects() {
 											))}
 										</div>
 									</figure>
-								</>
+								</React.Fragment>
 							)
 						})}
 					</div>
@@ -126,7 +126,7 @@ export default function Projects() {
 				// Touch Screen version
 				<section className='projects projects--ts'>
 					{/* {...handlers}  for react-swipeable */}
-					<div {...handlers} className='project project--ts'>
+					<div key='touch-screen-project' {...handlers} className='project project--ts'>
 						{projects.map((project) => {
 							const { nb, id, name, image_11, image_52, description } = project
 							return (

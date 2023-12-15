@@ -39,7 +39,13 @@
 }
 @include devices(tablet) {
 	.header--ts {
-		margin-bottom: 7%;
+		margin-bottom: 7vh;
+		& .title {
+			margin: 0;
+		}
+		& nav {
+			margin: 0;
+		}
 	}
 }
 @include devices(mobile) {

@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 import { useParams } from "react-router"
 import { Link, useLocation } from "react-router-dom"
 import { useTouchScreen } from "../../functions/ScreenTypeContext"
@@ -45,12 +45,12 @@ export default function Project() {
 					""
 				) : (
 					<div className='selected-left-links--ts'>
-						<Link className='left-link' to={site} target='_blank' rel='noreferrer'>
-							<FontAwesomeIcon className='left-link-icon' icon={faGlobe} />
+						<Link className='left-link--ts' to={site} target='_blank' rel='noreferrer'>
+							<FontAwesomeIcon className='left-link-icon--ts' icon={faGlobe} />
 							<p>site</p>
 						</Link>
-						<Link className='left-link' to={code} target='_blank' rel='noreferrer'>
-							<FontAwesomeIcon className='left-link-icon' icon={faGithub} />
+						<Link className='left-link--ts' to={code} target='_blank' rel='noreferrer'>
+							<FontAwesomeIcon className='left-link-icon--ts' icon={faGithub} />
 							<p>code</p>
 						</Link>
 					</div>
@@ -63,14 +63,14 @@ export default function Project() {
 				<p className='selected-right-constraints' dangerouslySetInnerHTML={constraintsHTML}></p>
 				<h5>Technologies :</h5>
 				<div className='selected-right-tech'>
-					{technologies.map((technology) => {
+					{technologies.map((technology, index) => {
 						// use a SVG file for figma's icon (multiple colors)
 						if (technology === "Figma") {
 							return (
-								<>
+								<React.Fragment key={`${technology}-${index}`}>
 									<img className={`selected-right-tech-icon color--${technology}`} src={figma} alt='figma' />
 									<p className='selected-right-tech-name'>{technology}</p>
-								</>
+								</React.Fragment>
 							)
 							// use Font Awesome's icons
 						} else {
@@ -91,6 +91,8 @@ export default function Project() {
 								case "JavaScript":
 									techIcon = faSquareJs
 									break
+								case "React-Router":
+									break
 								case "React":
 									techIcon = faReact
 									break
@@ -101,13 +103,23 @@ export default function Project() {
 								case "Swagger":
 									techIcon = faScroll
 									break
+								// case null:
+								// 	techIcon = null
+								// 	break
 								default:
+									break
 							}
 							return (
-								<>
-									<FontAwesomeIcon className={`selected-right-tech-icon color--${technology}`} icon={techIcon} />
-									<p className='selected-right-tech-name'>{technology}</p>
-								</>
+								<React.Fragment key={`${technology}-${index}`}>
+									{techIcon ? (
+										<>
+											<FontAwesomeIcon className={`selected-right-tech-icon color--${technology}`} icon={techIcon} />
+											<p className='selected-right-tech-name'>{technology}</p>
+										</>
+									) : (
+										<p className='selected-right-tech-name'>{technology}</p>
+									)}
+								</React.Fragment>
 							)
 						}
 					})}

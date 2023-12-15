@@ -15,6 +15,8 @@
 			display: inline-block;
 			border: none;
 			font-family: $font-subtitle;
+			-webkit-appearance: none;
+			-moz-appearance: none;
 			appearance: none;
 			&::after {
 				background-color: $light-color;
@@ -30,7 +32,7 @@
 }
 @include devices(tablet) {
 	.footer--ts {
-		margin-top: 7%;
+		margin-top: 7vh;
 	}
 }
 @include devices(mobile) {

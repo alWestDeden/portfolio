@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400;600&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -64,19 +64,6 @@
   color: #c56494;
 }
 
-.upfront {
-  font-weight: 400;
-}
-
-.figma {
-  color: #eb4b1d;
-}
-
-.upfront,
-.figma {
-  font-size: 1.2rem;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -115,7 +102,13 @@
 
 @media (max-width: 1200px) and (hover: none) {
   .header--ts {
-    margin-bottom: 7%;
+    margin-bottom: 7vh;
+  }
+  .header--ts .title {
+    margin: 0;
+  }
+  .header--ts nav {
+    margin: 0;
   }
 }
 @media (max-width: 600px) and (hover: none) {

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;400;600&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -87,14 +87,13 @@
   background-color: #3d3d3d;
   border: 10px solid white;
   padding: 20px 0 20px;
-  overflow: hidden;
+  overflow: clip;
 }
 .cv-list {
   align-items: flex-end;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 12fr 1fr;
-  overflow: hidden;
   list-style-type: none;
   margin: 0;
   padding: 0 20px;
