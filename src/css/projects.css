@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&family=Syne:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&family=Syne:wght@500&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -147,7 +147,7 @@
     transform: scaleY(1);
   }
   28%, 100% {
-    transform: scaleY(1.05);
+    transform: scaleY(1.05) scaleX(1);
     z-index: 0;
   }
 }
@@ -205,26 +205,33 @@
 }
 
 .projects {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  flex-basis: 515px;
+  flex-grow: 1;
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
 }
 .projects .project {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 350px;
-  min-height: 330px;
-  border-radius: 10px;
-  border: 10px solid white;
+  overflow: clip;
   padding: 10px;
+  flex-basis: 330px;
+  height: 330px;
+  flex-grow: 9999;
+  box-sizing: border-box;
+  border: 2px solid #3d3d3d;
 }
 .projects .project-tip {
   position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding: 30px 25px;
 }
@@ -234,37 +241,29 @@
   font-family: "Courier Prime", monospace;
   font-weight: 400;
 }
-.projects .project-tip span .code--blue {
+.projects .project-tip .code--blue {
   color: cyan;
 }
-.projects .project-tip span .code--gold {
+.projects .project-tip .code--gold {
   color: darkgoldenrod;
 }
-.projects .project-tip span .code--green {
+.projects .project-tip .code--green {
   color: green;
 }
-.projects .project-tip span .code--orange {
+.projects .project-tip .code--orange {
   color: orange;
 }
-.projects .project-tip span .code--purple {
+.projects .project-tip .code--purple {
   color: blueviolet;
 }
-.projects .project-tip span .code--red {
+.projects .project-tip .code--red {
   color: red;
 }
-.projects .project-tip span .code--yellow {
+.projects .project-tip .code--yellow {
   color: yellow;
 }
-.projects .project-tip span .code--gold {
+.projects .project-tip .code--gold {
   color: darkgoldenrod;
-}
-.projects .project-tip-icon {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 2rem;
-}
-.projects .project-tip-icon > path {
-  color: white;
 }
 .projects .project-figure {
   position: absolute;
@@ -272,13 +271,8 @@
   right: 0;
   margin: 0;
   padding: 0px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background-color: #3d3d3d;
-  border: 2px solid #3d3d3d;
   overflow: clip;
+  width: 100%;
 }
 .projects .project-figure-image {
   -o-object-fit: cover;
@@ -300,11 +294,11 @@
 .projects .project-figure--masks {
   position: absolute;
   top: 0;
-  right: -1px;
+  right: 0;
   display: flex;
   flex-direction: column;
   grid-area: inherit;
-  width: 101%;
+  width: 100%;
   height: 100%;
 }
 .projects .project-figure--masks .figure--mask {
@@ -340,24 +334,27 @@
   z-index: -1;
 }
 .projects .projects-menu {
+  flex-basis: 100px;
+  flex-grow: 1;
   list-style: none;
-  margin: 10px 0 0;
-  padding-left: 20px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  align-content: flex-end;
   gap: 5px;
 }
 .projects .projects-menu-button {
   position: relative;
+  width: 100%;
   cursor: pointer;
   box-sizing: border-box;
   background-color: #aac1f0;
   color: white;
   border: none;
   padding: 10px;
-  border-radius: 5px;
-  transition: transform 175ms ease;
-  transform-origin: left bottom;
+  transition: transform 175ms ease 50ms;
+  transform-origin: right bottom;
   overflow: hidden;
 }
 .projects .projects-menu-button::before {
@@ -373,7 +370,7 @@
   background-color: white;
 }
 .projects .projects-menu-button:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 .projects .projects-menu-button:hover::before {
   opacity: 0.75;
@@ -409,13 +406,42 @@
   color: #00bc77;
 }
 
+@media (max-width: 896px) and (hover: hover) {
+  .projects .project {
+    min-width: 100%;
+  }
+  .projects .projects-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0;
+    gap: 5px;
+  }
+  .projects .projects-menu-list {
+    flex-grow: 1;
+  }
+  .projects .projects-menu-button {
+    width: 100%;
+    transform-origin: center bottom;
+  }
+  .projects .projects-menu-button:hover {
+    transform: scale(1.12);
+  }
+}
 @media (max-width: 1200px) and (hover: none) {
   .projects--ts {
-    border-radius: 0;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    flex-basis: unset;
+    flex-grow: unset;
+    width: 100%;
+    border: 1px solid #f7f8f9;
+    box-sizing: border-box;
   }
   .projects--ts .project--ts {
-    grid-row-start: 2;
-    grid-row-end: 3;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -423,12 +449,11 @@
     align-items: center;
     border-radius: 0;
     border: unset;
-    box-sizing: border-box;
   }
   .projects--ts .project--ts .figure--ts {
-    border: 1px solid #3d3d3d;
     background-color: unset;
     padding: 0;
+    box-sizing: border-box;
   }
   .projects--ts .project--ts .figure--ts .caption--ts {
     top: 25px;
@@ -472,39 +497,9 @@
     transform: scale(1.75);
   }
 }
-@media (max-width: 896px) and (hover: hover) {
-  .projects .project {
-    width: 100%;
-  }
-  .projects .projects-menu {
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    margin: 0 10px;
-    padding: 0;
-    gap: 5px;
-  }
-  .projects .projects-menu-list {
-    flex-grow: 1;
-  }
-  .projects .projects-menu-button {
-    width: 100%;
-    transform-origin: center bottom;
-  }
-  .projects .projects-menu-button:hover {
-    transform: scale(1.12);
-  }
-}
-@media (min-width: 896px) and (max-width: 1200px) and (hover: hover) {
-  .projects .project {
-    max-height: 350px;
-  }
-}
-@media (min-width: 1200px) and (hover: hover) {
-  .projects {
-    max-height: 350px;
+@media (max-width: 600px) and (hover: none) {
+  .projects--ts {
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 }/*# sourceMappingURL=projects.css.map */

@@ -76,8 +76,8 @@ export default function Projects() {
 												className='project-figure-image'
 												fetchpriority='low'
 												src={image_74}
-												height='414'
-												width='724'
+												height='330'
+												width='787'
 												alt={name}
 											/>
 										</picture>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Libre+Barcode+39+Text&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&family=Syne:wght@500&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -65,14 +65,11 @@
 }
 
 .cv {
+  flex-basis: 330px;
   flex-grow: 1;
-  flex-basis: 300px;
-  max-width: 390px;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
   background-color: #3d3d3d;
-  border: 10px solid white;
   padding: 20px 0 20px;
   overflow: clip;
 }
@@ -129,19 +126,24 @@
   transform: translateX(110%);
 }
 
+@media (max-width: 896px) and (hover: hover) {
+  .cv {
+    flex-basis: unset;
+  }
+}
 @media (max-width: 1200px) and (hover: none) {
+  .cv--ts {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    flex-basis: unset;
+    flex-grow: unset;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 600px) and (hover: none) {
   .cv--ts {
     grid-row-start: 3;
     grid-row-end: 4;
-    max-width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    border-radius: 0;
-    border: none;
-  }
-}
-@media (max-width: 896px) and (hover: hover) {
-  .cv {
-    max-width: unset;
   }
 }/*# sourceMappingURL=cv.css.map */

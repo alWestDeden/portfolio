@@ -1,53 +1,42 @@
 @import "./variable.scss";
 .home {
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: 1fr;
-	gap: 25px;
-	margin: 0;
-	& .square-background {
-		position: absolute;
-		top: 25%;
-		left: 25%;
-		width: 50%;
-		height: 50%;
-		z-index: -1;
-		background-color: $primary-color;
-		border-radius: 20px;
-	}
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	min-height: fit-content;
+	margin: 40px 0;
 	&-top {
-		grid-row-start: 1;
-		grid-row-end: 2;
 		display: flex;
-		justify-content: space-between;
 		align-items: flex-end;
 		flex-wrap: wrap;
+		gap: 20px;
 		width: 100%;
+	}
+	&-bottom-container {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		& .home-bottom {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			width: 100%;
+		}
 	}
 }
 @include devices(tablet) {
 	.home--ts {
+		display: grid;
+		flex-direction: unset;
 		overflow-x: clip;
-		grid-template-rows: 1fr 1fr 0.4fr;
-		gap: 5vh;
-		& .square-background {
-			display: none;
-		}
+		grid-template-rows: repeat(5, auto);
+		gap: 20px;
 	}
 }
 @include devices(mobile) {
 	.home--ts {
 		gap: 10px;
 		grid-template-rows: repeat(3, auto);
-	}
-}
-@include devices(desktop-1) {
-	.home {
-		gap: 0px;
-	}
-}
-@include devices(wide-screen) {
-	.home {
-		height: calc(100vh - 50px);
+		grid-template-columns: 1fr;
 	}
 }

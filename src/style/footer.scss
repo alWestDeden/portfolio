@@ -5,7 +5,6 @@
 	justify-content: center;
 	align-items: center;
 	min-height: 50px;
-	margin-top: 10px;
 	border-top: 1px solid $dark-color;
 	& p {
 		font-size: 1.1rem;
@@ -34,6 +33,13 @@
 		}
 	}
 }
+@include devices(desktop-1) {
+	.footer {
+		& .languages-label {
+			display: none;
+		}
+	}
+}
 @include devices(tablet) {
 	.footer--ts {
 		margin-top: 7vh;
@@ -42,12 +48,5 @@
 @include devices(mobile) {
 	.footer--ts {
 		margin-top: 10px;
-	}
-}
-@include devices(desktop-1) {
-	.footer {
-		& .languages-label {
-			display: none;
-		}
 	}
 }

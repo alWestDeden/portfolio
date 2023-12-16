@@ -1,24 +1,31 @@
 @import "./variable.scss";
 @import "./animation.scss";
 .projects {
-	grid-row-start: 2;
-	grid-row-end: 3;
+	flex-basis: 515px;
+	flex-grow: 1;
 	display: flex;
-	justify-content: flex-end;
 	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 20px;
 	.project {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		width: 350px;
-		min-height: 330px;
-		border-radius: 10px;
-		border: 10px solid $light-color;
+		overflow: clip;
 		padding: 10px;
+		flex-basis: 330px;
+		height: 330px;
+		flex-grow: 9999;
+		box-sizing: border-box;
+		border: 2px solid $fourth-color;
 		&-tip {
 			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			box-sizing: border-box;
 			display: flex;
-			justify-content: flex-end;
+			justify-content: flex-start;
 			align-items: center;
 			padding: 30px 25px;
 			& span {
@@ -26,38 +33,30 @@
 				color: $light-color;
 				font-family: $font-code;
 				font-weight: 400;
-				& .code--blue {
-					color: cyan;
-				}
-				& .code--gold {
-					color: darkgoldenrod;
-				}
-				& .code--green {
-					color: green;
-				}
-				& .code--orange {
-					color: orange;
-				}
-				& .code--purple {
-					color: blueviolet;
-				}
-				& .code--red {
-					color: red;
-				}
-				& .code--yellow {
-					color: yellow;
-				}
-				& .code--gold {
-					color: darkgoldenrod;
-				}
 			}
-			&-icon {
-				display: inline-block;
-				margin-left: 10px;
-				font-size: 2rem;
-				& > path {
-					color: $light-color;
-				}
+			& .code--blue {
+				color: cyan;
+			}
+			& .code--gold {
+				color: darkgoldenrod;
+			}
+			& .code--green {
+				color: green;
+			}
+			& .code--orange {
+				color: orange;
+			}
+			& .code--purple {
+				color: blueviolet;
+			}
+			& .code--red {
+				color: red;
+			}
+			& .code--yellow {
+				color: yellow;
+			}
+			& .code--gold {
+				color: darkgoldenrod;
 			}
 		}
 		&-figure {
@@ -66,13 +65,8 @@
 			right: 0;
 			margin: 0;
 			padding: 0px;
-			box-sizing: border-box;
-			width: 100%;
-			height: 100%;
-			border-radius: inherit;
-			background-color: $fourth-color;
-			border: 2px solid $fourth-color;
 			overflow: clip;
+			width: 100%;
 			&-image {
 				-o-object-fit: cover;
 				object-fit: cover;
@@ -94,11 +88,11 @@
 			&--masks {
 				position: absolute;
 				top: 0;
-				right: -1px;
+				right: 0;
 				display: flex;
 				flex-direction: column;
 				grid-area: inherit;
-				width: 101%;
+				width: 100%;
 				height: 100%;
 				& .figure--mask {
 					width: 100%;
@@ -125,24 +119,27 @@
 			}
 		}
 	}
-	.projects-menu {
+	& .projects-menu {
+		flex-basis: 100px;
+		flex-grow: 1;
 		list-style: none;
-		margin: 10px 0 0;
-		padding-left: 20px;
+		margin: 0;
+		padding: 0;
 		display: flex;
 		flex-direction: column;
+		align-content: flex-end;
 		gap: 5px;
 		&-button {
 			position: relative;
+			width: 100%;
 			cursor: pointer;
 			box-sizing: border-box;
 			background-color: $third-color;
 			color: $light-color;
 			border: none;
 			padding: 10px;
-			border-radius: 5px;
-			transition: transform 175ms ease;
-			transform-origin: left bottom;
+			transition: transform 175ms ease 50ms;
+			transform-origin: right bottom;
 			overflow: hidden;
 			&::before {
 				content: "";
@@ -157,7 +154,7 @@
 				background-color: $light-color;
 			}
 			&:hover {
-				transform: scale(1.4);
+				transform: scale(1.1);
 			}
 			&:hover::before {
 				opacity: 0.75;
@@ -166,13 +163,44 @@
 		@include project-button;
 	}
 }
+@include devices(desktop-1) {
+	.projects {
+		& .project {
+			min-width: 100%;
+		}
+		& .projects-menu {
+			flex-direction: row;
+			flex-wrap: wrap;
+			flex-grow: 1;
+			justify-content: center;
+			align-items: flex-end;
+			width: 100%;
+			padding: 0;
+			gap: 5px;
+			&-list {
+				flex-grow: 1;
+			}
+			&-button {
+				width: 100%;
+				transform-origin: center bottom;
+				&:hover {
+					transform: scale(1.12);
+				}
+			}
+		}
+	}
+}
 @include devices(tablet) {
 	// touch screen classes
 	.projects--ts {
-		border-radius: 0;
+		grid-row-start: 3;
+		grid-row-end: 4;
+		flex-basis: unset;
+		flex-grow: unset;
+		width: 100%;
+		border: 1px solid $primary-color;
+		box-sizing: border-box;
 		& .project--ts {
-			grid-row-start: 2;
-			grid-row-end: 3;
 			width: 100%;
 			display: flex;
 			flex-direction: column;
@@ -180,11 +208,10 @@
 			align-items: center;
 			border-radius: 0;
 			border: unset;
-			box-sizing: border-box;
 			& .figure--ts {
-				border: 1px solid $fourth-color;
 				background-color: unset;
 				padding: 0;
+				box-sizing: border-box;
 				& .caption--ts {
 					top: 25px;
 					left: 28px;
@@ -230,43 +257,9 @@
 		}
 	}
 }
-@include devices(desktop-1) {
-	.projects {
-		& .project {
-			width: 100%;
-		}
-		& .projects-menu {
-			flex-direction: row;
-			flex-wrap: wrap;
-			flex-grow: 1;
-			justify-content: center;
-			align-items: flex-end;
-			width: 100%;
-			margin: 0 10px;
-			padding: 0;
-			gap: 5px;
-			&-list {
-				flex-grow: 1;
-			}
-			&-button {
-				width: 100%;
-				transform-origin: center bottom;
-				&:hover {
-					transform: scale(1.12);
-				}
-			}
-		}
-	}
-}
-@include devices(desktop-2) {
-	.projects {
-		& .project {
-			max-height: 350px;
-		}
-	}
-}
-@include devices(wide-screen) {
-	.projects {
-		max-height: 350px;
+@include devices(mobile) {
+	.projects--ts {
+		grid-row-start: 2;
+		grid-row-end: 3;
 	}
 }

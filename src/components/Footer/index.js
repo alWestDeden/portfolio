@@ -7,10 +7,10 @@ export default function Footer() {
 	let label
 	switch (language) {
 		case "fr":
-			label = "Langue:"
+			label = "Langue: "
 			break
 		case "en":
-			label = "Language:"
+			label = "Language: "
 			break
 		default:
 	}

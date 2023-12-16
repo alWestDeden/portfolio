@@ -20,6 +20,26 @@
 	& nav {
 		display: flex;
 		margin-right: 10px;
+		& .languages-select {
+			display: inline-block;
+			border: none;
+			font-family: $font-subtitle;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			&:focus {
+				border: none;
+			}
+			&::after {
+				background-color: $light-color;
+			}
+			& .language {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				background-color: $light-color;
+			}
+		}
 		& a {
 			& .icon {
 				font-size: 2rem;
@@ -33,6 +53,15 @@
 						color: $third-color;
 					}
 				}
+			}
+		}
+	}
+}
+@include devices(desktop-1) {
+	.header {
+		& .title {
+			& .subtitle {
+				text-align: left;
 			}
 		}
 	}
@@ -56,15 +85,6 @@
 				font-size: 0.9rem;
 				text-align: left;
 				white-space: nowrap;
-			}
-		}
-	}
-}
-@include devices(desktop-1) {
-	.header {
-		& .title {
-			& .subtitle {
-				text-align: left;
 			}
 		}
 	}

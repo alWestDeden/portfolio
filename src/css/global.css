@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&family=Syne:wght@500&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -64,19 +64,6 @@
   color: #c56494;
 }
 
-.upfront {
-  font-weight: 400;
-}
-
-.figma {
-  color: #eb4b1d;
-}
-
-.upfront,
-.figma {
-  font-size: 1.2rem;
-}
-
 * {
   font-family: "Jost", sans-serif;
   font-weight: 300;
@@ -86,6 +73,7 @@
 * body {
   margin: 0 10%;
   max-width: 1200px;
+  min-width: 450px;
   background-color: white;
 }
 * body a {
@@ -113,17 +101,24 @@
   font-family: "Paytone One", sans-serif;
   margin: 0;
 }
+* body h4 {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
 * body .hide {
   display: none;
+}
+@media (min-width: 1200px) and (hover: hover) {
+  * .body--ws {
+    margin: 0 auto;
+  }
 }
 @media (max-width: 1200px) and (hover: none) {
   * .body--ts {
     margin: 0 5%;
-  }
-}
-@media (min-width: 1200px) and (hover: hover) {
-  * .body--ws {
-    margin: 0 auto !important;
-    float: none !important;
+    min-width: unset;
+    max-width: unset;
   }
 }/*# sourceMappingURL=global.css.map */

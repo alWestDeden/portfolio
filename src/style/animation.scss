@@ -28,11 +28,11 @@
 }
 @-webkit-keyframes zoomIn {
 	0% {
-		transform: scaleY(1);
+		transform: scaleY(1) scaleX(0.9);
 	}
 	28%,
 	100% {
-		transform: scaleY(1.05);
+		transform: scaleY(1.05) scaleX(1);
 		z-index: 0;
 	}
 }
@@ -42,7 +42,7 @@
 	}
 	28%,
 	100% {
-		transform: scaleY(1.05);
+		transform: scaleY(1.05) scaleX(1);
 		z-index: 0;
 	}
 }

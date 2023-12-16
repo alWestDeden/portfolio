@@ -1,13 +1,10 @@
 @import "./variable.scss";
 .cv {
+	flex-basis: 330px;
 	flex-grow: 1;
-	flex-basis: 300px;
-	max-width: 390px;
 	align-items: center;
 	justify-content: center;
-	border-radius: 20px;
 	background-color: $fourth-color;
-	border: 10px solid $light-color;
 	padding: 20px 0 20px;
 	overflow: clip;
 	&-list {
@@ -62,20 +59,25 @@
 .right {
 	transform: translateX(110%);
 }
+@include devices(desktop-1) {
+	.cv {
+		flex-basis: unset;
+	}
+}
 @include devices(tablet) {
 	.cv--ts {
-		grid-row-start: 3;
-		grid-row-end: 4;
-		max-width: 100%;
+		grid-row-start: 5;
+		grid-row-end: 6;
+		flex-basis: unset;
+		flex-grow: unset;
 		height: -webkit-fit-content;
 		height: -moz-fit-content;
 		height: fit-content;
-		border-radius: 0;
-		border: none;
 	}
 }
-@include devices(desktop-1) {
-	.cv {
-		max-width: unset;
+@include devices(mobile) {
+	.cv--ts {
+		grid-row-start: 3;
+		grid-row-end: 4;
 	}
 }

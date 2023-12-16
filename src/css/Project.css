@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&family=Syne:wght@500&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -187,6 +187,14 @@
   color: #242424;
 }
 
+@media (max-width: 896px) and (hover: hover) {
+  .selected-left {
+    display: none;
+  }
+  .selected-right {
+    width: 100%;
+  }
+}
 @media (max-width: 1200px) and (hover: none) {
   .selected--ts {
     flex-direction: column;
@@ -249,13 +257,5 @@
     position: unset;
     width: 100%;
     align-items: center;
-  }
-}
-@media (max-width: 896px) and (hover: hover) {
-  .selected-left {
-    display: none;
-  }
-  .selected-right {
-    width: 100%;
   }
 }/*# sourceMappingURL=Project.css.map */

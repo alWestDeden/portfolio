@@ -7,6 +7,7 @@
 	body {
 		margin: 0 10%;
 		max-width: 1200px;
+		min-width: 450px;
 		background-color: $light-color;
 		& a {
 			text-decoration: none;
@@ -33,19 +34,26 @@
 			font-family: $font-subtitle;
 			margin: 0;
 		}
+		& h4 {
+			display: inline-block;
+			font-size: 1.2rem;
+			font-weight: 500;
+			margin: 0;
+		}
 		& .hide {
 			display: none;
+		}
+	}
+	@include devices(wide-screen) {
+		.body--ws {
+			margin: 0 auto;
 		}
 	}
 	@include devices(tablet) {
 		.body--ts {
 			margin: 0 5%;
-		}
-	}
-	@include devices(wide-screen) {
-		.body--ws {
-			margin: 0 auto !important;
-			float: none !important;
+			min-width: unset;
+			max-width: unset;
 		}
 	}
 }

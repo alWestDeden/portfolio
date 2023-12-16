@@ -1,0 +1,92 @@
+@import "./variable.scss";
+.knowledges-container {
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+	& .knowledges {
+		display: flex;
+		gap: 20px;
+		& .knowledge {
+			display: flex;
+			flex-direction: column;
+			background-color: $primary-color;
+			padding: 20px;
+			height: inherit;
+			flex-basis: 33%;
+			flex-grow: 1;
+			box-sizing: border-box;
+			& .card-icons {
+				height: fit-content;
+				text-align: center;
+				& .card-icon {
+					font-size: 2.75rem;
+					& > path {
+						color: $fourth-color;
+					}
+				}
+				.fa-mobile-screen-button {
+					font-size: 1.25rem;
+				}
+				.fa-tablet-screen-button {
+					font-size: 1.75rem;
+				}
+			}
+			& .card-text {
+				height: fit-content;
+				text-align: center;
+				& > span {
+					display: inline-block;
+					margin-top: 10px;
+					font-family: $font-subtitle;
+					font-size: 1.4rem;
+					font-weight: 500;
+					color: $third-color;
+				}
+				& > p {
+					display: inline-block;
+					line-height: 1.25rem;
+					margin-top: 5px;
+					font-size: 1.1rem;
+					& .upfront {
+						font-weight: 400;
+						font-size: 1.1rem;
+					}
+				}
+			}
+		}
+	}
+}
+@include devices(desktop-1) {
+	.knowledges-container {
+		& .knowledges {
+			flex-direction: column;
+			& .knowledge {
+				flex-direction: row;
+				align-items: center;
+				& .card-text {
+					text-align: left;
+					padding-left: 40px;
+					border-left: 1px solid $fourth-color;
+				}
+				& .card-icons {
+					min-width: 150px;
+				}
+			}
+		}
+	}
+}
+@include devices(tablet) {
+	.knowledges-container--ts {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		border: unset;
+		& h4 {
+			display: none;
+		}
+	}
+}
+@include devices(mobile) {
+	.knowledges-container--ts {
+		display: none;
+	}
+}

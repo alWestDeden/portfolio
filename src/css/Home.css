@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&family=Syne:wght@500&display=swap");
 .booki {
   font-family: "Raleway", sans-serif;
   color: #0164fc;
@@ -65,55 +65,45 @@
 }
 
 .home {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: 1fr;
-  gap: 25px;
-  margin: 0;
-}
-.home .square-background {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  z-index: -1;
-  background-color: #f7f8f9;
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  margin: 40px 0;
 }
 .home-top {
-  grid-row-start: 1;
-  grid-row-end: 2;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.home-bottom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home-bottom-container .home-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   width: 100%;
 }
 
 @media (max-width: 1200px) and (hover: none) {
   .home--ts {
+    display: grid;
+    flex-direction: unset;
     overflow-x: clip;
-    grid-template-rows: 1fr 1fr 0.4fr;
-    gap: 5vh;
-  }
-  .home--ts .square-background {
-    display: none;
+    grid-template-rows: repeat(5, auto);
+    gap: 20px;
   }
 }
 @media (max-width: 600px) and (hover: none) {
   .home--ts {
     gap: 10px;
     grid-template-rows: repeat(3, auto);
-  }
-}
-@media (max-width: 896px) and (hover: hover) {
-  .home {
-    gap: 0px;
-  }
-}
-@media (min-width: 1200px) and (hover: hover) {
-  .home {
-    height: calc(100vh - 50px);
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=Home.css.map */

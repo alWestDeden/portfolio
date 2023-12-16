@@ -1,0 +1,39 @@
+@import "./variable.scss";
+.description {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 500px;
+	flex-grow: 9999;
+	gap: 20px;
+	padding: 20px;
+	background-color: $primary-color;
+	&-text {
+		display: inline-block;
+		font-size: 1.1rem;
+		font-weight: 300;
+		line-height: 1.6rem;
+		& .upfront {
+			font-weight: 400;
+			font-size: 1.1rem;
+		}
+		& a {
+			text-decoration: none;
+			color: $sophie-color;
+			font-family: $sophie-font;
+		}
+	}
+}
+@include devices(tablet) {
+	.description--ts {
+		grid-row-start: 4;
+		grid-row-end: 5;
+		background-color: $primary-color;
+	}
+}
+@include devices(mobile) {
+	.description--ts {
+		display: none;
+		grid-row-start: unset;
+		grid-row-end: unset;
+	}
+}

@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&family=Syne:wght@500&display=swap");
+.booki {
+  font-family: "Raleway", sans-serif;
+  color: #0164fc;
+}
+
+.ohmyfood {
+  font-family: "Shrikhand", serif;
+  color: #101010;
+}
+
+.kasa {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+}
+
+.nina {
+  font-family: "Inter", sans-serif;
+  color: #212529;
+  font-weight: 400;
+}
+
+.argent {
+  font-family: "Montserrat", sans-serif;
+  color: #00bc77;
+}
+
+.open {
+  font-family: "Inter", sans-sherif;
+  color: #7450eb;
+  font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+.open:hover {
+  color: #aac1f0;
+}
+
+.fa-css3-alt > path {
+  color: #039fda;
+}
+
+.fa-figma > path {
+  color: #eb4b1d;
+}
+
+.fa-font-awesome > path {
+  color: #538dd6;
+}
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
+}
+
+.knowledges-container {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.knowledges-container .knowledges {
+  display: flex;
+  gap: 20px;
+}
+.knowledges-container .knowledges .knowledge {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f8f9;
+  padding: 20px;
+  height: inherit;
+  flex-basis: 33%;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.knowledges-container .knowledges .knowledge .card-icons {
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+.knowledges-container .knowledges .knowledge .card-icons .card-icon {
+  font-size: 2.75rem;
+}
+.knowledges-container .knowledges .knowledge .card-icons .card-icon > path {
+  color: #3d3d3d;
+}
+.knowledges-container .knowledges .knowledge .card-icons .fa-mobile-screen-button {
+  font-size: 1.25rem;
+}
+.knowledges-container .knowledges .knowledge .card-icons .fa-tablet-screen-button {
+  font-size: 1.75rem;
+}
+.knowledges-container .knowledges .knowledge .card-text {
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+.knowledges-container .knowledges .knowledge .card-text > span {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: "Paytone One", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #aac1f0;
+}
+.knowledges-container .knowledges .knowledge .card-text > p {
+  display: inline-block;
+  line-height: 1.25rem;
+  margin-top: 5px;
+  font-size: 1.1rem;
+}
+.knowledges-container .knowledges .knowledge .card-text > p .upfront {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 896px) and (hover: hover) {
+  .knowledges-container .knowledges {
+    flex-direction: column;
+  }
+  .knowledges-container .knowledges .knowledge {
+    flex-direction: row;
+    align-items: center;
+  }
+  .knowledges-container .knowledges .knowledge .card-text {
+    text-align: left;
+    padding-left: 40px;
+    border-left: 1px solid #3d3d3d;
+  }
+  .knowledges-container .knowledges .knowledge .card-icons {
+    min-width: 150px;
+  }
+}
+@media (max-width: 1200px) and (hover: none) {
+  .knowledges-container--ts {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: unset;
+  }
+  .knowledges-container--ts h4 {
+    display: none;
+  }
+}
+@media (max-width: 600px) and (hover: none) {
+  .knowledges-container--ts {
+    display: none;
+  }
+}/*# sourceMappingURL=knowledges.css.map */

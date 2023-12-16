@@ -27,7 +27,7 @@ export default function Project() {
 	// get the project's id from url
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
-	const { name, image_11, details, constraints, technologies, code, site } = selectedProject[0]
+	const { name, image_74, details, constraints, technologies, code, site } = selectedProject[0]
 	// allow the use of HTML tags in the JSON file
 	const detailsHTML = { __html: details }
 	const constraintsHTML = { __html: constraints }
@@ -40,7 +40,7 @@ export default function Project() {
 		<section className={addClassExtension(touchScreen, "selected")}>
 			<div className='square-background'></div>
 			<div className={addClassExtension(touchScreen, "selected-left")}>
-				<img className={addClassExtension(touchScreen, "selected-left-image")} src={image_11} alt={name} />
+				<img className={addClassExtension(touchScreen, "selected-left-image")} src={image_74} alt={name} />
 				{!touchScreen ? (
 					""
 				) : (
@@ -103,9 +103,6 @@ export default function Project() {
 								case "Swagger":
 									techIcon = faScroll
 									break
-								// case null:
-								// 	techIcon = null
-								// 	break
 								default:
 									break
 							}

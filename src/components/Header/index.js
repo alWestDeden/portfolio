@@ -7,8 +7,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import "../../style/header.scss"
 
 export default function Header() {
-	const { touchScreen } = useTouchScreen()
-	const { language } = useLanguage()
+	const { changeLanguage, language } = useLanguage()
 	let subtitle
 	switch (language) {
 		case "fr":
@@ -19,6 +18,7 @@ export default function Header() {
 			break
 		default:
 	}
+	const { touchScreen } = useTouchScreen()
 	return (
 		<header className={addClassExtension(touchScreen, "header")}>
 			<div className='title'>
@@ -26,6 +26,19 @@ export default function Header() {
 				<h2 className={addClassExtension(touchScreen, "subtitle")}>{subtitle}</h2>
 			</div>
 			<nav className='navigation'>
+				<select
+					name='languages'
+					id='languages'
+					className='languages-select'
+					onChange={(e) => changeLanguage(e.target.value)}
+					defaultValue='fr'>
+					<option className='language' value='fr'>
+						Fr
+					</option>
+					<option className='language' value='en'>
+						En
+					</option>
+				</select>
 				<a href='https://github.com/alWestDeden?tab=repositories' target='_blank' rel='noreferrer' aria-label='GitHub'>
 					<FontAwesomeIcon className='icon' icon={faGithub} />
 				</a>
