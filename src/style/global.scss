@@ -49,7 +49,7 @@
 			margin: 0 auto;
 		}
 	}
-	@include devices(tablet) {
+	@include devices(tablet-2) {
 		.body--ts {
 			margin: 0 5%;
 			min-width: unset;

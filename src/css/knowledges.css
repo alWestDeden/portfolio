@@ -124,7 +124,7 @@
   font-size: 1.1rem;
 }
 
-@media (max-width: 896px) and (hover: hover) {
+@media (max-width: 895px) and (hover: hover) {
   .knowledges-container .knowledges {
     flex-direction: column;
   }
@@ -141,17 +141,43 @@
     min-width: 150px;
   }
 }
-@media (max-width: 1200px) and (hover: none) {
+@media (max-width: 1979px) and (hover: none) {
   .knowledges-container--ts {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    border: unset;
+    grid-area: 3/2/6/3;
+    gap: unset;
   }
-  .knowledges-container--ts h4 {
+  .knowledges-container--ts > h4 {
+    display: none;
+  }
+  .knowledges-container--ts .knowledges--ts {
+    flex-direction: column;
+    flex-basis: unset;
+    height: 100%;
+  }
+  .knowledges-container--ts .knowledges--ts .knowledge--ts {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .knowledges-container--ts .knowledges--ts .knowledge--ts .card-text {
+    text-align: left;
+    padding-left: unset;
+    border-left: unset;
+  }
+  .knowledges-container--ts .knowledges--ts .knowledge--ts .card-text > span {
+    margin-right: 10px;
+  }
+  .knowledges-container--ts .knowledges--ts .knowledge--ts .card-icons {
+    min-width: 125px;
+  }
+}
+@media (max-width: 1023px) and (hover: none) {
+  .knowledges-container--ts {
+    grid-area: unset;
     display: none;
   }
 }
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 599px) and (hover: none) {
   .knowledges-container--ts {
     display: none;
   }

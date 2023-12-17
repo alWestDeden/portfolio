@@ -16,6 +16,8 @@
 			flex-grow: 1;
 			box-sizing: border-box;
 			& .card-icons {
+				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				text-align: center;
 				& .card-icon {
@@ -32,6 +34,8 @@
 				}
 			}
 			& .card-text {
+				height: -webkit-fit-content;
+				height: -moz-fit-content;
 				height: fit-content;
 				text-align: center;
 				& > span {
@@ -75,14 +79,40 @@
 		}
 	}
 }
-@include devices(tablet) {
+@include devices(tablet-2) {
 	.knowledges-container--ts {
-		grid-row-start: 2;
-		grid-row-end: 3;
-		border: unset;
-		& h4 {
+		grid-area: 3/2/6/3;
+		gap: unset;
+		& > h4 {
 			display: none;
 		}
+		& .knowledges--ts {
+			flex-direction: column;
+			flex-basis: unset;
+			height: 100%;
+			& .knowledge--ts {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				& .card-text {
+					text-align: left;
+					padding-left: unset;
+					border-left: unset;
+					& > span {
+						margin-right: 10px;
+					}
+				}
+				& .card-icons {
+					min-width: 125px;
+				}
+			}
+		}
+	}
+}
+@include devices(tablet-1) {
+	.knowledges-container--ts {
+		grid-area: unset;
+		display: none;
 	}
 }
 @include devices(mobile) {

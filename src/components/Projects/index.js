@@ -77,7 +77,7 @@ export default function Projects() {
 												fetchpriority='low'
 												src={image_74}
 												height='330'
-												width='787'
+												width='788'
 												alt={name}
 											/>
 										</picture>

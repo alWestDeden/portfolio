@@ -89,14 +89,21 @@
   font-family: "Syne";
 }
 
-@media (max-width: 1200px) and (hover: none) {
+@media (max-width: 1979px) and (hover: none) {
   .description--ts {
-    grid-row-start: 4;
-    grid-row-end: 5;
-    background-color: #f7f8f9;
+    grid-area: 3/1/7/2;
+    max-width: 390px;
   }
 }
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 1023px) and (hover: none) {
+  .description--ts {
+    grid-area: unset;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    max-width: unset;
+  }
+}
+@media (max-width: 599px) and (hover: none) {
   .description--ts {
     display: none;
     grid-row-start: unset;

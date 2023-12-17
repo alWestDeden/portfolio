@@ -23,11 +23,25 @@
 		}
 	}
 }
-@include devices(tablet) {
+@include devices(tablet-2) {
 	.description--ts {
-		grid-row-start: 4;
-		grid-row-end: 5;
-		background-color: $primary-color;
+		grid-area: 3/1/7/2;
+		max-width: 390px;
+	}
+}
+@include devices(tablet-1) {
+	.description--ts {
+		grid-area: unset;
+		grid-row-start: 3;
+		grid-row-end: 4;
+		max-width: unset;
+		// background-color: $primary-color;
+		// & .description-text {
+		// 	color: $light-color;
+		// 	& .upfront {
+		// 		color: $light-color;
+		// 	}
+		// }
 	}
 }
 @include devices(mobile) {

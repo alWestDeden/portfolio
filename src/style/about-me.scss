@@ -13,19 +13,45 @@
 		line-height: 1.4rem;
 		color: $dark-color;
 	}
+	a {
+		color: #b09bf4;
+	}
 }
 @include devices(desktop-1) {
 	.about {
 		max-width: unset;
 	}
 }
-@include devices(tablet) {
+@include devices(tablet-2) {
 	.about--ts {
-		grid-row-start: 1;
-		grid-row-end: 2;
+		grid-area: 1/1/2/3;
+		min-width: 330px;
 		flex-basis: unset;
 		flex-grow: unset;
 		width: 100%;
+		& span,
+		h2,
+		h3 {
+			font-size: 1.1rem;
+			margin-bottom: 0.7rem;
+		}
+	}
+}
+@include devices(tablet-1) {
+	.about--ts {
+		grid-area: unset;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		min-width: unset;
+		& span,
+		h2,
+		h3 {
+			color: $dark-color;
+		}
+	}
+}
+@include devices(mobile) {
+	.about--ts {
 		background-color: $fourth-color;
 		& span,
 		h2,
@@ -34,13 +60,6 @@
 			margin-bottom: 0.7rem;
 			color: $light-color;
 		}
-		a {
-			color: #b09bf4;
-		}
-	}
-}
-@include devices(mobile) {
-	.about--ts {
 		& br {
 			display: block;
 			content: "";

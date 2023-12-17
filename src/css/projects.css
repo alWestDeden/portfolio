@@ -406,7 +406,7 @@
   color: #00bc77;
 }
 
-@media (max-width: 896px) and (hover: hover) {
+@media (max-width: 895px) and (hover: hover) {
   .projects .project {
     min-width: 100%;
   }
@@ -431,10 +431,9 @@
     transform: scale(1.12);
   }
 }
-@media (max-width: 1200px) and (hover: none) {
+@media (max-width: 1979px) and (hover: none) {
   .projects--ts {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-area: 2/1/3/3;
     flex-basis: unset;
     flex-grow: unset;
     width: 100%;
@@ -442,18 +441,29 @@
     box-sizing: border-box;
   }
   .projects--ts .project--ts {
-    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0;
     border: unset;
+    border: 1px solid #d5d5d5;
   }
   .projects--ts .project--ts .figure--ts {
     background-color: unset;
     padding: 0;
     box-sizing: border-box;
+  }
+  .projects--ts .project--ts .figure--ts::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
   }
   .projects--ts .project--ts .figure--ts .caption--ts {
     top: 25px;
@@ -497,7 +507,14 @@
     transform: scale(1.75);
   }
 }
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 1023px) and (hover: none) {
+  .projects--ts {
+    grid-area: unset;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+@media (max-width: 599px) and (hover: none) {
   .projects--ts {
     grid-row-start: 2;
     grid-row-end: 3;

@@ -65,6 +65,7 @@
 }
 
 .selected {
+  position: relative;
   display: flex;
   width: 100%;
   height: -moz-fit-content;
@@ -74,28 +75,27 @@
 .selected > .square-background {
   position: absolute;
   z-index: -1;
-  top: 29vh;
-  left: 20%;
-  width: 34%;
-  height: 45vh;
+  top: 15vh;
+  left: 15%;
+  max-width: 330px;
+  width: 100%;
+  height: 330px;
   background-color: #f7f8f9;
-  border-radius: 10%;
+  border-radius: 5px;
   margin: auto;
 }
 .selected-left {
-  display: flex;
-  flex-direction: column;
   width: 34%;
   height: 100%;
   padding: 20px;
 }
 .selected-left-image {
-  max-width: 390px;
-  max-height: 390px;
+  max-width: 100%;
+  min-height: 330px;
   -o-object-fit: cover;
   object-fit: cover;
-  border: 3px solid #3d3d3d;
-  border-radius: 7px;
+  border: 2px solid #3d3d3d;
+  border-radius: 5px;
 }
 .selected-left-image-hide {
   display: none;
@@ -187,75 +187,23 @@
   color: #242424;
 }
 
-@media (max-width: 896px) and (hover: hover) {
+@media (min-width: 1199px) and (hover: hover) {
+  .selected .square-background {
+    top: 13vh;
+    left: 12%;
+  }
+}
+@media (max-width: 895px) and (hover: hover) {
+  .selected {
+    position: unset;
+  }
+  .selected .square-background {
+    display: none;
+  }
   .selected-left {
     display: none;
   }
   .selected-right {
     width: 100%;
-  }
-}
-@media (max-width: 1200px) and (hover: none) {
-  .selected--ts {
-    flex-direction: column;
-    height: unset;
-  }
-  .selected--ts > .square-background {
-    display: none;
-  }
-  .selected--ts .selected-left--ts {
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 0;
-  }
-  .selected--ts .selected-left--ts .selected-left-image--ts {
-    display: none;
-  }
-  .selected--ts .selected-left--ts .selected-left-links--ts {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 10px;
-  }
-  .selected--ts .selected-left--ts .selected-left-links--ts .left-link--ts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: content-box;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin: 0 15px 0 0;
-    transition: transform 175ms ease;
-    transform-origin: bottom;
-  }
-  .selected--ts .selected-left--ts .selected-left-links--ts .left-link--ts .left-link-icon--ts {
-    font-size: 2.25rem;
-  }
-  .selected--ts .selected-left--ts .selected-left-links--ts .left-link--ts .left-link-icon--ts > path {
-    color: #242424;
-  }
-  .selected--ts .selected-left--ts .selected-left-links--ts .left-link--ts:hover {
-    transform: scale(1.1);
-  }
-  .selected--ts .selected-left--ts .selected-left-links--ts .left-link--ts p {
-    font-size: 0.8rem;
-    color: #242424;
-  }
-  .selected--ts .selected-right--ts {
-    width: 100%;
-    padding: 10px;
-    border-left: none;
-    margin-left: 0;
-    height: -moz-fit-content;
-    height: fit-content;
-    max-height: unset;
-    padding: unset;
-  }
-  .selected--ts .selected-right--ts .selected-right-icons--ts {
-    position: unset;
-    width: 100%;
-    align-items: center;
   }
 }/*# sourceMappingURL=Project.css.map */

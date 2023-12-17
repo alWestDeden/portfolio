@@ -120,12 +120,12 @@
   color: #aac1f0;
 }
 
-@media (max-width: 896px) and (hover: hover) {
+@media (max-width: 895px) and (hover: hover) {
   .header .title .subtitle {
     text-align: left;
   }
 }
-@media (max-width: 1200px) and (hover: none) {
+@media (max-width: 1279px) and (hover: none) {
   .header--ts {
     margin-bottom: 7vh;
   }
@@ -136,7 +136,7 @@
     margin: 0;
   }
 }
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 599px) and (hover: none) {
   .header--ts {
     margin-bottom: 10px;
   }

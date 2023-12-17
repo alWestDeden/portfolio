@@ -110,12 +110,12 @@
 * body .hide {
   display: none;
 }
-@media (min-width: 1200px) and (hover: hover) {
+@media (min-width: 1199px) and (hover: hover) {
   * .body--ws {
     margin: 0 auto;
   }
 }
-@media (max-width: 1200px) and (hover: none) {
+@media (max-width: 1979px) and (hover: none) {
   * .body--ts {
     margin: 0 5%;
     min-width: unset;

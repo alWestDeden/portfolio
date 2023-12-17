@@ -99,17 +99,12 @@
   background-color: white;
 }
 
-@media (max-width: 896px) and (hover: hover) {
+@media (max-width: 895px) and (hover: hover) {
   .footer .languages-label {
     display: none;
   }
 }
-@media (max-width: 1200px) and (hover: none) {
-  .footer--ts {
-    margin-top: 7vh;
-  }
-}
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 599px) and (hover: none) {
   .footer--ts {
     margin-top: 10px;
   }

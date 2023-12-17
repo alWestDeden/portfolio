@@ -15,19 +15,25 @@ export default function Project() {
 	const { touchScreen } = useTouchScreen()
 	const { language } = useLanguage()
 	let projects
+	let title1
+	let home
 	switch (language) {
 		case "fr":
 			projects = projects_fr
+			title1 = "Contraintes"
+			home = "retour"
 			break
 		case "en":
 			projects = projects_en
+			title1 = "Constraints"
+			home = "home"
 			break
 		default:
 	}
 	// get the project's id from url
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
-	const { name, image_74, details, constraints, technologies, code, site } = selectedProject[0]
+	const { name, image_74, image_74W, details, constraints, technologies, code, site } = selectedProject[0]
 	// allow the use of HTML tags in the JSON file
 	const detailsHTML = { __html: details }
 	const constraintsHTML = { __html: constraints }
@@ -40,16 +46,26 @@ export default function Project() {
 		<section className={addClassExtension(touchScreen, "selected")}>
 			<div className='square-background'></div>
 			<div className={addClassExtension(touchScreen, "selected-left")}>
-				<img className={addClassExtension(touchScreen, "selected-left-image")} src={image_74} alt={name} />
+				<picture>
+					<source srcSet={image_74W} type='image/webp' />
+					<img
+						className={addClassExtension(touchScreen, "selected-left-image")}
+						fetchpriority='low'
+						src={image_74}
+						height='330'
+						width='330'
+						alt={name}
+					/>
+				</picture>
 				{!touchScreen ? (
 					""
 				) : (
 					<div className='selected-left-links--ts'>
-						<Link className='left-link--ts' to={site} target='_blank' rel='noreferrer'>
+						<Link className='left-link--ts' to={site} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
 							<FontAwesomeIcon className='left-link-icon--ts' icon={faGlobe} />
 							<p>site</p>
 						</Link>
-						<Link className='left-link--ts' to={code} target='_blank' rel='noreferrer'>
+						<Link className='left-link--ts' to={code} target='_blank' rel='noreferrer' aria-label={`code ${name}`}>
 							<FontAwesomeIcon className='left-link-icon--ts' icon={faGithub} />
 							<p>code</p>
 						</Link>
@@ -59,7 +75,7 @@ export default function Project() {
 			<div className={addClassExtension(touchScreen, "selected-right")}>
 				<h4 className={`selected-right-title ${id}`}>{name}</h4>
 				<p className='selected-right-details' dangerouslySetInnerHTML={detailsHTML}></p>
-				<h5>Contraintes :</h5>
+				<h5>{title1}</h5>
 				<p className='selected-right-constraints' dangerouslySetInnerHTML={constraintsHTML}></p>
 				<h5>Technologies :</h5>
 				<div className='selected-right-tech'>
@@ -126,11 +142,11 @@ export default function Project() {
 						""
 					) : (
 						<>
-							<Link className='right-link' to={site}>
+							<Link className='right-link' to={site} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
 								<FontAwesomeIcon className='right-link-icon' icon={faGlobe} />
 								<p>site</p>
 							</Link>
-							<Link className='right-link' to={code}>
+							<Link className='right-link' to={code} target='_blank' rel='noreferrer' aria-label={`site ${code}`}>
 								<FontAwesomeIcon className='right-link-icon' icon={faGithub} />
 								<p>code</p>
 							</Link>
@@ -138,7 +154,7 @@ export default function Project() {
 					)}
 					<Link className='right-link' to='/'>
 						<FontAwesomeIcon className='right-link-icon' icon={faHouse} />
-						<p>retour</p>
+						<p>{home}</p>
 					</Link>
 				</div>
 			</div>

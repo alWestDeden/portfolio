@@ -91,16 +91,24 @@
   width: 100%;
 }
 
-@media (max-width: 1200px) and (hover: none) {
+@media (max-width: 1979px) and (hover: none) {
   .home--ts {
     display: grid;
     flex-direction: unset;
     overflow-x: clip;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(2, auto);
     gap: 20px;
   }
 }
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 1023px) and (hover: none) {
+  .home--ts {
+    display: grid;
+    flex-direction: unset;
+    grid-template-rows: repeat(4, auto);
+  }
+}
+@media (max-width: 599px) and (hover: none) {
   .home--ts {
     gap: 10px;
     grid-template-rows: repeat(3, auto);

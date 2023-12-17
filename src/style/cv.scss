@@ -64,15 +64,21 @@
 		flex-basis: unset;
 	}
 }
-@include devices(tablet) {
+@include devices(tablet-2) {
 	.cv--ts {
-		grid-row-start: 5;
-		grid-row-end: 6;
+		grid-area: 6/2/7/3;
 		flex-basis: unset;
 		flex-grow: unset;
 		height: -webkit-fit-content;
 		height: -moz-fit-content;
 		height: fit-content;
+	}
+}
+@include devices(tablet-1) {
+	.cv--ts {
+		grid-area: unset;
+		grid-row-start: 4;
+		grid-row-end: 5;
 	}
 }
 @include devices(mobile) {

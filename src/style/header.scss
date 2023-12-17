@@ -66,7 +66,7 @@
 		}
 	}
 }
-@include devices(tablet) {
+@include devices(tablet-2) {
 	.header--ts {
 		margin-bottom: 7vh;
 		& .title {

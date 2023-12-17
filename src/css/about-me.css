@@ -79,19 +79,45 @@
   line-height: 1.4rem;
   color: #242424;
 }
+.about a {
+  color: #b09bf4;
+}
 
-@media (max-width: 896px) and (hover: hover) {
+@media (max-width: 895px) and (hover: hover) {
   .about {
     max-width: unset;
   }
 }
-@media (max-width: 1200px) and (hover: none) {
+@media (max-width: 1979px) and (hover: none) {
   .about--ts {
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-area: 1/1/2/3;
+    min-width: 330px;
     flex-basis: unset;
     flex-grow: unset;
     width: 100%;
+  }
+  .about--ts span,
+  .about--ts h2,
+  .about--ts h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+}
+@media (max-width: 1023px) and (hover: none) {
+  .about--ts {
+    grid-area: unset;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    min-width: unset;
+  }
+  .about--ts span,
+  .about--ts h2,
+  .about--ts h3 {
+    color: #242424;
+  }
+}
+@media (max-width: 599px) and (hover: none) {
+  .about--ts {
     background-color: #3d3d3d;
   }
   .about--ts span,
@@ -101,11 +127,6 @@
     margin-bottom: 0.7rem;
     color: white;
   }
-  .about--ts a {
-    color: #b09bf4;
-  }
-}
-@media (max-width: 600px) and (hover: none) {
   .about--ts br {
     display: block;
     content: "";

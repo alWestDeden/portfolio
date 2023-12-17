@@ -190,28 +190,38 @@
 		}
 	}
 }
-@include devices(tablet) {
+@include devices(tablet-2) {
 	// touch screen classes
 	.projects--ts {
-		grid-row-start: 3;
-		grid-row-end: 4;
+		grid-area: 2/1/3/3;
 		flex-basis: unset;
 		flex-grow: unset;
 		width: 100%;
 		border: 1px solid $primary-color;
 		box-sizing: border-box;
 		& .project--ts {
-			width: 100%;
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			border-radius: 0;
 			border: unset;
+			border: 1px solid $secondary-color;
 			& .figure--ts {
 				background-color: unset;
 				padding: 0;
 				box-sizing: border-box;
+				&::before {
+					position: absolute;
+					content: "";
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background: rgb(0, 0, 0);
+					background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+				}
 				& .caption--ts {
 					top: 25px;
 					left: 28px;
@@ -255,6 +265,13 @@
 				}
 			}
 		}
+	}
+}
+@include devices(tablet-1) {
+	.projects--ts {
+		grid-area: unset;
+		grid-row-start: 2;
+		grid-row-end: 3;
 	}
 }
 @include devices(mobile) {

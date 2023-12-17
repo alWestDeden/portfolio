@@ -126,22 +126,28 @@
   transform: translateX(110%);
 }
 
-@media (max-width: 896px) and (hover: hover) {
+@media (max-width: 895px) and (hover: hover) {
   .cv {
     flex-basis: unset;
   }
 }
-@media (max-width: 1200px) and (hover: none) {
+@media (max-width: 1979px) and (hover: none) {
   .cv--ts {
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-area: 6/2/7/3;
     flex-basis: unset;
     flex-grow: unset;
     height: -moz-fit-content;
     height: fit-content;
   }
 }
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 1023px) and (hover: none) {
+  .cv--ts {
+    grid-area: unset;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
+@media (max-width: 599px) and (hover: none) {
   .cv--ts {
     grid-row-start: 3;
     grid-row-end: 4;

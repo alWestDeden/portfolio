@@ -1,5 +1,6 @@
 @import "./variable.scss";
 .selected {
+	position: relative;
 	display: flex;
 	width: 100%;
 	height: -webkit-fit-content;
@@ -9,27 +10,26 @@
 	& > .square-background {
 		position: absolute;
 		z-index: -1;
-		top: 29vh;
-		left: 20%;
-		width: 34%;
-		height: 45vh;
+		top: 15vh;
+		left: 15%;
+		max-width: 330px;
+		width: 100%;
+		height: 330px;
 		background-color: $primary-color;
-		border-radius: 10%;
+		border-radius: 5px;
 		margin: auto;
 	}
 	&-left {
-		display: flex;
-		flex-direction: column;
 		width: 34%;
 		height: 100%;
 		padding: 20px;
 		&-image {
-			max-width: 390px;
-			max-height: 390px;
+			max-width: 100%;
+			min-height: 330px;
 			-o-object-fit: cover;
 			object-fit: cover;
-			border: 3px solid $fourth-color;
-			border-radius: 7px;
+			border: 2px solid $fourth-color;
+			border-radius: 5px;
 			&-hide {
 				display: none;
 			}
@@ -124,8 +124,20 @@
 		}
 	}
 }
+@include devices(wide-screen) {
+	.selected {
+		& .square-background {
+			top: 13vh;
+			left: 12%;
+		}
+	}
+}
 @include devices(desktop-1) {
 	.selected {
+		position: unset;
+		& .square-background {
+			display: none;
+		}
 		&-left {
 			display: none;
 		}
@@ -136,9 +148,10 @@
 }
 @include devices(tablet) {
 	.selected--ts {
+		position: unset;
 		flex-direction: column;
 		height: unset;
-		& > .square-background {
+		& .square-background {
 			display: none;
 		}
 		& .selected-left--ts {
