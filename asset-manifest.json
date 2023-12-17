@@ -1,34 +1,34 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.bb5546ee.css",
-    "main.js": "/portfolio/static/js/main.40988db7.js",
+    "main.css": "/portfolio/static/css/main.b36c5f48.css",
+    "main.js": "/portfolio/static/js/main.ac25cb65.js",
+    "static/media/kasa_169.jpg": "/portfolio/static/media/kasa_169.4fb0cc969b272c3f0cbd.jpg",
+    "static/media/ohmyfood_169.jpg": "/portfolio/static/media/ohmyfood_169.18995a125770d1698cea.jpg",
+    "static/media/nina_169.jpg": "/portfolio/static/media/nina_169.bb956e6b4fcab61656b8.jpg",
+    "static/media/booki_169.jpg": "/portfolio/static/media/booki_169.239d643d0ca96ebac2fb.jpg",
+    "static/media/kasa_169.webp": "/portfolio/static/media/kasa_169.4d40988808c3b29a3118.webp",
     "static/media/kasa_52.jpg": "/portfolio/static/media/kasa_52.29992a3b35ecef882b52.jpg",
     "static/media/ohmyfood_52.jpg": "/portfolio/static/media/ohmyfood_52.5d17f0beb71a80d60210.jpg",
+    "static/media/ohmyfood_169.webp": "/portfolio/static/media/ohmyfood_169.8faec8efc077587d761c.webp",
     "static/media/booki_52.jpg": "/portfolio/static/media/booki_52.c83ecabefb9d4ad87672.jpg",
-    "static/media/ohmyfood_74.jpg": "/portfolio/static/media/ohmyfood_74.3027e896a81ea9f0a72a.jpg",
-    "static/media/kasa_74.jpg": "/portfolio/static/media/kasa_74.b7be4162eac3add83c68.jpg",
-    "static/media/nina_74.jpg": "/portfolio/static/media/nina_74.f77f2f39d3da397de848.jpg",
+    "static/media/argent_169.jpg": "/portfolio/static/media/argent_169.9c810ba0b2b17573636e.jpg",
     "static/media/nina_52.jpg": "/portfolio/static/media/nina_52.a217c7a47b9fcffbe737.jpg",
-    "static/media/booki_74.jpg": "/portfolio/static/media/booki_74.01386c44299d110a4e54.jpg",
+    "static/media/nina_169.webp": "/portfolio/static/media/nina_169.e29f8d53e2716dde1553.webp",
+    "static/media/booki_169.webp": "/portfolio/static/media/booki_169.5d34ecefb125849ca04b.webp",
     "static/media/kasa_52.webp": "/portfolio/static/media/kasa_52.bea54eb1947c52ad2c3d.webp",
     "static/media/ohmyfood_52.webp": "/portfolio/static/media/ohmyfood_52.29264b96ce50398fa223.webp",
     "static/media/booki_52.webp": "/portfolio/static/media/booki_52.dcd81267964a658f04da.webp",
-    "static/media/ohmyfood_74.webp": "/portfolio/static/media/ohmyfood_74.9cc74312a50c435bfcdd.webp",
-    "static/media/kasa_74.webp": "/portfolio/static/media/kasa_74.0210b414c8e477b50092.webp",
-    "static/media/argent_74.jpg": "/portfolio/static/media/argent_74.3d54aea6bf7a0aa4624c.jpg",
-    "static/media/nina_74.webp": "/portfolio/static/media/nina_74.951891d32446cd24bf0c.webp",
+    "static/media/argent_169.webp": "/portfolio/static/media/argent_169.db6e2552cf01763fe501.webp",
     "static/media/argent_52.jpg": "/portfolio/static/media/argent_52.d61c9ffacdcd66bb8e87.jpg",
-    "static/media/booki_74.webp": "/portfolio/static/media/booki_74.bd0d6ddf3331828bfcc3.webp",
     "static/media/nina_52.webp": "/portfolio/static/media/nina_52.f64b287529b9d9732590.webp",
-    "static/media/argent_74.webp": "/portfolio/static/media/argent_74.eac93218e7faa9e0afbd.webp",
     "static/media/argent_52.webp": "/portfolio/static/media/argent_52.330838c8275179585c44.webp",
     "static/media/figma.svg": "/portfolio/static/media/figma.085cac66df752c79b39e8d055ac7bddd.svg",
     "index.html": "/portfolio/index.html",
-    "main.bb5546ee.css.map": "/portfolio/static/css/main.bb5546ee.css.map",
-    "main.40988db7.js.map": "/portfolio/static/js/main.40988db7.js.map"
+    "main.b36c5f48.css.map": "/portfolio/static/css/main.b36c5f48.css.map",
+    "main.ac25cb65.js.map": "/portfolio/static/js/main.ac25cb65.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb5546ee.css",
-    "static/js/main.40988db7.js"
+    "static/css/main.b36c5f48.css",
+    "static/js/main.ac25cb65.js"
   ]
 }
