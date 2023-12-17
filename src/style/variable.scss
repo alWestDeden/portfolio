@@ -130,7 +130,7 @@ $open-color: #7450eb;
 		}
 	}
 	@if $breakpoint == tablet-2 {
-		@media (max-width: 1279px) and (hover: none) {
+		@media (max-width: 1370px) and (hover: none) {
 			@content;
 		}
 	}

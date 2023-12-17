@@ -65,19 +65,19 @@ export default function Projects() {
 							<ReactTyped strings={tips} typeSpeed={50} startDelay={100} backSpeed={25} loop />
 						</span>
 						{projects.map((project) => {
-							const { nb, id, name, image_74, image_74W, description } = project
+							const { nb, id, name, image_169, image_169W, description } = project
 							return (
 								<React.Fragment key={`${id}-fragment`}>
 									<figure key={`${id}-figure`} id={`project--${nb}`} className={`project-figure project-figure--${nb}`}>
 										<picture key={`${id}-picture`}>
-											<source key={`${id}-image_7411W`} srcSet={image_74W} type='image/webp' />
+											<source key={`${id}-image_169W`} srcSet={image_169W} type='image/webp' />
 											<img
-												key={`${id}-image_7411`}
+												key={`${id}-image_169`}
 												className='project-figure-image'
 												fetchpriority='low'
-												src={image_74}
+												src={image_169}
 												height='330'
-												width='788'
+												width='800'
 												alt={name}
 											/>
 										</picture>
@@ -142,14 +142,14 @@ export default function Projects() {
 									id={id}
 									className={`project-figure figure--ts ${indexTS === nb ? direction : "hide"}`}>
 									<picture key={`${id}-picture--ts`}>
-										<source key={`${id}-image_1152W--ts`} srcSet={image_52W} type='image/webp' />
+										<source key={`${id}-image_52W--ts`} srcSet={image_52W} type='image/webp' />
 										<img
-											key={`${id}-image_1152--ts`}
+											key={`${id}-image_52--ts`}
 											className='project-figure-image image--ts'
 											fetchpriority='low'
 											src={image_52}
-											height='368'
-											width='922'
+											height='330'
+											width='1220'
 											alt={name}
 										/>
 									</picture>

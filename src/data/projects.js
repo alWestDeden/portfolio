@@ -1,23 +1,23 @@
 import argent_52 from "../images/argent_52.jpg"
 import argent_52W from "../images/argent_52.webp"
-import argent_74 from "../images/argent_74.jpg"
-import argent_74W from "../images/argent_74.webp"
+import argent_169 from "../images/argent_169.jpg"
+import argent_169W from "../images/argent_169.webp"
 import booki_52 from "../images/booki_52.jpg"
 import booki_52W from "../images/booki_52.webp"
-import booki_74 from "../images/booki_74.jpg"
-import booki_74W from "../images/booki_74.webp"
+import booki_169 from "../images/booki_169.jpg"
+import booki_169W from "../images/booki_169.webp"
 import kasa_52 from "../images/kasa_52.jpg"
 import kasa_52W from "../images/kasa_52.webp"
-import kasa_74 from "../images/kasa_74.jpg"
-import kasa_74W from "../images/kasa_74.webp"
+import kasa_169 from "../images/kasa_169.jpg"
+import kasa_169W from "../images/kasa_169.webp"
 import nina_52 from "../images/nina_52.jpg"
 import nina_52W from "../images/nina_52.webp"
-import nina_74 from "../images/nina_74.jpg"
-import nina_74W from "../images/nina_74.webp"
+import nina_169 from "../images/nina_169.jpg"
+import nina_169W from "../images/nina_169.webp"
 import ohmyfood_52 from "../images/ohmyfood_52.jpg"
 import ohmyfood_52W from "../images/ohmyfood_52.webp"
-import ohmyfood_74 from "../images/ohmyfood_74.jpg"
-import ohmyfood_74W from "../images/ohmyfood_74.webp"
+import ohmyfood_169 from "../images/ohmyfood_169.jpg"
+import ohmyfood_169W from "../images/ohmyfood_169.webp"
 // projects data in corresponding language
 const projects_fr = [
 	{
@@ -25,9 +25,9 @@ const projects_fr = [
 		id: "booki",
 		name: "Booki",
 		image_52: booki_52,
-		image_74: booki_74,
+		image_169: booki_169,
 		image_52W: booki_52W,
-		image_74W: booki_74W,
+		image_169W: booki_169W,
 		description: "Plateforme de recherche d'hébergements et d'activités",
 		details:
 			"A partir de la maquette <a class='figma' href='https://www.figma.com/file/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki-(desktop%2C-mobile%2C-tablette)?type=design&node-id=3-0&mode=design' target='_blank' rel='noreferrer'>Figma</a>, on a eu à développer le site codé uniquement en <span class='upfront'>HTML</span> & <span class='upfront'>CSS</span>. Une note de synthèse spécifiait les attentes fonctionnelles et téchniques.",
@@ -42,9 +42,9 @@ const projects_fr = [
 		id: "ohmyfood",
 		name: "Oh My Food !",
 		image_52: ohmyfood_52,
-		image_74: ohmyfood_74,
+		image_169: ohmyfood_169,
 		image_52W: ohmyfood_52W,
-		image_74W: ohmyfood_74W,
+		image_169W: ohmyfood_169W,
 		description: "Site de réservation et de composition de menus",
 		details:
 			"A partir d'un code de départ et de la maquette <a class='figma' href='https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1' target='_blank' rel='noreferrer'>Figma</a>, il a fallu développer le <span class='upfront'>Front-End</span> du site uniquement en <span class='upfront'>HTML</span> & <span class='upfront'>CSS</span>. La maquette <a class='figma' href='https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1' target='_blank' rel='noreferrer'>Figma</a> contenait les élements de l'interface ainsi que les animations attendues.",
@@ -59,9 +59,9 @@ const projects_fr = [
 		id: "kasa",
 		name: "Kasa",
 		image_52: kasa_52,
-		image_74: kasa_74,
+		image_169: kasa_169,
 		image_52W: kasa_52W,
-		image_74W: kasa_74W,
+		image_169W: kasa_169W,
 		description: "Plateforme de location d'appartements entre particuliers",
 		details:
 			"A partir de la maquette <a class='figma' href='https://www.figma.com/file/qEno0LwL4ZLkWyeY59kxp1/UI-Design-Kasa-FR?type=design&node-id=0-1&t=xZlEO0AToUcKLwbJ-0' target='_blank' rel='noreferrer'>Figma</a>, il a fallu développer l'application avec <span class='upfront'>React</span> et <span class='upfront'>React-Router</span>. Le <span class='upfront'>Back-End</span> n'étant pas développé on le simule en récupérant les informations de chaque appartements dans un fichier <span class='upfront'>JSON</span>. Les images référencées dans ce fichier sont hébergées sur <span class='upfront'>Amazon AWS</span>. <span class='upfront'>SASS</span> a été utilisé pour génerer le style <span class='upfront'>CSS</span>.",
@@ -76,9 +76,9 @@ const projects_fr = [
 		id: "nina",
 		name: "Nina Carducci",
 		image_52: nina_52,
-		image_74: nina_74,
+		image_169: nina_169,
 		image_52W: nina_52W,
-		image_74W: nina_74W,
+		image_169W: nina_169W,
 		description: "Portfolio de la photographe Nina Carducci",
 		details:
 			"Ici, le challenge était d'optimiser le site tant sur les <span class='upfront'>performances</span> que sur le <span class='upfront'>SEO</span>. Ensuite, il a fallu mettre en place le <span class='upfront'>référencement local</span> à l'aide de <span class='upfront'>Schema.org</span>, ajouter les <span class='upfront'>Metas</span> pour les <span class='upfront'>réseaux sociaux</span> et le conformer aux exigences d'<span class='upfront'>accessibilité</span>.",
@@ -93,9 +93,9 @@ const projects_fr = [
 		id: "argent",
 		name: "ARGENTBANK",
 		image_52: argent_52,
-		image_74: argent_74,
+		image_169: argent_169,
 		image_52W: argent_52W,
-		image_74W: argent_74W,
+		image_169W: argent_169W,
 		description: "Application Web Bancaire",
 		details:
 			"En se basant sur sur des pages <span class='upfront'>HTML</span> statique on a eu à développer à l'aide de <span class='upfront'>React</span>, <span class='upfront'>React-Router</span> et <span class='upfront'>Redux</span> un site permettant à l'utilisateur autorisé de se connecter en utilisant un <span class='upfront'>Token</span> et de pouvoir changer son nom d'utilisateur. Il fallait aussi fournir un fichier <span class='upfront'>Swagger</span>, pour la suite du développement, décrivant les <span class='upfront'>requêtes</span> nécessaires pour afficher les différents compte et leurs transactions.",
@@ -124,9 +124,9 @@ const projects_en = [
 		id: "booki",
 		name: "Booki",
 		image_52: booki_52,
-		image_74: booki_74,
+		image_169: booki_169,
 		image_52W: booki_52W,
-		image_74W: booki_74W,
+		image_169W: booki_169W,
 		description: "Accommodation and activities search website",
 		details:
 			"From the <a class='figma' href='https://www.figma.com/file/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki-(desktop%2C-mobile%2C-tablette)?type=design&node-id=3-0&mode=design' target='_blank' rel='noreferrer'>Figma</a> model, we had to develop the site coded only in <span class='upfront'>HTML</span> & <span class='upfront'>CSS</span>. A summary note specified the functional and technical expectations.",
@@ -141,9 +141,9 @@ const projects_en = [
 		id: "ohmyfood",
 		name: "Oh My Food !",
 		image_52: ohmyfood_52,
-		image_74: ohmyfood_74,
+		image_169: ohmyfood_169,
 		image_52W: ohmyfood_52W,
-		image_74W: ohmyfood_74W,
+		image_169W: ohmyfood_169W,
 		description: "Reservation and menu composition website",
 		details:
 			"From a starting code and the <a class='figma' href='https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1' target='_blank' rel='noreferrer'>Figma</a> model, it was asked to develop the <span class='upfront'>Front-End</span> of the site using <span class='upfront'>HTML</span> & <span class='upfront'>CSS</span> only. The <a class='figma' href='https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Projet-3-FR---Ohmyfood?node-id=0%3A1' target='_blank' rel='noreferrer'>Figma</a> model contained the interface elements as well as the expected animations.",
@@ -158,9 +158,9 @@ const projects_en = [
 		id: "kasa",
 		name: "Kasa",
 		image_52: kasa_52,
-		image_74: kasa_74,
+		image_169: kasa_169,
 		image_52W: kasa_52W,
-		image_74W: kasa_74W,
+		image_169W: kasa_169W,
 		description: "Apartment rental website",
 		details:
 			"From the <a class='figma' href='https://www.figma.com/file/qEno0LwL4ZLkWyeY59kxp1/UI-Design-Kasa-FR?type=design&node-id=0-1&t=xZlEO0AToUcKLwbJ-0' target='_blank' rel='noreferrer'>Figma</a> model, it was asked to develop the website with <span class='upfront'>React</span> and <span class='upfront'>React-Router</span>. As the <span class='upfront'>Back-End</span> isn't developed, we simulate it by retrieving the information from each apartment in a <span class='upfront'>JSON</span> file. The images referenced in this file are hosted on <span class='upfront'>Amazon AWS</span>. <span class='upfront'>SASS</span> was used to generate the <span class='upfront'>CSS</span> styling.",
@@ -175,9 +175,9 @@ const projects_en = [
 		id: "nina",
 		name: "Nina Carducci",
 		image_52: nina_52,
-		image_74: nina_74,
+		image_169: nina_169,
 		image_52W: nina_52W,
-		image_74W: nina_74W,
+		image_169W: nina_169W,
 		description: "Portfolio of photographer Nina Carducci",
 		details:
 			"Here, the challenge was to optimize the site both in terms of <span class='upfront'>performances</span> and <span class='upfront'>SEO</span>. Then, we had to improve the <span class='upfront'>local SEO</span> using <span class='upfront'>Schema.org</span>, add <span class='upfront'>Metas</span> for <span class='upfront'>social networks</span> and comply with <span class='upfront'>accessibility</span> requirements.",
@@ -192,9 +192,9 @@ const projects_en = [
 		id: "argent",
 		name: "ARGENTBANK",
 		image_52: argent_52,
-		image_74: argent_74,
+		image_169: argent_169,
 		image_52W: argent_52W,
-		image_74W: argent_74W,
+		image_169W: argent_169W,
 		description: "Banking Website",
 		details:
 			"Based on static <span class='upfront'>HTML</span> pages we had to develop using <span class='upfront'>React</span>, <span class='upfront'>React-Router</span> and <span class='upfront'>Redux</span> a site allowing the authorized user to connect securly thanks to a <span class='upfront'>Token</span>. He was then allowed to change their username. A <span class='upfront'>Swagger</span> file was also expected for further development. This file would describes the <span class='upfront'>requests</span>> necessary to display the different accounts and their transactions.",
