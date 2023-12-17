@@ -146,7 +146,7 @@
 		}
 	}
 }
-@include devices(tablet) {
+@include devices(tablet-2) {
 	.selected--ts {
 		position: unset;
 		flex-direction: column;
@@ -213,4 +213,6 @@
 			}
 		}
 	}
+}
+@include devices(tablet-1) {
 }
