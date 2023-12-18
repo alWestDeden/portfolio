@@ -33,7 +33,7 @@ export default function Project() {
 	// get the project's id from url
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
-	const { name, image_74, image_74W, details, constraints, technologies, code, site } = selectedProject[0]
+	const { name, image_169, image_169W, details, constraints, technologies, code, site } = selectedProject[0]
 	// allow the use of HTML tags in the JSON file
 	const detailsHTML = { __html: details }
 	const constraintsHTML = { __html: constraints }
@@ -47,11 +47,11 @@ export default function Project() {
 			<div className='square-background'></div>
 			<div className={addClassExtension(touchScreen, "selected-left")}>
 				<picture>
-					<source srcSet={image_74W} type='image/webp' />
+					<source srcSet={image_169W} type='image/webp' />
 					<img
 						className={addClassExtension(touchScreen, "selected-left-image")}
 						fetchpriority='low'
-						src={image_74}
+						src={image_169}
 						height='330'
 						width='330'
 						alt={name}

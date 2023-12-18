@@ -131,13 +131,11 @@
     flex-basis: unset;
   }
 }
-@media (max-width: 1979px) and (hover: none) {
+@media (max-width: 1370px) and (hover: none) {
   .cv--ts {
     grid-area: 6/2/7/3;
     flex-basis: unset;
     flex-grow: unset;
-    height: -moz-fit-content;
-    height: fit-content;
   }
 }
 @media (max-width: 1023px) and (hover: none) {

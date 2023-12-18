@@ -19,25 +19,27 @@
 	}
 	& nav {
 		display: flex;
+		align-items: center;
 		margin-right: 10px;
-		& .languages-select {
-			display: inline-block;
-			border: none;
-			font-family: $font-subtitle;
-			-webkit-appearance: none;
-			-moz-appearance: none;
-			appearance: none;
-			&:focus {
-				border: none;
-			}
-			&::after {
-				background-color: $light-color;
-			}
-			& .language {
+		& .select-container {
+			& .languages-select {
+				appearance: none;
 				-webkit-appearance: none;
 				-moz-appearance: none;
-				appearance: none;
+				width: 100%;
+				border: none;
+				font-family: $font-subtitle;
 				background-color: $light-color;
+				cursor: pointer;
+				&::after {
+					background-color: $light-color;
+				}
+				& .language {
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					background-color: $light-color;
+				}
 			}
 		}
 		& a {

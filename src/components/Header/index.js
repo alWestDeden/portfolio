@@ -26,27 +26,25 @@ export default function Header() {
 				<h2 className={addClassExtension(touchScreen, "subtitle")}>{subtitle}</h2>
 			</div>
 			<nav className='navigation'>
-				<select
-					name='languages'
-					id='languages'
-					className='languages-select'
-					onChange={(e) => changeLanguage(e.target.value)}
-					defaultValue='fr'>
-					<option className='language' value='fr'>
-						Fr
-					</option>
-					<option className='language' value='en'>
-						En
-					</option>
-				</select>
+				<div className='select-container'>
+					<select
+						name='languages'
+						id='languages'
+						className='languages-select'
+						onChange={(e) => changeLanguage(e.target.value)}
+						defaultValue='fr'>
+						<option className='language' value='fr'>
+							Fr
+						</option>
+						<option className='language' value='en'>
+							En
+						</option>
+					</select>
+				</div>
 				<a href='https://github.com/alWestDeden?tab=repositories' target='_blank' rel='noreferrer' aria-label='GitHub'>
 					<FontAwesomeIcon className='icon' icon={faGithub} />
 				</a>
-				<a
-					href='https://www.linkedin.com/in/deden-a-844302124/details/experience/'
-					target='_blank'
-					rel='noreferrer'
-					aria-label='Linked In'>
+				<a href='https://www.linkedin.com/in/deden-a-844302124/' target='_blank' rel='noreferrer' aria-label='Linked In'>
 					<FontAwesomeIcon className='icon' icon={faLinkedin} />
 				</a>
 				<a href='mailto:baboumediene@gmail.com' aria-label='Contact'>

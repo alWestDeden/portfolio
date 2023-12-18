@@ -80,23 +80,54 @@
   position: absolute;
   right: 0;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
 }
-.footer .languages-select {
+.footer .languages-label {
   display: inline-block;
+}
+.footer .languages .select-container {
+  position: relative;
+  min-width: 100px;
+}
+.footer .languages .select-container .languages-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
   border: none;
   font-family: "Paytone One", sans-serif;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+.footer .languages .select-container .languages-select::after {
+  background-color: white;
+}
+.footer .languages .select-container .languages-select .language {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-.footer .languages-select::after {
   background-color: white;
 }
-.footer .languages-select .language {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: white;
+.footer .languages .select-container::before, .footer .languages .select-container::after {
+  --size: 0.3rem;
+  position: absolute;
+  content: "";
+  right: 0;
+  pointer-events: none;
+}
+.footer .languages .select-container::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 40%;
+}
+.footer .languages .select-container::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 55%;
 }
 
 @media (max-width: 895px) and (hover: hover) {

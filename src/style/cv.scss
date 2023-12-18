@@ -69,9 +69,6 @@
 		grid-area: 6/2/7/3;
 		flex-basis: unset;
 		flex-grow: unset;
-		height: -webkit-fit-content;
-		height: -moz-fit-content;
-		height: fit-content;
 	}
 }
 @include devices(tablet-1) {

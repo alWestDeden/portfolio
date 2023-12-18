@@ -22,19 +22,21 @@ export default function Footer() {
 				<label className='languages-label' htmlFor='languages'>
 					{label}
 				</label>
-				<select
-					name='languages'
-					id='languages'
-					className='languages-select'
-					onChange={(e) => changeLanguage(e.target.value)}
-					defaultValue='fr'>
-					<option className='language' value='fr'>
-						{touchScreen ? "Fr" : "Français"}
-					</option>
-					<option className='language' value='en'>
-						{touchScreen ? "En" : "English"}
-					</option>
-				</select>
+				<div className='select-container'>
+					<select
+						name='languages'
+						id='languages'
+						className='languages-select'
+						onChange={(e) => changeLanguage(e.target.value)}
+						defaultValue='fr'>
+						<option className='language' value='fr'>
+							{touchScreen ? "Fr" : "Français"}
+						</option>
+						<option className='language' value='en'>
+							{touchScreen ? "En" : "English"}
+						</option>
+					</select>
+				</div>
 			</div>
 		</footer>
 	)
