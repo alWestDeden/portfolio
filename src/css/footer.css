@@ -135,8 +135,16 @@
     display: none;
   }
 }
+@media (max-width: 1370px) and (hover: none) {
+  .footer--ts {
+    margin-top: 7vh;
+  }
+}
 @media (max-width: 599px) and (hover: none) {
   .footer--ts {
     margin-top: 10px;
+  }
+  .footer--ts .languages-label {
+    display: none;
   }
 }/*# sourceMappingURL=footer.css.map */

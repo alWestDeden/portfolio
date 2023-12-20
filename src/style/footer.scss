@@ -74,7 +74,7 @@
 		}
 	}
 }
-@include devices(tablet) {
+@include devices(tablet-2) {
 	.footer--ts {
 		margin-top: 7vh;
 	}
@@ -82,5 +82,8 @@
 @include devices(mobile) {
 	.footer--ts {
 		margin-top: 10px;
+		& .languages-label {
+			display: none;
+		}
 	}
 }
