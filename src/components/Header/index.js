@@ -32,7 +32,8 @@ export default function Header() {
 						id='languages'
 						className='languages-select'
 						onChange={(e) => changeLanguage(e.target.value)}
-						defaultValue='fr'>
+						defaultValue='fr'
+						value={language}>
 						<option className='language' value='fr'>
 							Fr
 						</option>

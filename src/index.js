@@ -6,6 +6,7 @@ import { LanguageProvider } from "./functions/LanguageContext"
 import Header from "./components/Header"
 import Home from "./pages/Home"
 import Project from "./pages/Project"
+import Video from "./pages/Video"
 import Footer from "./components/Footer"
 import "./style/global.scss"
 const root = ReactDOM.createRoot(document.getElementById("root"))
@@ -18,6 +19,7 @@ root.render(
 					<Routes>
 						<Route path='/' element={<Home />} />
 						<Route path='/project/:id' element={<Project />} />
+						<Route path='/video/:id' element={<Video />} />
 					</Routes>
 					<Footer />
 				</ScreenTypeProvider>

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Gasoek+One&family=Inter:wght@400;900&family=Jost:wght@100;200;300;500&family=Montserrat:wght@700&family=Paytone+One&family=Raleway:wght@700&family=Shrikhand&family=Syne:wght@500&display=swap");
+.booki {
+  font-family: "Raleway", sans-serif;
+  color: #0164fc;
+}
+
+.ohmyfood {
+  font-family: "Shrikhand", serif;
+  color: #101010;
+}
+
+.kasa {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+}
+
+.nina {
+  font-family: "Inter", sans-serif;
+  color: #212529;
+  font-weight: 400;
+}
+
+.argent {
+  font-family: "Montserrat", sans-serif;
+  color: #00bc77;
+}
+
+.open {
+  font-family: "Inter", sans-sherif;
+  color: #7450eb;
+  font-weight: 900;
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+.open:hover {
+  color: #aac1f0;
+}
+
+.fa-css3-alt > path {
+  color: #039fda;
+}
+
+.fa-figma > path {
+  color: #eb4b1d;
+}
+
+.fa-font-awesome > path {
+  color: #538dd6;
+}
+
+.fa-html5 > path {
+  color: #dc4a25;
+}
+
+.fa-square-js > path {
+  color: #efd81a;
+}
+
+.fa-react > path {
+  color: #5ed2f3;
+}
+
+.fa-sass > path {
+  color: #c56494;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.video-youtube {
+  aspect-ratio: inherit;
+  width: inherit;
+}
+.video-links {
+  display: flex;
+  margin-top: 10px;
+}
+.video-links .video-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+.video-links .video-link-icon {
+  font-size: 1.9rem;
+}
+.video-links .video-link-icon > path {
+  color: #3d3d3d;
+}
+.video-links .video-link:hover {
+  transform: scale(1.1);
+}
+.video-links .video-link:hover path {
+  color: #aac1f0;
+}
+.video-links .video-link p {
+  font-size: 0.8rem;
+  color: #242424;
+}/*# sourceMappingURL=Video.css.map */

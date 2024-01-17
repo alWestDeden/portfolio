@@ -87,6 +87,7 @@ const projects_fr = [
 		technologies: ["HTML", "CSS", "JavaScript", "Lighthouse", "WAVE", "GitHub"],
 		code: "https://github.com/alWestDeden/Projet9_new",
 		site: "https://alwestdeden.github.io/Projet9_new/index.html",
+		video: "https://www.youtube.com/embed/4RzjV0OpsbY",
 	},
 	{
 		nb: 4,
@@ -186,6 +187,7 @@ const projects_en = [
 		technologies: ["HTML", "CSS", "JavaScript", "Lighthouse", "WAVE", "GitHub"],
 		code: "https://github.com/alWestDeden/Projet9_new",
 		site: "https://alwestdeden.github.io/Projet9_new/index.html",
+		video: "https://www.youtube.com/embed/591OMRtzplQ",
 	},
 	{
 		nb: 4,

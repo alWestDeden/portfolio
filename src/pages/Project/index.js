@@ -7,7 +7,16 @@ import addClassExtension from "../../functions/addClassExtension"
 import { projects_fr, projects_en } from "../../data/projects"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe, faHouse, faScroll } from "@fortawesome/free-solid-svg-icons"
-import { faCss3Alt, faFontAwesome, faGithub, faHtml5, faSquareJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons"
+import {
+	faCss3Alt,
+	faFontAwesome,
+	faGithub,
+	faHtml5,
+	faSquareJs,
+	faReact,
+	faSass,
+	faYoutube,
+} from "@fortawesome/free-brands-svg-icons"
 import figma from "../../images/figma.svg"
 import "../../style/Project.scss"
 
@@ -16,24 +25,22 @@ export default function Project() {
 	const { language } = useLanguage()
 	let projects
 	let title1
-	let home
 	switch (language) {
 		case "fr":
 			projects = projects_fr
 			title1 = "Contraintes"
-			home = "retour"
 			break
 		case "en":
 			projects = projects_en
 			title1 = "Constraints"
-			home = "home"
 			break
 		default:
 	}
 	// get the project's id from url
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
-	const { name, image_169, image_169W, details, constraints, technologies, code, site } = selectedProject[0]
+	const { name, image_169, image_169W, details, constraints, technologies, code, site, video } = selectedProject[0]
+	console.log(video)
 	// allow the use of HTML tags in the JSON file
 	const detailsHTML = { __html: details }
 	const constraintsHTML = { __html: constraints }
@@ -61,6 +68,14 @@ export default function Project() {
 					""
 				) : (
 					<div className='selected-left-links--ts'>
+						{video ? (
+							<Link className='left-link--ts' to={`/video/${id}`} rel='noreferrer' aria-label={`site ${name}`}>
+								<FontAwesomeIcon className='left-link-icon--ts' icon={faYoutube} />
+								<p>video</p>
+							</Link>
+						) : (
+							""
+						)}
 						<Link className='left-link--ts' to={site} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
 							<FontAwesomeIcon className='left-link-icon--ts' icon={faGlobe} />
 							<p>site</p>
@@ -142,6 +157,14 @@ export default function Project() {
 						""
 					) : (
 						<>
+							{video ? (
+								<Link className='right-link' to={`/video/${id}`} rel='noreferrer' aria-label={`site ${name}`}>
+									<FontAwesomeIcon className='right-link-icon' icon={faYoutube} />
+									<p>video</p>
+								</Link>
+							) : (
+								""
+							)}
 							<Link className='right-link' to={site} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
 								<FontAwesomeIcon className='right-link-icon' icon={faGlobe} />
 								<p>site</p>
@@ -154,7 +177,7 @@ export default function Project() {
 					)}
 					<Link className='right-link' to='/'>
 						<FontAwesomeIcon className='right-link-icon' icon={faHouse} />
-						<p>{home}</p>
+						<p>home</p>
 					</Link>
 				</div>
 			</div>

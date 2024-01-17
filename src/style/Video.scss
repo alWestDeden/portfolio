@@ -1,0 +1,39 @@
+@import "./variable.scss";
+.video {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	aspect-ratio: 16/9;
+	width: 100%;
+	height: fit-content;
+	&-youtube {
+		aspect-ratio: inherit;
+		width: inherit;
+	}
+	&-links {
+		display: flex;
+		margin-top: 10px;
+		& .video-link {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-left: 10px;
+			&-icon {
+				font-size: 1.9rem;
+				& > path {
+					color: $fourth-color;
+				}
+			}
+			&:hover {
+				transform: scale(1.1);
+				& path {
+					color: $third-color;
+				}
+			}
+			& p {
+				font-size: 0.8rem;
+				color: $dark-color;
+			}
+		}
+	}
+}
