@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.64eec4a5.css",
-    "main.js": "/portfolio/static/js/main.730c627e.js",
+    "main.css": "/portfolio/static/css/main.3db5e868.css",
+    "main.js": "/portfolio/static/js/main.9a8b5660.js",
     "static/media/kasa_169.jpg": "/portfolio/static/media/kasa_169.4fb0cc969b272c3f0cbd.jpg",
     "static/media/ohmyfood_169.jpg": "/portfolio/static/media/ohmyfood_169.18995a125770d1698cea.jpg",
     "static/media/nina_169.jpg": "/portfolio/static/media/nina_169.bb956e6b4fcab61656b8.jpg",
     "static/media/booki_169.jpg": "/portfolio/static/media/booki_169.239d643d0ca96ebac2fb.jpg",
+    "static/media/menumaker_169.jpg": "/portfolio/static/media/menumaker_169.056a6e00e99b482cf7f6.jpg",
     "static/media/kasa_169.webp": "/portfolio/static/media/kasa_169.4d40988808c3b29a3118.webp",
     "static/media/kasa_52.jpg": "/portfolio/static/media/kasa_52.29992a3b35ecef882b52.jpg",
     "static/media/ohmyfood_52.jpg": "/portfolio/static/media/ohmyfood_52.5d17f0beb71a80d60210.jpg",
@@ -15,20 +16,24 @@
     "static/media/nina_52.jpg": "/portfolio/static/media/nina_52.a217c7a47b9fcffbe737.jpg",
     "static/media/nina_169.webp": "/portfolio/static/media/nina_169.e29f8d53e2716dde1553.webp",
     "static/media/booki_169.webp": "/portfolio/static/media/booki_169.5d34ecefb125849ca04b.webp",
+    "static/media/menumaker_169.webp": "/portfolio/static/media/menumaker_169.7b6612beb29db95a7876.webp",
+    "static/media/menumaker_52.jpg": "/portfolio/static/media/menumaker_52.7692d77cf632e8c39ad3.jpg",
     "static/media/kasa_52.webp": "/portfolio/static/media/kasa_52.bea54eb1947c52ad2c3d.webp",
     "static/media/ohmyfood_52.webp": "/portfolio/static/media/ohmyfood_52.29264b96ce50398fa223.webp",
     "static/media/booki_52.webp": "/portfolio/static/media/booki_52.dcd81267964a658f04da.webp",
     "static/media/argent_169.webp": "/portfolio/static/media/argent_169.db6e2552cf01763fe501.webp",
     "static/media/argent_52.jpg": "/portfolio/static/media/argent_52.d61c9ffacdcd66bb8e87.jpg",
     "static/media/nina_52.webp": "/portfolio/static/media/nina_52.f64b287529b9d9732590.webp",
+    "static/media/menumaker_52.webp": "/portfolio/static/media/menumaker_52.6e4b92de703c2f003844.webp",
     "static/media/argent_52.webp": "/portfolio/static/media/argent_52.330838c8275179585c44.webp",
+    "static/media/notion.svg": "/portfolio/static/media/notion.37591b2507cd721d24aeef295e7132e6.svg",
     "static/media/figma.svg": "/portfolio/static/media/figma.085cac66df752c79b39e8d055ac7bddd.svg",
     "index.html": "/portfolio/index.html",
-    "main.64eec4a5.css.map": "/portfolio/static/css/main.64eec4a5.css.map",
-    "main.730c627e.js.map": "/portfolio/static/js/main.730c627e.js.map"
+    "main.3db5e868.css.map": "/portfolio/static/css/main.3db5e868.css.map",
+    "main.9a8b5660.js.map": "/portfolio/static/js/main.9a8b5660.js.map"
   },
   "entrypoints": [
-    "static/css/main.64eec4a5.css",
-    "static/js/main.730c627e.js"
+    "static/css/main.3db5e868.css",
+    "static/js/main.9a8b5660.js"
   ]
 }
