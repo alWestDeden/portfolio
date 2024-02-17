@@ -16,6 +16,8 @@ $booki-font: "Raleway", sans-serif;
 $booki-color: #0164fc;
 $ohmyfood-font: "Shrikhand", serif;
 $ohmyfood-color: #101010;
+$menumaker-font: "Montserrat", sans-serif;
+$menumaker-color: #0d0d0d;
 $kasa-font: "Montserrat", sans-serif;
 $kasa-color: #ff6060;
 $nina-font: "Inter", sans-serif;
@@ -34,6 +36,10 @@ $open-color: #7450eb;
 .ohmyfood {
 	font-family: $ohmyfood-font;
 	color: $ohmyfood-color;
+}
+.menumaker {
+	font-family: $menumaker-font;
+	color: $menumaker-color;
 }
 .kasa {
 	font-family: $kasa-font;
@@ -70,6 +76,12 @@ $open-color: #7450eb;
 		font-family: $ohmyfood-font;
 		&:hover {
 			color: $ohmyfood-color;
+		}
+	}
+	.menumaker--hover {
+		font-family: $menumaker-font;
+		&:hover {
+			color: $menumaker-color;
 		}
 	}
 	.kasa--hover {

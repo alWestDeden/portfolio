@@ -112,7 +112,8 @@
 					}
 				}
 			}
-			@for $i from 0 through 4 {
+			// !!! increment when adding new project !!!
+			@for $i from 0 through 5 {
 				&--#{$i} {
 					z-index: -1;
 				}

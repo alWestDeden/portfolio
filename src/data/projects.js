@@ -10,6 +10,10 @@ import kasa_52 from "../images/kasa_52.jpg"
 import kasa_52W from "../images/kasa_52.webp"
 import kasa_169 from "../images/kasa_169.jpg"
 import kasa_169W from "../images/kasa_169.webp"
+import menumaker_52 from "../images/menumaker_52.jpg"
+import menumaker_52W from "../images/menumaker_52.webp"
+import menumaker_169 from "../images/menumaker_169.jpg"
+import menumaker_169W from "../images/menumaker_169.webp"
 import nina_52 from "../images/nina_52.jpg"
 import nina_52W from "../images/nina_52.webp"
 import nina_169 from "../images/nina_169.jpg"
@@ -34,8 +38,8 @@ const projects_fr = [
 		constraints:
 			"Le challenge pour ce projet était de réaliser les attentes au niveau du site (Cartes d'hébergements et d'activités, filtres de recherche, champ de recherche, ...), mais il n'était pas demandé à ce qu'il soit fonctionnel. Le site a dû être pensé en <span class='upfront'>desktop first</span> et être <span class='upfront'>responsive</span> (mobile, tablette, desktop).",
 		technologies: ["Figma", "HTML", "CSS", "SASS", "FontAwesome", "GitHub"],
-		code: "https://github.com/alWestDeden/bushido/tree/main/Projet3",
-		site: "https://alwestdeden.github.io/bushido/Projet3/index.html",
+		codelink: "https://github.com/alWestDeden/bushido/tree/main/Projet3",
+		sitelink: "https://alwestdeden.github.io/bushido/Projet3/index.html",
 	},
 	{
 		nb: 1,
@@ -51,11 +55,30 @@ const projects_fr = [
 		constraints:
 			"Les attentes pour ce projet étaient que le site soit <span class='upfront'>responsive</span> et <span class='upfront'>mobile first</span>. Une attention particulières était portée sur les animations; les coeurs des <span class='upfront'>likes</span> doivent se remplir progressivement, les menus doivent apparaîtres en cascade et les boutons doivent réagir aux survols et aux clics. Il fallait impérativement utiliser <span class='upfront'>SASS</span>.",
 		technologies: ["Figma", "HTML", "CSS", "SASS", "FontAwesome", "GitHub"],
-		code: "https://github.com/alWestDeden/Projet4",
-		site: "https://alwestdeden.github.io/Projet4/index.html",
+		codelink: "https://github.com/alWestDeden/Projet4",
+		sitelink: "https://alwestdeden.github.io/Projet4/index.html",
 	},
 	{
 		nb: 2,
+		id: "menumaker",
+		name: "Menu Maker",
+		image_52: menumaker_52,
+		image_169: menumaker_169,
+		image_52W: menumaker_52W,
+		image_169W: menumaker_169W,
+		description: "Site de création de menus",
+		details:
+			"Cette fois si le projet ne consiste pas à codelinkr un site mais à préparer et planifier son développement. La maquette du site était disponible sur <a class='figma' href='https://www.figma.com/file/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?type=design&node-id=0-6&mode=design' target='_blank' rel='noreferrer'>Figma</a>, mais ce sont surtout les User Stories, qui étaient à notre disposition sur <a class='figma' href='https://openclassrooms.notion.site/abd02d8dda9d44409e15699da62719f0?v=07313c40e99d4e7fb07f0a8eb3291f6d' target='_blank' rel='noreferrer'>Notion</a>, qui nous ont servies de base pour mener à terme ce projet.",
+		constraints:
+			"Pour valider ce projet, il fallait organiser une veille et faire un travail de curation sur les technologies nécessaires au fonctionnement du site, ensuite on avait à définir ses spécifications techniques et enfin on devait organiser son développement. Pour que l'évaluateur puisse juger ce travail, on devait lui transmettre des diaporamas traitant du travail de veille, de la planification et de la justification des choix technologiques, ainsi qu'un tableau décrivant les spécifications techniques. Ce sont ces documents qui ont servis de base à la vidéo en lien.",
+		technologies: ["Figma", "GitHub", "Notion"],
+		figmalink:
+			"https://www.figma.com/file/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?type=design&node-id=0-6&mode=design",
+		notionlink: "https://jeweled-valley-c20.notion.site/824396d00aac442a866e6b9a8c98c67d?v=d698f97d191c42829950c04b50552e01",
+		videolink: "https://www.youtube.com/embed/h_PWNmtk3FM",
+	},
+	{
+		nb: 3,
 		id: "kasa",
 		name: "Kasa",
 		image_52: kasa_52,
@@ -68,11 +91,11 @@ const projects_fr = [
 		constraints:
 			"Il était attendu que le <span class='upfront'>carrousel</span> boucle et que les icones de navigation n'apparaisent pas quand il n'y a qu'une seule image. Les élements <span class='upfront'>collapse</span> doivent par défaut être fermés et crées à partir d'un seul composant.",
 		technologies: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React", "React-Router", "GitHub"],
-		code: "https://github.com/alWestDeden/Projet8-kasa",
-		site: "https://alwestdeden.github.io/Projet8-kasa",
+		codelink: "https://github.com/alWestDeden/Projet8-kasa",
+		sitelink: "https://alwestdeden.github.io/Projet8-kasa",
 	},
 	{
-		nb: 3,
+		nb: 4,
 		id: "nina",
 		name: "Nina Carducci",
 		image_52: nina_52,
@@ -85,12 +108,12 @@ const projects_fr = [
 		constraints:
 			"Il était demandé qu'une fois optimisé le site passe les audits <span class='upfront'>Google Lighthouse</span> (performances et SEO) et <span class='upfront'>WAVE</span> (accessibilité).",
 		technologies: ["HTML", "CSS", "JavaScript", "Lighthouse", "WAVE", "GitHub"],
-		code: "https://github.com/alWestDeden/Projet9_new",
-		site: "https://alwestdeden.github.io/Projet9_new/index.html",
-		video: "https://www.youtube.com/embed/4RzjV0OpsbY",
+		codelink: "https://github.com/alWestDeden/Projet9_new",
+		sitelink: "https://alwestdeden.github.io/Projet9_new/index.html",
+		videolink: "https://www.youtube.com/embed/4RzjV0OpsbY",
 	},
 	{
-		nb: 4,
+		nb: 5,
 		id: "argent",
 		name: "ARGENTBANK",
 		image_52: argent_52,
@@ -115,8 +138,8 @@ const projects_fr = [
 			"FontAwesome",
 			"GitHub",
 		],
-		code: "https://github.com/alWestDeden/ArgentBank-website",
-		site: "https://alwestdeden.github.io/ArgentBank-website/",
+		codelink: "https://github.com/alWestDeden/ArgentBank-website",
+		sitelink: "https://alwestdeden.github.io/ArgentBank-website/",
 	},
 ]
 const projects_en = [
@@ -134,8 +157,8 @@ const projects_en = [
 		constraints:
 			"The challenge for this project was to achieve the expectations (accommodation and activity cards, search filters, search field, etc...), but it was not required to be functional. The site had to be designed <span class='upfront'>desktop first</span> and be <span class='upfront'>responsive</span> (mobile, tablet, desktop).",
 		technologies: ["Figma", "HTML", "CSS", "SASS", "FontAwesome", "GitHub"],
-		code: "https://github.com/alWestDeden/bushido/tree/main/Projet3",
-		site: "https://alwestdeden.github.io/bushido/Projet3/index.html",
+		codelink: "https://github.com/alWestDeden/bushido/tree/main/Projet3",
+		sitelink: "https://alwestdeden.github.io/bushido/Projet3/index.html",
 	},
 	{
 		nb: 1,
@@ -151,11 +174,30 @@ const projects_en = [
 		constraints:
 			"The expectations for this project were that the website would be <span class='upfront'>responsive</span> and <span class='upfront'>mobile first</span>. Particular attention was paid to the animations; hearts should gradually fill up, menus should cascade, and buttons should respond to hovers and clicks. It was imperative to use <span class='upfront'>SASS</span>.",
 		technologies: ["Figma", "HTML", "CSS", "SASS", "FontAwesome", "GitHub"],
-		code: "https://github.com/alWestDeden/Projet4",
-		site: "https://alwestdeden.github.io/Projet4/index.html",
+		codelink: "https://github.com/alWestDeden/Projet4",
+		sitelink: "https://alwestdeden.github.io/Projet4/index.html",
 	},
 	{
 		nb: 2,
+		id: "menumaker",
+		name: "Menu Maker",
+		image_52: menumaker_52,
+		image_169: menumaker_169,
+		image_52W: menumaker_52W,
+		image_169W: menumaker_169W,
+		description: "Menu creation website",
+		details:
+			"This time the project isn't about coding but about choosing the best technologies and planning the development. The mock was available on Figma, but the basis for completing this project were  the User Stories which were available to us on Notion.",
+		constraints:
+			"To validate this project we had to do a curation work on the technologies necessary, then we had to define its technical specifications and finally we had to organize its development. We provided the evaluator slideshows dealing with the curation work the planning and the justification of technological choices as well as a table describing the technical specifications. These are the documents which served as the basis for the linked video.",
+		technologies: ["Figma", "GitHub", "Notion"],
+		figmalink:
+			"https://www.figma.com/file/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?type=design&node-id=0-6&mode=design",
+		notionlink: "https://jeweled-valley-c20.notion.site/824396d00aac442a866e6b9a8c98c67d?v=d698f97d191c42829950c04b50552e01",
+		videolink: "https://www.youtube.com/embed/h_PWNmtk3FM",
+	},
+	{
+		nb: 3,
 		id: "kasa",
 		name: "Kasa",
 		image_52: kasa_52,
@@ -168,11 +210,11 @@ const projects_en = [
 		constraints:
 			"It was expected that the <span class='upfront'>carousel</span> loop and that the navigation icons would not appear when there is only one image. <span class='upfront'>Collapses</span> components must by default be closed and created from a single component.",
 		technologies: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React", "React-Router", "GitHub"],
-		code: "https://github.com/alWestDeden/Projet8-kasa",
-		site: "https://alwestdeden.github.io/Projet8-kasa",
+		codelink: "https://github.com/alWestDeden/Projet8-kasa",
+		sitelink: "https://alwestdeden.github.io/Projet8-kasa",
 	},
 	{
-		nb: 3,
+		nb: 4,
 		id: "nina",
 		name: "Nina Carducci",
 		image_52: nina_52,
@@ -185,12 +227,12 @@ const projects_en = [
 		constraints:
 			"Once optimized, it was expected the website to pass <span class='upfront'>Google Lighthouse</span> (performance and SEO) and <span class='upfront'>WAVE</span> (accessibility) audits.",
 		technologies: ["HTML", "CSS", "JavaScript", "Lighthouse", "WAVE", "GitHub"],
-		code: "https://github.com/alWestDeden/Projet9_new",
-		site: "https://alwestdeden.github.io/Projet9_new/index.html",
-		video: "https://www.youtube.com/embed/591OMRtzplQ",
+		codelink: "https://github.com/alWestDeden/Projet9_new",
+		sitelink: "https://alwestdeden.github.io/Projet9_new/index.html",
+		videolink: "https://www.youtube.com/embed/591OMRtzplQ",
 	},
 	{
-		nb: 4,
+		nb: 5,
 		id: "argent",
 		name: "ARGENTBANK",
 		image_52: argent_52,
@@ -215,8 +257,8 @@ const projects_en = [
 			"FontAwesome",
 			"GitHub",
 		],
-		code: "https://github.com/alWestDeden/ArgentBank-website",
-		site: "https://alwestdeden.github.io/ArgentBank-website/",
+		codelink: "https://github.com/alWestDeden/ArgentBank-website",
+		sitelink: "https://alwestdeden.github.io/ArgentBank-website/",
 	},
 ]
 export { projects_fr, projects_en }

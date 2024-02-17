@@ -9,6 +9,11 @@
   color: #101010;
 }
 
+.menumaker {
+  font-family: "Montserrat", sans-serif;
+  color: #0d0d0d;
+}
+
 .kasa {
   font-family: "Montserrat", sans-serif;
   color: #ff6060;
@@ -207,7 +212,7 @@
     width: 100%;
   }
 }
-@media (max-width: 1279px) and (hover: none) {
+@media (max-width: 1370px) and (hover: none) {
   .selected--ts {
     position: unset;
     flex-direction: column;
@@ -228,6 +233,7 @@
   .selected--ts .selected-left--ts .selected-left-links--ts {
     display: flex;
     justify-content: flex-start;
+    align-items: end;
     width: 100%;
     box-sizing: border-box;
     margin-top: 10px;

@@ -24,13 +24,13 @@ export default function Video() {
 	// get the project's id from url
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
-	const { name, video } = selectedProject[0]
+	const { name, videolink } = selectedProject[0]
 	return (
 		<div className='video'>
 			<iframe
 				title={`${name}-video`}
 				className='video-youtube'
-				src={`${video}?autoplay=1`}
+				src={videolink}
 				autoplay='0'
 				modestbranding='1'
 				rel='0'

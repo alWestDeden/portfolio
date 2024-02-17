@@ -10,6 +10,11 @@
   color: #101010;
 }
 
+.menumaker {
+  font-family: "Montserrat", sans-serif;
+  color: #0d0d0d;
+}
+
 .kasa {
   font-family: "Montserrat", sans-serif;
   color: #ff6060;
@@ -73,6 +78,11 @@
 .ohmyfood {
   font-family: "Shrikhand", serif;
   color: #101010;
+}
+
+.menumaker {
+  font-family: "Montserrat", sans-serif;
+  color: #0d0d0d;
 }
 
 .kasa {
@@ -333,6 +343,9 @@
 .projects .project-figure--4 {
   z-index: -1;
 }
+.projects .project-figure--5 {
+  z-index: -1;
+}
 .projects .projects-menu {
   flex-basis: 100px;
   flex-grow: 1;
@@ -387,6 +400,12 @@
 .projects .projects-menu .ohmyfood--hover:hover {
   color: #101010;
 }
+.projects .projects-menu .menumaker--hover {
+  font-family: "Montserrat", sans-serif;
+}
+.projects .projects-menu .menumaker--hover:hover {
+  color: #0d0d0d;
+}
 .projects .projects-menu .kasa--hover {
   font-family: "Montserrat", sans-serif;
 }
@@ -431,7 +450,7 @@
     transform: scale(1.12);
   }
 }
-@media (max-width: 1979px) and (hover: none) {
+@media (max-width: 1370px) and (hover: none) {
   .projects--ts {
     grid-area: 2/1/3/3;
     flex-basis: unset;

@@ -18,6 +18,7 @@ import {
 	faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
 import figma from "../../images/figma.svg"
+import notion from "../../images/notion.svg"
 import "../../style/Project.scss"
 
 export default function Project() {
@@ -39,8 +40,35 @@ export default function Project() {
 	// get the project's id from url
 	const { id } = useParams()
 	const selectedProject = projects.filter((project) => project.id === id)
-	const { name, image_169, image_169W, details, constraints, technologies, code, site, video } = selectedProject[0]
-	console.log(video)
+	const {
+		name,
+		image_169,
+		image_169W,
+		details,
+		constraints,
+		technologies,
+		codelink,
+		sitelink,
+		figmalink,
+		notionlink,
+		videolink,
+	} = selectedProject[0]
+	const links = []
+	if (codelink !== undefined) {
+		links.push(codelink)
+	}
+	if (sitelink !== undefined) {
+		links.push(sitelink)
+	}
+	if (figmalink !== undefined) {
+		links.push(figmalink)
+	}
+	if (notionlink !== undefined) {
+		links.push(notionlink)
+	}
+	if (videolink !== undefined) {
+		links.push(videolink)
+	}
 	// allow the use of HTML tags in the JSON file
 	const detailsHTML = { __html: details }
 	const constraintsHTML = { __html: constraints }
@@ -64,28 +92,61 @@ export default function Project() {
 						alt={name}
 					/>
 				</picture>
-				{!touchScreen ? (
-					""
-				) : (
-					<div className='selected-left-links--ts'>
-						{video ? (
-							<Link className='left-link--ts' to={`/video/${id}`} rel='noreferrer' aria-label={`site ${name}`}>
-								<FontAwesomeIcon className='left-link-icon--ts' icon={faYoutube} />
-								<p>video</p>
-							</Link>
-						) : (
-							""
-						)}
-						<Link className='left-link--ts' to={site} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
-							<FontAwesomeIcon className='left-link-icon--ts' icon={faGlobe} />
-							<p>site</p>
-						</Link>
-						<Link className='left-link--ts' to={code} target='_blank' rel='noreferrer' aria-label={`code ${name}`}>
-							<FontAwesomeIcon className='left-link-icon--ts' icon={faGithub} />
-							<p>code</p>
-						</Link>
-					</div>
-				)}
+				<div className='selected-left-links--ts'>
+					{!touchScreen
+						? ""
+						: links.map((link) => {
+								switch (link) {
+									case codelink:
+										return (
+											<Link className='left-link--ts' to={codelink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
+												<FontAwesomeIcon className='left-link-icon--ts' icon={faGithub} />
+												<p>code</p>
+											</Link>
+										)
+									case sitelink:
+										return (
+											<Link className='left-link--ts' to={sitelink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
+												<FontAwesomeIcon className='left-link-icon--ts' icon={faGlobe} />
+												<p>site</p>
+											</Link>
+										)
+									case figmalink:
+										return (
+											<Link className='left-link--ts' to={figmalink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
+												<img className='selected-right-tech-icon color--Figma' src={figma} alt='Figma' />
+												<p>figma</p>
+											</Link>
+										)
+									case notionlink:
+										return (
+											<Link
+												className='left-link--ts'
+												to={notionlink}
+												target='_blank'
+												rel='noreferrer'
+												aria-label={`site ${name}`}>
+												<img className='selected-right-tech-icon color--Figma' src={notion} alt='Notion' />
+												<p>notion</p>
+											</Link>
+										)
+									case videolink:
+										return (
+											<Link
+												className='left-link--ts'
+												to={`/video/${id}`}
+												target='_blank'
+												rel='noreferrer'
+												aria-label={`site ${name}`}>
+												<FontAwesomeIcon className='left-link-icon--ts' icon={faYoutube} />
+												<p>video</p>
+											</Link>
+										)
+									default:
+										return null
+								}
+						  })}
+				</div>
 			</div>
 			<div className={addClassExtension(touchScreen, "selected-right")}>
 				<h4 className={`selected-right-title ${id}`}>{name}</h4>
@@ -104,6 +165,13 @@ export default function Project() {
 								</React.Fragment>
 							)
 							// use Font Awesome's icons
+						} else if (technology === "Notion") {
+							return (
+								<React.Fragment key={`${technology}-${index}`}>
+									<img className={`selected-right-tech-icon color--${technology}`} src={notion} alt='notion' />
+									<p className='selected-right-tech-name'>{technology}</p>
+								</React.Fragment>
+							)
 						} else {
 							let techIcon
 							switch (technology) {
@@ -153,28 +221,54 @@ export default function Project() {
 					})}
 				</div>
 				<div className={addClassExtension(touchScreen, "selected-right-icons")}>
-					{touchScreen ? (
-						""
-					) : (
-						<>
-							{video ? (
-								<Link className='right-link' to={`/video/${id}`} rel='noreferrer' aria-label={`site ${name}`}>
-									<FontAwesomeIcon className='right-link-icon' icon={faYoutube} />
-									<p>video</p>
-								</Link>
-							) : (
-								""
-							)}
-							<Link className='right-link' to={site} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
-								<FontAwesomeIcon className='right-link-icon' icon={faGlobe} />
-								<p>site</p>
-							</Link>
-							<Link className='right-link' to={code} target='_blank' rel='noreferrer' aria-label={`site ${code}`}>
-								<FontAwesomeIcon className='right-link-icon' icon={faGithub} />
-								<p>code</p>
-							</Link>
-						</>
-					)}
+					{touchScreen
+						? ""
+						: links.map((link) => {
+								switch (link) {
+									case codelink:
+										return (
+											<Link className='right-link' to={codelink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
+												<FontAwesomeIcon className='right-link-icon' icon={faGithub} />
+												<p>code</p>
+											</Link>
+										)
+									case sitelink:
+										return (
+											<Link className='right-link' to={sitelink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
+												<FontAwesomeIcon className='right-link-icon' icon={faGlobe} />
+												<p>site</p>
+											</Link>
+										)
+									case figmalink:
+										return (
+											<Link className='right-link' to={figmalink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
+												<img className='selected-right-tech-icon color--Figma' src={figma} alt='Figma' />
+												<p>figma</p>
+											</Link>
+										)
+									case notionlink:
+										return (
+											<Link className='right-link' to={notionlink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
+												<img className='selected-right-tech-icon color--Figma' src={notion} alt='Notion' />
+												<p>notion</p>
+											</Link>
+										)
+									case videolink:
+										return (
+											<Link
+												className='right-link'
+												to={`/video/${id}`}
+												target='_blank'
+												rel='noreferrer'
+												aria-label={`site ${name}`}>
+												<FontAwesomeIcon className='right-link-icon' icon={faYoutube} />
+												<p>video</p>
+											</Link>
+										)
+									default:
+										return null
+								}
+						  })}
 					<Link className='right-link' to='/'>
 						<FontAwesomeIcon className='right-link-icon' icon={faHouse} />
 						<p>home</p>

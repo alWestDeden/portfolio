@@ -32,12 +32,11 @@ export default function Header() {
 						id='languages'
 						className='languages-select'
 						onChange={(e) => changeLanguage(e.target.value)}
-						defaultValue='fr'
-						value={language}>
-						<option className='language' value='fr'>
+						defaultValue='fr'>
+						<option className='language' value='fr' key='top-option-fr'>
 							Fr
 						</option>
-						<option className='language' value='en'>
+						<option className='language' value='en' key='top-option-en'>
 							En
 						</option>
 					</select>
