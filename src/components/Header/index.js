@@ -27,7 +27,7 @@ export default function Header() {
 			</div>
 			<nav className='navigation'>
 				<div className='select-container'>
-					<select
+					{/* <select
 						name='languages'
 						id='languages'
 						className='languages-select'
@@ -39,7 +39,7 @@ export default function Header() {
 						<option className='language' value='en' key='top-option-en'>
 							En
 						</option>
-					</select>
+					</select> */}
 				</div>
 				<a href='https://github.com/alWestDeden?tab=repositories' target='_blank' rel='noreferrer' aria-label='GitHub'>
 					<FontAwesomeIcon className='icon' icon={faGithub} />

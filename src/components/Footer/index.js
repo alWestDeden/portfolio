@@ -30,10 +30,12 @@ export default function Footer() {
 						onChange={(e) => changeLanguage(e.target.value)}
 						defaultValue='fr'>
 						<option className='language' value='fr' key='bottom-option-fr'>
-							{touchScreen ? "Fr" : "Français"}
+							{/* {touchScreen ? "Fr" : "Français"} */}
+							Français
 						</option>
 						<option className='language' value='en' key='bottom-option-en'>
-							{touchScreen ? "En" : "English"}
+							{/* {touchScreen ? "En" : "English"} */}
+							English
 						</option>
 					</select>
 				</div>
