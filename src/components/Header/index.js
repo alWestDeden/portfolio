@@ -1,5 +1,5 @@
 import { useTouchScreen } from "../../functions/ScreenTypeContext"
-import { useLanguage } from "../../functions/LanguageContext"
+// import { useLanguage } from "../../functions/LanguageContext"
 import addClassExtension from "../../functions/addClassExtension"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -7,17 +7,17 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import "../../style/header.scss"
 
 export default function Header() {
-	const { changeLanguage, language } = useLanguage()
+	// const { changeLanguage, language } = useLanguage()
 	let subtitle
-	switch (language) {
-		case "fr":
-			subtitle = "Développeur/Intégrateur Web"
-			break
-		case "en":
-			subtitle = "Web Developer/Integrator"
-			break
-		default:
-	}
+	// switch (language) {
+	// 	case "fr":
+	// 		subtitle = "Développeur/Intégrateur Web"
+	// 		break
+	// 	case "en":
+	// 		subtitle = "Web Developer/Integrator"
+	// 		break
+	// 	default:
+	// }
 	const { touchScreen } = useTouchScreen()
 	return (
 		<header className={addClassExtension(touchScreen, "header")}>
