@@ -132,12 +132,7 @@ export default function Project() {
 										)
 									case videolink:
 										return (
-											<Link
-												className='left-link--ts'
-												to={`/video/${id}`}
-												target='_blank'
-												rel='noreferrer'
-												aria-label={`site ${name}`}>
+											<Link className='left-link--ts' to={videolink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
 												<FontAwesomeIcon className='left-link-icon--ts' icon={faYoutube} />
 												<p>video</p>
 											</Link>
@@ -255,12 +250,7 @@ export default function Project() {
 										)
 									case videolink:
 										return (
-											<Link
-												className='right-link'
-												to={`/video/${id}`}
-												target='_blank'
-												rel='noreferrer'
-												aria-label={`site ${name}`}>
+											<Link className='right-link' to={videolink} target='_blank' rel='noreferrer' aria-label={`site ${name}`}>
 												<FontAwesomeIcon className='right-link-icon' icon={faYoutube} />
 												<p>video</p>
 											</Link>
