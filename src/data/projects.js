@@ -68,7 +68,7 @@ const projects_fr = [
 		image_169W: menumaker_169W,
 		description: "Site de création de menus",
 		details:
-			"Cette fois si le projet ne consiste pas à codelinkr un site mais à préparer et planifier son développement. La maquette du site était disponible sur <a class='figma' href='https://www.figma.com/file/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?type=design&node-id=0-6&mode=design' target='_blank' rel='noreferrer'>Figma</a>, mais ce sont surtout les User Stories, qui étaient à notre disposition sur <a class='figma' href='https://openclassrooms.notion.site/abd02d8dda9d44409e15699da62719f0?v=07313c40e99d4e7fb07f0a8eb3291f6d' target='_blank' rel='noreferrer'>Notion</a>, qui nous ont servies de base pour mener à terme ce projet.",
+			"Cette fois si le projet ne consiste pas à coder un site mais à préparer et planifier son développement. La maquette du site était disponible sur <a class='figma' href='https://www.figma.com/file/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?type=design&node-id=0-6&mode=design' target='_blank' rel='noreferrer'>Figma</a>, mais ce sont surtout les User Stories, qui étaient à notre disposition sur <a class='figma' href='https://openclassrooms.notion.site/abd02d8dda9d44409e15699da62719f0?v=07313c40e99d4e7fb07f0a8eb3291f6d' target='_blank' rel='noreferrer'>Notion</a>, qui nous ont servies de base pour mener à terme ce projet.",
 		constraints:
 			"Pour valider ce projet, il fallait organiser une veille et faire un travail de curation sur les technologies nécessaires au fonctionnement du site, ensuite on avait à définir ses spécifications techniques et enfin on devait organiser son développement. Pour que l'évaluateur puisse juger ce travail, on devait lui transmettre des diaporamas traitant du travail de veille, de la planification et de la justification des choix technologiques, ainsi qu'un tableau décrivant les spécifications techniques. Ce sont ces documents qui ont servis de base à la vidéo en lien.",
 		technologies: ["Figma", "GitHub", "Notion"],
@@ -187,9 +187,9 @@ const projects_en = [
 		image_169W: menumaker_169W,
 		description: "Menu creation website",
 		details:
-			"This time the project isn't about coding but about choosing the best technologies and planning the development. The mock was available on Figma, but the basis for completing this project were  the User Stories which were available to us on Notion.",
+			"This time the project isn't about coding but about choosing the best technologies and planning the development of the website. The mock was available on Figma, but the basis for completing this project were the User Stories which were available to us on Notion.",
 		constraints:
-			"To validate this project we had to do a curation work on the technologies necessary, then we had to define its technical specifications and finally we had to organize its development. We provided the evaluator slideshows dealing with the curation work the planning and the justification of technological choices as well as a table describing the technical specifications. These are the documents which served as the basis for the linked video.",
+			"To validate this project we had to do a curation work on the necessary technologies, then we had to define its technical specifications and finally we had to organize its development. We provided the evaluator slideshows dealing with the curation work, the planning and the justification of technological choices as well as a table describing the technical specifications. These are the documents which served as the basis for the linked video.",
 		technologies: ["Figma", "GitHub", "Notion"],
 		figmalink:
 			"https://www.figma.com/file/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?type=design&node-id=0-6&mode=design",
