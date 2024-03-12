@@ -194,7 +194,7 @@ const projects_en = [
 		figmalink:
 			"https://www.figma.com/file/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?type=design&node-id=0-6&mode=design",
 		notionlink: "https://jeweled-valley-c20.notion.site/824396d00aac442a866e6b9a8c98c67d?v=d698f97d191c42829950c04b50552e01",
-		videolink: "https://www.youtube.com/embed/h_PWNmtk3FM",
+		videolink: "https://www.youtube.com/embed/SWiWtk7xVbM",
 	},
 	{
 		nb: 3,
